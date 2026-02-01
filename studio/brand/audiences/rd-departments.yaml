@@ -1,0 +1,49 @@
+# TERTIARY AUDIENCE: Technical R&D Departments
+# Priority: 3 (Tertiary)
+# Last Updated: 2026-02-01
+
+profile:
+  title: Technical R&D Departments
+  priority: tertiary
+
+demographics:
+  department_types:
+    - Corporate R&D Labs
+    - Innovation Centers
+    - Applied Research Teams
+    - Platform Engineering R&D
+  company_size: Enterprise with dedicated R&D budgets
+  focus_areas:
+    - Automation frameworks
+    - AI/ML infrastructure
+    - Developer productivity research
+
+responsibilities:
+  - Evaluate emerging technologies
+  - Prototype automation solutions
+  - Define internal tooling standards
+  - Research efficiency improvements
+
+pain_points:
+  - Lack of research-grade tooling for production use
+  - Gap between POC and production-ready solutions
+  - Difficulty measuring automation effectiveness
+  - Vendor solutions that don't expose internals
+
+goals:
+  - Develop proprietary automation advantages
+  - Build internal platforms on solid foundations
+  - Achieve measurable R&D outcomes
+  - Maintain control over critical tooling internals
+
+messaging_focus:
+  - Open-box architecture for customization
+  - Research-to-production pathway
+  - Extensibility and integration APIs
+  - Performance benchmarking capabilities
+
+channels:
+  - Research publications and whitepapers
+  - Technical conferences
+  - Direct enterprise engagement
+  - Technical advisory relationships

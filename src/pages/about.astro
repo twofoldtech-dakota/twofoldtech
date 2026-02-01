@@ -1,0 +1,170 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Button from '@/components/common/Button.astro';
+import SectionHeader from '@/components/common/SectionHeader.astro';
+import Badge from '@/components/common/Badge.astro';
+import { Building, Target, Users, Shield, ArrowRight, Microscope } from 'lucide-react';
+import {
+  ABOUT_META,
+  COMPANY_TIMELINE,
+  CORE_VALUES,
+  LAB_FOCUS_AREAS,
+} from '@/lib/constants/about';
+
+const iconMap: Record<string, any> = {
+  building: Building,
+  target: Target,
+  users: Users,
+  shield: Shield,
+};
+---
+
+<BaseLayout title={ABOUT_META.title} description={ABOUT_META.description}>
+  <!-- Hero Section -->
+  <header class="pt-40 pb-20 border-b-5 border-black bg-white bg-grid-pattern bg-[size:40px_40px]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl">
+        <div class="inline-block bg-black text-white px-4 py-2 font-mono font-bold text-sm mb-6 uppercase tracking-wider">
+          THE LAB
+        </div>
+        <h1 class="text-5xl sm:text-7xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-8">
+          {ABOUT_META.title}
+        </h1>
+        <p class="text-2xl md:text-3xl font-mono font-bold text-tf-orange mb-6 uppercase">
+          {ABOUT_META.tagline}
+        </p>
+        <p class="text-xl font-mono text-gray-700 max-w-3xl">
+          {ABOUT_META.description}
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mission Statement -->
+  <section class="py-32 border-t-5 border-black bg-tf-orange">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="inline-block bg-black text-white px-4 py-2 font-mono font-bold text-sm mb-8 uppercase tracking-wider">
+          CORE_MISSION
+        </div>
+        <h2 class="text-3xl md:text-5xl font-black uppercase leading-tight mb-8">
+          We build the autonomous systems that build enterprise software.
+        </h2>
+        <p class="text-xl font-mono font-bold leading-relaxed">
+          Our R&D lab creates tools that transform how organizations approach
+          legacy modernization, software development, and technical debt.
+          We don't just consult — we ship products that solve problems at scale.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values -->
+  <section class="py-32 border-t-5 border-black bg-white">
+    <div class="container mx-auto px-4">
+      <SectionHeader
+        number="01"
+        title="CORE VALUES"
+        subtitle="The principles that guide every decision in the lab."
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {CORE_VALUES.map((value, idx) => {
+          const IconComponent = iconMap[value.icon];
+          return (
+            <div class="border-5 border-black p-8 shadow-neo hover:-translate-y-1 hover:shadow-[12px_12px_0px_#000] transition-all bg-white">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="bg-tf-orange p-3 border-3 border-black">
+                  {IconComponent && <IconComponent size={28} className="text-black" />}
+                </div>
+                <h3 class="text-2xl font-black uppercase">{value.title}</h3>
+              </div>
+              <p class="font-mono text-gray-700 leading-relaxed">{value.description}</p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="py-32 border-t-5 border-black bg-gray-100">
+    <div class="container mx-auto px-4">
+      <SectionHeader
+        number="02"
+        title="LAB TIMELINE"
+        subtitle="Key milestones in our journey."
+      />
+
+      <div class="max-w-4xl mx-auto">
+        <div class="space-y-0">
+          {COMPANY_TIMELINE.map((event, idx) => (
+            <div class="flex gap-8 relative">
+              <div class="flex flex-col items-center">
+                <div class="bg-tf-orange border-4 border-black w-16 h-16 flex items-center justify-center font-mono font-black text-lg">
+                  {event.year}
+                </div>
+                {idx < COMPANY_TIMELINE.length - 1 && (
+                  <div class="w-1 bg-black flex-1 min-h-[80px]"></div>
+                )}
+              </div>
+              <div class="flex-1 pb-12">
+                <h3 class="text-3xl font-black uppercase mb-2">{event.title}</h3>
+                <p class="font-mono text-gray-700">{event.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lab Focus Areas -->
+  <section class="py-32 border-t-5 border-black bg-black text-white">
+    <div class="container mx-auto px-4">
+      <div class="mb-16 border-b-2 border-white/30 pb-6">
+        <div class="flex items-center gap-4 mb-4">
+          <Microscope size={32} className="text-tf-orange" />
+          <span class="font-mono font-bold text-tf-orange uppercase">Research & Development</span>
+        </div>
+        <h2 class="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85]">
+          LAB FOCUS AREAS
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {LAB_FOCUS_AREAS.map((area) => (
+          <div class="border-2 border-gray-700 p-8 hover:border-tf-orange transition-colors">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-black uppercase text-white">{area.title}</h3>
+              <Badge variant={area.status === 'ACTIVE' ? 'orange' : 'default'}>
+                {area.status}
+              </Badge>
+            </div>
+            <p class="font-mono text-gray-400">{area.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-32 border-t-5 border-black bg-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl md:text-6xl font-black uppercase mb-8">
+        Work With The Lab
+      </h2>
+      <p class="font-mono text-xl font-bold mb-10 max-w-2xl mx-auto text-gray-700">
+        Partner with us on your next enterprise modernization project or explore our products.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button href="/contact" class="text-xl px-12 py-5">
+          GET IN TOUCH
+        </Button>
+        <Button href="/studio" variant="outline" class="text-xl px-12 py-5">
+          EXPLORE STUDIO
+        </Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

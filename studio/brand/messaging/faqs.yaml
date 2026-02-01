@@ -1,0 +1,103 @@
+# TWOFOLD TECH - Frequently Asked Questions
+# Version: 1.0
+# Last Updated: 2026-02-01
+
+title: "System Diagnostics: Frequently Asked Questions"
+
+faqs:
+
+  - id: studio-architecture
+    question: "What is the core architectural philosophy behind STUDIO?"
+    category: STUDIO
+    answer: >
+      STUDIO is built on the principle of Deterministic Orchestration. While
+      standard LLMs operate on probabilistic guesses, STUDIO enforces a
+      "Plan-First" state machine. It utilizes a Tri-Agent Architecture
+      (Planner, Builder, Writer) where every proposed code change must pass
+      through a secondary validation agent before execution. This ensures
+      that agentic coding remains within the bounds of senior-level
+      architectural constraints.
+    keywords:
+      - Deterministic Orchestration
+      - Plan-First
+      - Tri-Agent Architecture
+      - Planner
+      - Builder
+      - Writer
+
+  - id: alloy-rust
+    question: "Why was ALLOY developed in Rust instead of C#/.NET?"
+    category: ALLOY
+    answer: >
+      Our research into large-scale Sitecore migrations (20+ site nodes)
+      identified a critical bottleneck in memory management and thread-safe
+      concurrency within standard serialization utilities. We engineered
+      ALLOY in Rust to leverage its zero-cost abstractions and high-concurrency
+      model. This allows for sub-second parsing of complex dependency trees
+      that would typically cause memory pressure or silent failures in
+      managed environments.
+    keywords:
+      - Rust
+      - zero-cost abstractions
+      - high-concurrency
+      - memory management
+      - Sitecore migrations
+
+  - id: architectural-hardening
+    question: "How does Twofold Tech define 'Architectural Hardening'?"
+    category: Advisory
+    answer: >
+      Hardening is the process of eliminating latent technical debt within
+      legacy .NET and Sitecore XP/XM environments. This involves decoupling
+      business logic from the CMS core, optimizing SQL/Solr interaction
+      layers, and refactoring tightly coupled pipelines into event-driven
+      functions. Our research proves that hardening the monolith is a
+      prerequisite for a stable, high-performance transition to XM Cloud.
+    keywords:
+      - technical debt
+      - Sitecore XP/XM
+      - XM Cloud
+      - decoupling
+      - event-driven
+
+  - id: studio-cicd
+    question: "Is STUDIO compatible with existing CI/CD pipelines?"
+    category: STUDIO
+    answer: >
+      Yes. STUDIO is designed as a portable orchestration layer that plugs
+      into the Claude Code CLI environment. It utilizes standard Git-based
+      snapshots for its rollback system and can be configured to trigger
+      existing enterprise quality gates (Unit Tests, Linting, Security Scans)
+      as part of its internal "Quality Gate" lifecycle.
+    keywords:
+      - CI/CD
+      - Git
+      - rollback
+      - quality gates
+      - Claude Code
+
+  - id: platform-agnostic
+    question: "Can Twofold's research be applied to non-Sitecore ecosystems?"
+    category: Company
+    answer: >
+      While our current deep-stack research focuses on Sitecore and .NET,
+      the underlying orchestration logic of STUDIO is platform-agnostic.
+      It is engineered to bring "Industrial Clarity" to any complex
+      enterprise environment where the gap between AI-generated code and
+      production-ready architecture needs to be closed.
+    keywords:
+      - platform-agnostic
+      - Industrial Clarity
+      - enterprise
+
+# Grouped by category for navigation
+by_category:
+  STUDIO:
+    - studio-architecture
+    - studio-cicd
+  ALLOY:
+    - alloy-rust
+  Advisory:
+    - architectural-hardening
+  Company:
+    - platform-agnostic

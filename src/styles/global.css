@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Import fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-black font-sans antialiased;
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-tf-orange text-black;
+  }
+
+  /* Custom Scrollbar for the Brutalist feel */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FFFFFF;
+    border-left: 5px solid #000000;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #FF5F1F;
+    border: 2px solid #000000;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #000000;
+  }
+
+  /* Focus styles for accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-tf-orange ring-offset-2;
+  }
+}
+
+@layer components {
+  /* Neo-Brutalist Card */
+  .card-neo {
+    @apply bg-white border-5 border-black shadow-neo transition-all duration-150;
+  }
+
+  .card-neo:hover {
+    @apply -translate-y-1 -translate-x-1;
+    box-shadow: 12px 12px 0px 0px #000000;
+  }
+
+  /* Neo-Brutalist Button Base */
+  .btn-neo {
+    @apply font-sans font-bold text-lg border-5 border-black transition-all duration-100 px-8 py-3 flex items-center justify-center gap-2 uppercase tracking-tight shadow-neo;
+  }
+
+  .btn-neo:hover {
+    @apply -translate-y-1 -translate-x-1;
+    box-shadow: 10px 10px 0px 0px #000000;
+  }
+
+  .btn-neo:active {
+    @apply translate-x-1 translate-y-1 shadow-none;
+  }
+
+  /* Primary Button */
+  .btn-primary {
+    @apply btn-neo bg-tf-orange text-black;
+  }
+
+  /* Secondary Button */
+  .btn-secondary {
+    @apply btn-neo bg-black text-white;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-gray-900;
+  }
+
+  /* Outline Button */
+  .btn-outline {
+    @apply btn-neo bg-white text-black;
+  }
+
+  /* Section Header */
+  .section-header {
+    @apply mb-16 border-b-5 border-black pb-6;
+  }
+
+  .section-title {
+    @apply text-4xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85] text-black;
+  }
+
+  .section-number {
+    @apply text-7xl font-black text-transparent select-none hidden md:block;
+    -webkit-text-stroke: 2px black;
+  }
+
+  .section-subtitle {
+    @apply font-mono mt-6 text-xl md:text-2xl max-w-3xl font-bold text-gray-700 uppercase;
+  }
+}
+
+@layer utilities {
+  /* Text balance for headings */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Border width 5px utility */
+  .border-5 {
+    border-width: 5px;
+  }
+
+  .border-t-5 {
+    border-top-width: 5px;
+  }
+
+  .border-b-5 {
+    border-bottom-width: 5px;
+  }
+
+  .border-l-5 {
+    border-left-width: 5px;
+  }
+
+  .border-r-5 {
+    border-right-width: 5px;
+  }
+}

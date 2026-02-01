@@ -1,0 +1,22 @@
+---
+interface Props {
+  variant?: 'default' | 'dark' | 'orange' | 'outline';
+  class?: string;
+}
+
+const {
+  variant = 'default',
+  class: className = '',
+} = Astro.props;
+
+const variants = {
+  default: 'bg-gray-100 border-2 border-black text-black',
+  dark: 'bg-black text-white',
+  orange: 'bg-tf-orange text-black border-2 border-black',
+  outline: 'bg-white border-2 border-black text-black',
+};
+---
+
+<span class={`inline-block px-2 py-1 font-mono text-xs font-bold uppercase ${variants[variant]} ${className}`}>
+  <slot />
+</span>

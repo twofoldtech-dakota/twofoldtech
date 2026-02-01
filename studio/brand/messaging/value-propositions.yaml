@@ -1,0 +1,73 @@
+# TWOFOLD TECH - Value Propositions
+# Version: 1.1
+# Last Updated: 2026-02-01
+
+primary_propositions:
+
+  - headline: "AI builds code. STUDIO makes sure it's correct."
+    product: STUDIO
+    audience: All
+    proof_points:
+      - Requirements traceability from task to implementation
+      - Deterministic rollback to any prior state
+      - Plan-first workflow prevents architectural drift
+      - Quality gates enforce correctness before build
+
+  - headline: "High-fidelity modernization research powered by Rust."
+    product: ALLOY
+    audience: Enterprise Architects, R&D
+    proof_points:
+      - Zero-copy message passing for minimal overhead
+      - Compile-time correctness guarantees
+      - Predictable performance characteristics
+      - Memory safety without garbage collection
+
+  - headline: "Technical deep-dives into architectural hardening."
+    product: Advisory
+    audience: Enterprise Architects
+    proof_points:
+      - System integrity assessments
+      - Modernization pathway analysis
+      - Architecture review and recommendations
+      - Implementation guidance
+
+value_hierarchy:
+  level_1:
+    name: Correctness
+    description: >
+      Every system we build prioritizes correctness over speed.
+      AI-generated code is validated, traced, and auditable.
+
+  level_2:
+    name: Traceability
+    description: >
+      Full visibility from requirement to implementation.
+      Every change can be traced to its origin.
+
+  level_3:
+    name: Stability
+    description: >
+      Production-grade reliability. Deterministic behavior.
+      Systems that perform predictably under load.
+
+  level_4:
+    name: Throughput
+    description: >
+      High-performance engineering without sacrificing correctness.
+      Optimized for enterprise scale.
+
+differentiators:
+  - name: Open-Box Architecture
+    description: >
+      Unlike black-box AI tools, our systems expose their internals.
+      Inspect, audit, and customize at every layer.
+
+  - name: Research-First R&D
+    description: >
+      We focus on advancing the state of the art, not just shipping features.
+      Our products emerge from genuine research.
+
+  - name: Industrial-Grade Standards
+    description: >
+      Built for enterprise environments with high reliability requirements.
+      No consumer-grade assumptions.

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://twofold.tech/sitemap-index.xml
+
+# Block common bot paths
+Disallow: /api/
+Disallow: /_astro/

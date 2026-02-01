@@ -1,0 +1,189 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Button from '@/components/common/Button.astro';
+import SectionHeader from '@/components/common/SectionHeader.astro';
+import Badge from '@/components/common/Badge.astro';
+import Card from '@/components/common/Card.astro';
+import { Cpu, Users, RefreshCw, Shield, Database, GitBranch, CheckSquare, ArrowRight } from 'lucide-react';
+import {
+  STUDIO_META,
+  STUDIO_AGENTS,
+  STUDIO_FEATURES,
+  STUDIO_SPECS,
+  STUDIO_USE_CASES,
+} from '@/lib/constants/studio';
+
+const iconMap: Record<string, any> = {
+  cpu: Cpu,
+  users: Users,
+  refresh: RefreshCw,
+  shield: Shield,
+  database: Database,
+  'git-branch': GitBranch,
+};
+---
+
+<BaseLayout title={STUDIO_META.title} description={STUDIO_META.description}>
+  <!-- Hero Section -->
+  <header class="pt-40 pb-20 border-b-5 border-black bg-white bg-grid-pattern bg-[size:40px_40px]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl">
+        <div class="inline-block bg-black text-white px-4 py-2 font-mono font-bold text-sm mb-6 uppercase tracking-wider">
+          {STUDIO_META.category}
+        </div>
+        <h1 class="text-5xl sm:text-7xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-8">
+          {STUDIO_META.title}
+        </h1>
+        <p class="text-2xl md:text-3xl font-mono font-bold text-tf-orange mb-6 uppercase">
+          {STUDIO_META.tagline}
+        </p>
+        <p class="text-xl font-mono text-gray-700 max-w-3xl mb-10">
+          {STUDIO_META.description}
+        </p>
+
+        <div class="flex flex-wrap gap-3 mb-10">
+          <Badge variant="orange">TRI-AGENT ARCHITECTURE</Badge>
+          <Badge variant="orange">HUMAN-IN-THE-LOOP</Badge>
+          <Badge variant="orange">SELF-HEALING</Badge>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <Button href="/contact" class="text-xl px-10 py-5">
+            REQUEST ACCESS
+          </Button>
+          <Button href="#agents" variant="outline" class="text-xl px-10 py-5">
+            EXPLORE ARCHITECTURE
+          </Button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Tri-Agent Architecture -->
+  <section id="agents" class="py-32 border-t-5 border-black bg-white">
+    <div class="container mx-auto px-4">
+      <SectionHeader
+        number="01"
+        title="TRI-AGENT ARCHITECTURE"
+        subtitle="Three specialized AI agents working in concert to deliver enterprise-grade software."
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {STUDIO_AGENTS.map((agent, idx) => (
+          <div class={`border-5 border-black p-8 shadow-neo ${idx === 1 ? 'bg-tf-orange' : 'bg-white'} relative`}>
+            <div class={`absolute -top-4 -left-1 ${idx === 1 ? 'bg-black text-white' : 'bg-tf-orange'} border-4 border-black px-3 py-1 font-mono text-sm font-bold uppercase`}>
+              AGENT_{String(idx + 1).padStart(2, '0')}
+            </div>
+            <h3 class="text-4xl font-black uppercase mb-2 mt-4">{agent.name}</h3>
+            <p class={`font-mono font-bold text-lg mb-4 ${idx === 1 ? 'text-black' : 'text-tf-orange'}`}>
+              {agent.role}
+            </p>
+            <p class={`font-mono text-sm mb-6 ${idx === 1 ? 'text-black/80' : 'text-gray-600'}`}>
+              {agent.description}
+            </p>
+            <div class="space-y-2">
+              {agent.capabilities.map((cap) => (
+                <div class="flex items-center gap-2 font-mono text-sm font-bold">
+                  <CheckSquare size={16} />
+                  <span>{cap}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature Grid -->
+  <section class="py-32 border-t-5 border-black bg-gray-100">
+    <div class="container mx-auto px-4">
+      <SectionHeader
+        number="02"
+        title="PLATFORM CAPABILITIES"
+        subtitle="Enterprise features designed for high-stakes engineering environments."
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-5 border-black bg-white">
+        {STUDIO_FEATURES.map((feature, idx) => {
+          const IconComponent = iconMap[feature.icon];
+          return (
+            <div class={`p-8 ${idx < STUDIO_FEATURES.length - 1 ? 'border-b-5 md:border-b-0 md:border-r-5 border-black' : ''} ${idx % 3 === 2 ? 'md:border-r-0' : ''} ${idx >= STUDIO_FEATURES.length - 3 ? 'md:border-b-0' : 'md:border-b-5'} hover:bg-gray-50 transition-colors`}>
+              <div class="flex items-center gap-3 mb-4">
+                <div class="bg-tf-orange p-2 border-2 border-black">
+                  {IconComponent && <IconComponent size={24} className="text-black" />}
+                </div>
+              </div>
+              <h3 class="text-xl font-black uppercase mb-3">{feature.title}</h3>
+              <p class="font-mono text-sm text-gray-600">{feature.description}</p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Specs -->
+  <section class="py-32 border-t-5 border-black bg-black text-white">
+    <div class="container mx-auto px-4">
+      <div class="mb-16 border-b-2 border-white/30 pb-6">
+        <h2 class="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85] text-white">
+          TECHNICAL SPECS
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        {STUDIO_SPECS.map((spec) => (
+          <div class="border-l-4 border-tf-orange pl-4">
+            <p class="font-mono text-xs text-gray-400 uppercase mb-1">{spec.label}</p>
+            <p class="font-bold text-lg">{spec.value}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases -->
+  <section class="py-32 border-t-5 border-black bg-white">
+    <div class="container mx-auto px-4">
+      <SectionHeader
+        number="03"
+        title="USE CASES"
+        subtitle="Real-world applications of STUDIO in enterprise environments."
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {STUDIO_USE_CASES.map((useCase) => (
+          <div class="border-5 border-black p-8 shadow-neo hover:-translate-y-1 hover:shadow-[12px_12px_0px_#000] transition-all">
+            <h3 class="text-2xl font-black uppercase mb-4">{useCase.title}</h3>
+            <p class="font-mono text-gray-600 mb-6">{useCase.description}</p>
+            <div class="flex items-center gap-2 bg-tf-orange border-3 border-black px-4 py-2 inline-block">
+              <ArrowRight size={16} />
+              <span class="font-mono font-bold text-sm">{useCase.outcome}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-32 border-t-5 border-black bg-tf-orange">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl md:text-6xl font-black uppercase mb-8">
+        Ready to Orchestrate?
+      </h2>
+      <p class="font-mono text-xl font-bold mb-10 max-w-2xl mx-auto">
+        Join the waitlist for STUDIO_OS and transform how your team builds software.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button href="/contact" variant="secondary" class="text-xl px-12 py-5">
+          REQUEST ACCESS
+        </Button>
+        <Button href="/" variant="outline" class="text-xl px-12 py-5">
+          BACK TO HOME
+        </Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

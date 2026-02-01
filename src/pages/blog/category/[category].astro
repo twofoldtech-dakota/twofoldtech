@@ -1,0 +1,95 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Badge from '@/components/common/Badge.astro';
+import { Calendar, Clock, ArrowRight, ArrowLeft } from 'lucide-react';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  const categories = [...new Set(posts.map(post => post.data.category))];
+
+  return categories.map(category => ({
+    params: { category },
+    props: {
+      category,
+      posts: posts
+        .filter(post => post.data.category === category)
+        .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
+    },
+  }));
+}
+
+const { category, posts } = Astro.props;
+
+const categoryLabels: Record<string, string> = {
+  'engineering': 'Engineering',
+  'tutorial': 'Tutorials',
+  'product': 'Product',
+  'announcement': 'Announcements',
+};
+
+const categoryLabel = categoryLabels[category] || category.charAt(0).toUpperCase() + category.slice(1);
+
+function getReadTime(body: string) {
+  const words = body.split(/\s+/).length;
+  return Math.ceil(words / 200);
+}
+---
+
+<BaseLayout title={`${categoryLabel} | Blog`} description={`Blog posts about ${categoryLabel.toLowerCase()}`}>
+  <!-- Hero Section -->
+  <header class="pt-40 pb-20 border-b-5 border-black bg-white bg-grid-pattern bg-[size:40px_40px]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl">
+        <a href="/blog" class="inline-flex items-center gap-2 font-mono font-bold text-sm mb-6 hover:text-tf-orange transition-colors">
+          <ArrowLeft size={16} />
+          ALL POSTS
+        </a>
+        <div class="inline-block bg-tf-orange text-black px-4 py-2 font-mono font-bold text-sm mb-6 uppercase tracking-wider ml-4">
+          {posts.length} {posts.length === 1 ? 'POST' : 'POSTS'}
+        </div>
+        <h1 class="text-5xl sm:text-7xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-8">
+          {categoryLabel}
+        </h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- Posts -->
+  <section class="py-32 border-t-5 border-black bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <a href={"/blog/" + post.slug} class="group">
+            <article class="border-5 border-black p-6 bg-white hover:border-tf-orange hover:-translate-y-1 hover:shadow-neo transition-all h-full flex flex-col">
+              <div class="flex items-center gap-3 mb-4">
+                <Badge variant="orange">{post.data.category.toUpperCase()}</Badge>
+                <span class="font-mono text-xs text-gray-500 flex items-center gap-1">
+                  <Clock size={12} />
+                  {getReadTime(post.body)} min
+                </span>
+              </div>
+              <h2 class="text-xl font-black uppercase mb-3 group-hover:text-tf-orange transition-colors">
+                {post.data.title}
+              </h2>
+              <p class="font-mono text-sm text-gray-600 mb-4 flex-1 line-clamp-3">{post.data.description}</p>
+              <div class="flex items-center justify-between border-t-3 border-black pt-4">
+                <time class="font-mono text-xs text-gray-500 flex items-center gap-1" datetime={new Date(post.data.publishDate).toISOString()}>
+                  <Calendar size={12} />
+                  {new Date(post.data.publishDate).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                  })}
+                </time>
+                <span class="font-mono font-bold text-sm flex items-center gap-1 text-tf-orange">
+                  READ <ArrowRight size={14} />
+                </span>
+              </div>
+            </article>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

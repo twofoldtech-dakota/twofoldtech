@@ -1,0 +1,229 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Badge from '@/components/common/Badge.astro';
+import Button from '@/components/common/Button.astro';
+import { Calendar, Clock, User, ArrowLeft, ArrowRight } from 'lucide-react';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+// Get adjacent posts for navigation
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const sortedPosts = allPosts.sort((a, b) => 
+  new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+);
+const currentIndex = sortedPosts.findIndex(p => p.slug === post.slug);
+const prevPost = currentIndex < sortedPosts.length - 1 ? sortedPosts[currentIndex + 1] : null;
+const nextPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null;
+
+// Calculate read time (rough estimate)
+const words = post.body.split(/\s+/).length;
+const readTime = Math.ceil(words / 200);
+
+// Structured data for article
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.data.title,
+  "description": post.data.description,
+  "author": {
+    "@type": "Organization",
+    "name": post.data.author || "Twofold Tech"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Twofold Tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://twofold.tech/logo.png"
+    }
+  },
+  "datePublished": new Date(post.data.publishDate).toISOString(),
+  "dateModified": new Date(post.data.publishDate).toISOString(),
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://twofold.tech/blog/${post.slug}`
+  },
+  "keywords": post.data.tags?.join(", ") || ""
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://twofold.tech"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://twofold.tech/blog"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": post.data.title,
+      "item": `https://twofold.tech/blog/${post.slug}`
+    }
+  ]
+};
+---
+
+<BaseLayout 
+  title={post.data.title} 
+  description={post.data.description}
+  article={true}
+  publishDate={post.data.publishDate}
+  author={post.data.author}
+>
+  <!-- Article Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+
+  <article class="pt-40 pb-20">
+    <!-- Header -->
+    <header class="border-b-5 border-black bg-white bg-grid-pattern bg-[size:40px_40px]">
+      <div class="container mx-auto px-4 pb-16">
+        <a href="/blog" class="inline-flex items-center gap-2 font-mono font-bold text-sm mb-8 hover:text-tf-orange transition-colors">
+          <ArrowLeft size={16} />
+          BACK TO BLOG
+        </a>
+        
+        <div class="max-w-4xl">
+          <div class="flex items-center gap-3 mb-6">
+            <Badge variant="orange">{post.data.category.toUpperCase()}</Badge>
+            <span class="font-mono text-sm text-gray-500 flex items-center gap-1">
+              <Clock size={14} />
+              {readTime} min read
+            </span>
+          </div>
+          
+          <h1 class="text-4xl md:text-6xl font-black uppercase leading-tight mb-6">
+            {post.data.title}
+          </h1>
+          
+          <p class="text-xl font-mono text-gray-600 mb-8">
+            {post.data.description}
+          </p>
+          
+          <div class="flex items-center gap-6 font-mono text-sm text-gray-500">
+            <span class="flex items-center gap-2">
+              <User size={16} />
+              {post.data.author}
+            </span>
+            <span class="flex items-center gap-2">
+              <Calendar size={16} />
+              <time datetime={new Date(post.data.publishDate).toISOString()}>
+                {new Date(post.data.publishDate).toLocaleDateString('en-US', { 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </time>
+            </span>
+          </div>
+          
+          {post.data.tags && post.data.tags.length > 0 && (
+            <div class="flex flex-wrap gap-2 mt-6">
+              {post.data.tags.map((tag) => (
+                <span class="px-3 py-1 bg-gray-100 border-2 border-black font-mono text-xs uppercase">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <div class="container mx-auto px-4 py-16">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none
+          prose-headings:font-black prose-headings:uppercase prose-headings:tracking-tight
+          prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b-4 prose-h2:border-black prose-h2:pb-4
+          prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
+          prose-p:font-mono prose-p:text-gray-700 prose-p:leading-relaxed
+          prose-a:text-tf-orange prose-a:font-bold prose-a:no-underline hover:prose-a:underline
+          prose-strong:font-black
+          prose-code:bg-transparent prose-code:px-0 prose-code:py-0 prose-code:border-0 prose-code:font-mono prose-code:text-gray-900
+          prose-pre:bg-white prose-pre:border-l-4 prose-pre:border-l-tf-orange prose-pre:pl-6 prose-pre:py-4 prose-pre:text-gray-800 prose-pre:rounded-none prose-pre:shadow-sm
+          prose-blockquote:border-l-4 prose-blockquote:border-tf-orange prose-blockquote:bg-gray-50 prose-blockquote:py-4 prose-blockquote:px-6
+          prose-table:border-4 prose-table:border-black
+          prose-th:bg-black prose-th:text-white prose-th:font-mono prose-th:uppercase prose-th:px-4 prose-th:py-2
+          prose-td:border-2 prose-td:border-black prose-td:px-4 prose-td:py-2 prose-td:font-mono
+          prose-ul:list-none prose-ul:pl-0
+          prose-li:relative prose-li:pl-6 prose-li:before:content-['→'] prose-li:before:absolute prose-li:before:left-0 prose-li:before:text-tf-orange prose-li:before:font-bold
+        ">
+          <Content />
+        </div>
+      </div>
+    </div>
+
+    <!-- Post Navigation -->
+    <nav class="border-t-5 border-black bg-gray-100" aria-label="Post navigation">
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {prevPost ? (
+            <a href={"/blog/" + prevPost.slug} class="group" rel="prev">
+              <div class="border-4 border-black p-6 bg-white hover:border-tf-orange transition-colors h-full">
+                <span class="font-mono text-xs text-gray-500 flex items-center gap-1 mb-2">
+                  <ArrowLeft size={12} />
+                  PREVIOUS
+                </span>
+                <h3 class="font-black uppercase group-hover:text-tf-orange transition-colors">
+                  {prevPost.data.title}
+                </h3>
+              </div>
+            </a>
+          ) : <div />}
+          
+          {nextPost ? (
+            <a href={"/blog/" + nextPost.slug} class="group md:text-right" rel="next">
+              <div class="border-4 border-black p-6 bg-white hover:border-tf-orange transition-colors h-full">
+                <span class="font-mono text-xs text-gray-500 flex items-center gap-1 mb-2 md:justify-end">
+                  NEXT
+                  <ArrowRight size={12} />
+                </span>
+                <h3 class="font-black uppercase group-hover:text-tf-orange transition-colors">
+                  {nextPost.data.title}
+                </h3>
+              </div>
+            </a>
+          ) : <div />}
+        </div>
+      </div>
+    </nav>
+
+    <!-- CTA -->
+    <section class="border-t-5 border-black bg-black text-white py-16">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-black uppercase mb-6">Want to Learn More?</h2>
+        <p class="font-mono text-gray-300 mb-8 max-w-xl mx-auto">
+          Explore our products or get in touch to discuss your project.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/studio" class="text-lg px-8 py-4">
+            EXPLORE STUDIO
+          </Button>
+          <Button href="/contact" variant="outline" class="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-black">
+            CONTACT US
+          </Button>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

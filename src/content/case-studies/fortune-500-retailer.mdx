@@ -1,0 +1,102 @@
+---
+title: 'Fortune 500 Retailer Migrates 2M Items to XM Cloud'
+description: 'How a major retail brand completed their Sitecore XP to XM Cloud migration in 8 weeks using ALLOY.'
+client: 'Fortune 500 Retailer'
+industry: 'Retail & E-commerce'
+challenge: 'The client had a 10-year-old Sitecore XP implementation with over 2 million content items, 500+ custom templates, and complex multi-site architecture. Previous migration attempts using traditional tools had failed due to memory issues and processing time.'
+solution: 'We deployed ALLOY to handle the content migration, processing the entire content tree in parallel with zero data loss. Custom template mappings were created to transform XP structures to XM Cloud format.'
+results:
+  - metric: '2M+'
+    value: 'Items Migrated'
+    description: 'Content items successfully migrated with full version history'
+  - metric: '8 weeks'
+    value: 'Total Duration'
+    description: 'From kickoff to production launch'
+  - metric: '90%'
+    value: 'Faster Processing'
+    description: 'Compared to traditional migration tools'
+  - metric: '0'
+    value: 'Data Loss'
+    description: 'Complete integrity verified post-migration'
+technologies:
+  - 'ALLOY CLI'
+  - 'Sitecore XM Cloud'
+  - 'Next.js'
+  - 'Vercel'
+  - 'Azure DevOps'
+publishDate: 2025-11-15
+testimonial:
+  quote: 'We had tried twice before with other tools and vendors. ALLOY processed in hours what previously took days, and we had zero data integrity issues.'
+  author: 'Director of Digital Technology'
+  role: 'Fortune 500 Retailer'
+draft: false
+---
+
+## The Challenge
+
+After a decade on Sitecore XP, this Fortune 500 retailer faced mounting pressure to modernize. Their monolithic architecture was:
+
+- Expensive to maintain with dedicated infrastructure
+- Slow to deploy with 4-hour release windows
+- Difficult to scale during peak shopping periods
+- Blocking adoption of modern front-end technologies
+
+Previous migration attempts had failed. Traditional tools couldn't handle the scale—2 million content items with complex relationships, version history, and workflow states.
+
+## Our Approach
+
+### Phase 1: Deep Assessment
+
+We began with a comprehensive audit using ALLOY's analysis mode:
+
+```bash
+alloy analyze --source ./master.db --report detailed
+```
+
+This revealed:
+- 2,147,832 content items
+- 523 custom templates
+- 12 distinct sites
+- 8 languages
+- Complex inheritance patterns
+
+### Phase 2: Template Mapping
+
+We created a template mapping configuration that handled:
+- Template consolidation (523 → 180 templates)
+- Field type conversions
+- Computed field recreation
+- Relationship preservation
+
+### Phase 3: Parallel Migration
+
+ALLOY processed the content tree using all available cores:
+
+- **Extraction**: 2.1M items in 47 minutes
+- **Transformation**: Template mapping in 23 minutes  
+- **Validation**: Integrity checks in 12 minutes
+- **Import**: XM Cloud ingestion in 3 hours
+
+### Phase 4: Front-End Modernization
+
+With content in XM Cloud, we built a Next.js front-end:
+- Component library matching existing designs
+- Optimized for Core Web Vitals
+- Deployed to Vercel Edge Network
+
+## The Results
+
+The migration completed in 8 weeks—4x faster than industry average for implementations of this scale.
+
+Post-migration metrics:
+- **Page load time**: 4.2s → 1.1s
+- **Time to first byte**: 800ms → 120ms
+- **Deployment frequency**: Weekly → Daily
+- **Infrastructure cost**: 40% reduction
+
+## Key Learnings
+
+1. **Parallel processing is essential** at scale—sequential migration is not viable
+2. **Template consolidation** should happen during migration, not after
+3. **Validation at every step** prevents issues from compounding
+4. **Memory safety matters**—ALLOY's Rust foundation eliminated crash risks

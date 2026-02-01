@@ -1,0 +1,72 @@
+# TWOFOLD TECH - Engineering Manifesto
+# Version: 1.0
+# Last Updated: 2026-02-01
+
+title: "Engineering for Architectural Integrity"
+
+preamble: >
+  Complexity is the natural state of the enterprise. Without rigorous
+  orchestration, that complexity turns into terminal technical debt.
+
+declaration: >
+  At Twofold Tech, we are dedicated to the science of software modernization.
+
+positioning: >
+  We operate as an engineering lab focused on the research and development
+  of high-performance systems. We believe that the future of the enterprise
+  depends on three pillars of integrity:
+
+pillars:
+
+  - name: Hardened Architecture
+    principle: "Stability is a physical requirement of software."
+    statement: >
+      We research the methods and abstractions needed to stabilize legacy
+      .NET and Sitecore environments before they transition to the cloud.
+
+  - name: Orchestrated Intelligence
+    principle: "Generative development requires a supervisor."
+    statement: >
+      We build STUDIO—the orchestration framework that ensures agentic AI
+      follows strict, senior-level architectural logic.
+
+  - name: Performance Tooling
+    principle: "When standard utilities fail to meet enterprise throughput requirements, we build our own."
+    statement: >
+      ALLOY is the result of our research into high-concurrency Rust engines
+      for precision data translation.
+
+closing: >
+  We don't just study platforms; we engineer the autonomous frameworks
+  that allow them to endure.
+
+# Rendered manifesto for content use
+full_text: |
+  ENGINEERING FOR ARCHITECTURAL INTEGRITY.
+
+  Complexity is the natural state of the enterprise. Without rigorous
+  orchestration, that complexity turns into terminal technical debt.
+
+  At Twofold Tech, we are dedicated to the science of software modernization.
+
+  We operate as an engineering lab focused on the research and development
+  of high-performance systems. We believe that the future of the enterprise
+  depends on three pillars of integrity:
+
+  HARDENED ARCHITECTURE
+  Stability is a physical requirement of software. We research the methods
+  and abstractions needed to stabilize legacy .NET and Sitecore environments
+  before they transition to the cloud.
+
+  ORCHESTRATED INTELLIGENCE
+  Generative development requires a supervisor. We build STUDIO—the
+  orchestration framework that ensures agentic AI follows strict,
+  senior-level architectural logic.
+
+  PERFORMANCE TOOLING
+  When standard utilities fail to meet enterprise throughput requirements,
+  we build our own. ALLOY is the result of our research into high-concurrency
+  Rust engines for precision data translation.
+
+  We don't just study platforms; we engineer the autonomous frameworks
+  that allow them to endure.

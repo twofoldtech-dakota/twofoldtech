@@ -1,0 +1,82 @@
+# TWOFOLD TECH - Objection Handling
+# Version: 1.1
+# Last Updated: 2026-02-01
+
+objections:
+
+  - objection: "We already use Copilot/ChatGPT for code generation."
+    category: Competition
+    response: >
+      Consumer AI tools generate code without verification. STUDIO adds
+      the traceability and correctness layer that enterprise systems require.
+      AI builds the code—STUDIO ensures it's correct.
+    proof_points:
+      - Requirements-to-implementation traceability
+      - Plan-first workflow prevents architectural drift
+      - Deterministic rollback capabilities
+
+  - objection: "We'll build our own orchestration layer."
+    category: Build vs. Buy
+    response: >
+      Building production-grade orchestration takes 12-18 months of dedicated
+      engineering. STUDIO provides that foundation immediately, with open-box
+      architecture you can customize and extend.
+    proof_points:
+      - Open-box architecture for customization
+      - Documented extension points
+      - Focus your team on domain-specific logic
+
+  - objection: "How is this different from other AI dev tools?"
+    category: Differentiation
+    response: >
+      Most AI tools focus on generation speed. STUDIO focuses on correctness.
+      We trace every change to its requirement, enforce quality gates, and
+      provide deterministic rollback. Generation without verification is
+      technical debt at scale.
+    proof_points:
+      - Plan-then-build workflow
+      - Quality gates before execution
+      - Full audit trail
+
+  - objection: "This seems like research, not production-ready software."
+    category: Maturity
+    response: >
+      Our products emerge from research but ship as production-grade tooling.
+      ALLOY powers high-concurrency modernization in production environments.
+      STUDIO is used for enterprise development workflows.
+    proof_points:
+      - Production deployments
+      - Enterprise customer references
+      - Performance benchmarks
+
+  - objection: "We're not ready for this level of change."
+    category: Timing
+    response: >
+      STUDIO integrates with existing workflows—it doesn't replace them.
+      Start with a single team or project. The plan-first approach reduces
+      risk, not increases it.
+    proof_points:
+      - Incremental adoption path
+      - Existing toolchain integration
+      - Rollback capabilities for safety
+
+positioning_against:
+
+  - competitor: "Consumer AI Tools (Copilot, ChatGPT)"
+    our_advantage: >
+      Verification and traceability. Consumer tools generate without
+      validating correctness or maintaining audit trails.
+    their_strength: >
+      Ubiquitous, low barrier to entry, familiar interface.
+    counter: >
+      Familiarity without correctness creates technical debt at scale.
+
+  - competitor: "No-Code/Low-Code Platforms"
+    our_advantage: >
+      Full code ownership and visibility. No platform lock-in.
+      Industrial-grade performance characteristics.
+    their_strength: >
+      Fast prototyping, lower technical barrier.
+    counter: >
+      Enterprise systems require inspectable, auditable code—not
+      proprietary abstractions.

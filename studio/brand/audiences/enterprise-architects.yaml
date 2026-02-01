@@ -1,0 +1,51 @@
+# PRIMARY AUDIENCE: Enterprise Systems Architects
+# Priority: 1 (Primary)
+# Last Updated: 2026-02-01
+
+profile:
+  title: Enterprise Systems Architects & Technical Decision Makers
+  priority: primary
+
+demographics:
+  titles:
+    - Chief Architect
+    - Principal Architect
+    - VP of Engineering
+    - CTO
+    - Director of Platform Engineering
+  company_size: Enterprise (1000+ employees)
+  industries:
+    - Financial Services
+    - Healthcare
+    - Manufacturing
+    - Government
+
+responsibilities:
+  - Define and enforce architectural standards
+  - Evaluate build vs. buy decisions
+  - Ensure system reliability and scalability
+  - Manage technical debt and modernization initiatives
+
+pain_points:
+  - Legacy system constraints blocking modernization
+  - AI tooling that produces inconsistent, unauditable code
+  - Vendor lock-in and opacity in critical systems
+  - Difficulty maintaining traceability across complex systems
+
+goals:
+  - Achieve architectural consistency across teams
+  - Implement auditable, traceable development workflows
+  - Reduce time-to-production for high-stakes systems
+  - Maintain system integrity during modernization
+
+messaging_focus:
+  - Traceability and auditability
+  - Architectural correctness
+  - System stability under load
+  - Open-box visibility into AI-generated changes
+
+channels:
+  - Technical conferences (QCon, InfoQ)
+  - Architecture review boards
+  - Technical RFP processes
+  - Peer recommendations

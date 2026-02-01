@@ -1,0 +1,38 @@
+{
+  "name": "twofold-tech",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Twofold Tech - Enterprise Software Research & Modernization Lab",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "lint": "eslint src --ext .ts,.tsx,.astro",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "astro": "^5.0.0",
+    "@astrojs/react": "^4.0.0",
+    "@astrojs/tailwind": "^6.0.0",
+    "@astrojs/vercel": "^8.0.0",
+    "@astrojs/mdx": "^4.0.0",
+    "@astrojs/sitemap": "^3.0.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "tailwindcss": "^3.4.0",
+    "lucide-react": "^0.400.0",
+    "clsx": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@tailwindcss/typography": "^0.5.0",
+    "@tailwindcss/container-queries": "^0.1.0",
+    "typescript": "^5.0.0",
+    "prettier": "^3.0.0",
+    "prettier-plugin-astro": "^0.14.0"
+  }
+}

@@ -1,0 +1,46 @@
+# SECONDARY AUDIENCE: Senior Software Engineers
+# Priority: 2 (Secondary)
+# Last Updated: 2026-02-01
+
+profile:
+  title: Senior Software Engineers (Agentic Workflow Users)
+  priority: secondary
+
+demographics:
+  titles:
+    - Senior Software Engineer
+    - Staff Engineer
+    - Tech Lead
+    - Platform Engineer
+  company_size: Mid-market to Enterprise
+  experience: 7+ years
+
+responsibilities:
+  - Implement and maintain production systems
+  - Evaluate and integrate development tooling
+  - Review AI-generated code for correctness
+  - Mentor junior engineers on best practices
+
+pain_points:
+  - AI code generation without verification mechanisms
+  - Context loss across long development sessions
+  - Difficulty tracing changes back to requirements
+  - Tooling that doesn't integrate with existing workflows
+
+goals:
+  - Increase development velocity without sacrificing quality
+  - Maintain code correctness in AI-assisted workflows
+  - Reduce cognitive load of context management
+  - Achieve deterministic, reproducible builds
+
+messaging_focus:
+  - Plan-then-build workflow correctness
+  - Requirements traceability
+  - Rollback and recovery capabilities
+  - Integration with existing toolchains
+
+channels:
+  - GitHub and open source communities
+  - Technical blogs and documentation
+  - Engineering podcasts
+  - Hacker News / Lobsters

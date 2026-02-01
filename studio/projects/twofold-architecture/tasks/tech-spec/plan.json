@@ -1,0 +1,128 @@
+{
+  "id": "tech-spec-001",
+  "goal": "Design high-performance technical architecture for twofold.tech Enterprise R&D Lab website",
+  "created_at": "2026-02-01T10:30:00Z",
+  "estimated_complexity": "moderate",
+  "analysis": {
+    "summary": "Create comprehensive technical specification documenting Astro 5.0 architecture with Neo-Brutalist design system, optimized for Lighthouse 100/100 scores and Sitecore/.NET SEO dominance",
+    "inputs": [
+      "User requirements for Lighthouse dominance, island hydration, SEO supremacy",
+      "Stack: Astro 5.0+, Tailwind 4.0, Motion, View Transitions API, MDX",
+      "Deployment target: Vercel Edge with ISR",
+      "Brand: Neo-Brutalist with #FF5F1F orange, 5px borders"
+    ],
+    "outputs": [
+      "docs/TECHNICAL-SPECIFICATION.md - Complete architecture document",
+      "docs/DIRECTORY-STRUCTURE.md - Astro-optimized file organization",
+      "tailwind.config.ts - Twofold brand DNA encoded",
+      "docs/SEO-STRATEGY.md - Sitecore keyword domination plan"
+    ],
+    "constraints": [
+      "Documentation only - no STUDIO/ALLOY product code implementation",
+      "Website showcases products but does not embed them",
+      "Must achieve 100/100 Lighthouse scores by design",
+      "Zero client-side JS by default (island architecture)"
+    ],
+    "risks": [
+      {
+        "description": "Tailwind 4.0 API may have breaking changes from 3.x",
+        "mitigation": "Document with latest stable API, note version requirements"
+      },
+      {
+        "description": "View Transitions API browser support",
+        "mitigation": "Document progressive enhancement fallback strategy"
+      }
+    ],
+    "assumptions": [
+      "Astro 5.0+ with Content Layer API is stable",
+      "Vercel Edge deployment with ISR is target platform",
+      "STUDIO and ALLOY product pages are informational, not functional"
+    ]
+  },
+  "steps": [
+    {
+      "id": "step_1",
+      "name": "Create Technical Specification Document",
+      "action": "Write comprehensive TECHNICAL-SPECIFICATION.md covering architecture overview, component strategy, performance targets, and technology decisions",
+      "rationale": "Core deliverable that defines the entire system architecture",
+      "inputs": ["User requirements", "Stack decisions"],
+      "outputs": ["docs/TECHNICAL-SPECIFICATION.md"],
+      "success_criteria": [
+        "Document covers all architectural requirements",
+        "Island hydration strategy clearly defined",
+        "Performance targets documented with implementation approach",
+        "Technology stack justified with rationale"
+      ],
+      "depends_on": []
+    },
+    {
+      "id": "step_2",
+      "name": "Create Directory Structure Document",
+      "action": "Write DIRECTORY-STRUCTURE.md defining Astro-optimized project organization with Content Layer, components, and layouts",
+      "rationale": "Establishes file organization patterns for the implementation phase",
+      "inputs": ["Technical spec decisions"],
+      "outputs": ["docs/DIRECTORY-STRUCTURE.md"],
+      "success_criteria": [
+        "Structure supports Astro 5.0 Content Layer API",
+        "Clear separation of islands vs static components",
+        "MDX content organization defined",
+        "Asset and styling organization documented"
+      ],
+      "depends_on": ["step_1"]
+    },
+    {
+      "id": "step_3",
+      "name": "Create Tailwind Configuration",
+      "action": "Write tailwind.config.ts encoding Twofold brand DNA: Neo-Brutalist design tokens, #FF5F1F orange, 5px borders, shadow system",
+      "rationale": "Codifies brand identity into reusable design tokens",
+      "inputs": ["Brand requirements"],
+      "outputs": ["tailwind.config.ts"],
+      "success_criteria": [
+        "International Orange (#FF5F1F) defined as primary",
+        "5px border utilities configured",
+        "Neo-Brutalist shadow system defined",
+        "Typography scale established",
+        "Responsive breakpoints documented"
+      ],
+      "depends_on": ["step_1"]
+    },
+    {
+      "id": "step_4",
+      "name": "Create SEO Strategy Document",
+      "action": "Write SEO-STRATEGY.md defining keyword strategy, structured data approach, and content optimization for Sitecore/.NET topics",
+      "rationale": "Establishes search dominance strategy for target market",
+      "inputs": ["Target audience: Sitecore/.NET developers and enterprises"],
+      "outputs": ["docs/SEO-STRATEGY.md"],
+      "success_criteria": [
+        "Target keywords identified and prioritized",
+        "Schema.org structured data templates defined",
+        "OpenGraph/Twitter Card strategy documented",
+        "Sitemap and indexing approach specified",
+        "Content cluster strategy for thought leadership"
+      ],
+      "depends_on": ["step_1"]
+    }
+  ],
+  "checkpoints": [
+    {
+      "after_step": "step_1",
+      "name": "Core Architecture Defined",
+      "verification": ["Technical spec covers all required sections", "Architecture decisions are consistent"],
+      "rollback_to": null
+    },
+    {
+      "after_step": "step_4",
+      "name": "All Documentation Complete",
+      "verification": ["All 4 deliverables created", "Cross-references are consistent"],
+      "rollback_to": "step_1"
+    }
+  ],
+  "quality_gate": {
+    "checks": [
+      {"name": "All files exist", "required": true},
+      {"name": "Technical spec covers all requirements", "required": true},
+      {"name": "Tailwind config is valid TypeScript", "required": true},
+      {"name": "SEO strategy targets Sitecore keywords", "required": true}
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  number: string;
+  class?: string;
+}
+
+const { title, subtitle, number, class: className = '' } = Astro.props;
+---
+
+<div class={`mb-16 border-b-5 border-black pb-6 ${className}`}>
+  <div class="flex justify-between items-end">
+    <h2 class="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85] text-black">
+      {title}
+    </h2>
+    <span
+      class="text-7xl font-black text-transparent select-none hidden md:block"
+      style="-webkit-text-stroke: 2px black;"
+    >
+      {number}
+    </span>
+  </div>
+  {subtitle && (
+    <p class="font-mono mt-6 text-xl md:text-2xl max-w-3xl font-bold text-gray-700 uppercase">
+      {subtitle}
+    </p>
+  )}
+</div>

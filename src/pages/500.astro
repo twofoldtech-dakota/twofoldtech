@@ -1,0 +1,38 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Button from '@/components/common/Button.astro';
+import { ServerCrash, Home, RefreshCw } from 'lucide-react';
+---
+
+<BaseLayout title="500 - Server Error">
+  <main class="min-h-screen flex items-center justify-center bg-black text-white">
+    <div class="container mx-auto px-4 py-32 text-center">
+      <div class="max-w-2xl mx-auto">
+        <div class="inline-block bg-tf-orange border-5 border-white p-6 mb-8 shadow-[8px_8px_0px_#fff]">
+          <ServerCrash size={64} className="text-black" />
+        </div>
+        
+        <h1 class="text-8xl md:text-9xl font-black uppercase mb-4">500</h1>
+        
+        <div class="inline-block bg-tf-orange text-black px-4 py-2 font-mono font-bold text-lg mb-8 uppercase tracking-wider">
+          SERVER_ERROR
+        </div>
+        
+        <p class="text-xl font-mono text-gray-300 mb-12">
+          Something went wrong on our end. We've been notified and are working on it.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="/" class="text-lg px-8 py-4">
+            <Home size={20} className="mr-2" />
+            BACK TO HOME
+          </Button>
+          <Button variant="outline" onclick="location.reload()" class="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-black">
+            <RefreshCw size={20} className="mr-2" />
+            TRY AGAIN
+          </Button>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

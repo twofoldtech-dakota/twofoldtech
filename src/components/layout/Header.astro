@@ -1,0 +1,58 @@
+---
+import MobileMenu from '@/components/islands/react/MobileMenu';
+import { NAV_ITEMS } from '@/lib/constants/site';
+import { ChevronDown } from 'lucide-react';
+---
+
+<nav class="fixed top-0 left-0 w-full z-50 bg-white border-b-5 border-black">
+  <div class="container mx-auto px-4 h-24 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-4 relative z-10">
+      <div class="relative w-12 h-12 pointer-events-none">
+        <div class="absolute inset-0 bg-black translate-x-[4px] translate-y-[4px]"></div>
+        <div class="absolute inset-0 bg-tf-orange border-4 border-black flex items-center justify-center">
+          <span class="font-mono font-black text-xl">2F</span>
+        </div>
+      </div>
+      <span class="text-3xl font-black tracking-tighter uppercase hidden sm:block pointer-events-none">TWOFOLD</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <div class="hidden lg:flex gap-8">
+      {NAV_ITEMS.map((item) => (
+        item.children ? (
+          <div class="relative group">
+            <button class="font-bold text-base hover:text-tf-orange transition-colors relative flex items-center gap-1">
+              {item.label}
+              <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
+              <span class="absolute -bottom-1 left-0 w-0 h-1 bg-black transition-all group-hover:w-full"></span>
+            </button>
+            <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+              <div class="bg-white border-4 border-black shadow-neo min-w-[200px]">
+                {item.children.map((child) => (
+                  <a
+                    href={child.href}
+                    class="block px-4 py-3 font-mono font-bold text-sm hover:bg-tf-orange hover:text-black transition-colors border-b-2 border-black last:border-b-0"
+                  >
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        ) : (
+          <a
+            href={item.href}
+            class="font-bold text-base hover:text-tf-orange transition-colors relative group"
+          >
+            {item.label}
+            <span class="absolute -bottom-1 left-0 w-0 h-1 bg-black transition-all group-hover:w-full"></span>
+          </a>
+        )
+      ))}
+    </div>
+
+    <!-- Mobile Menu (React Island) -->
+    <MobileMenu client:media="(max-width: 1024px)" navItems={NAV_ITEMS} />
+  </div>
+</nav>

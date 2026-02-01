@@ -1,0 +1,73 @@
+---
+title: 'Announcing STUDIO Public Beta'
+description: 'After 18 months of development and private testing, STUDIO is now available in public beta. Here is what you need to know.'
+publishDate: 2026-01-07
+author: 'Twofold Tech'
+category: 'announcement'
+tags: ['studio', 'beta', 'launch', 'product']
+draft: false
+---
+
+## STUDIO is Now in Public Beta
+
+Today, we're excited to announce that STUDIO—our agentic orchestration platform—is now available in public beta.
+
+## What is STUDIO?
+
+STUDIO is an AI-powered development platform that uses a Tri-Agent Architecture to build enterprise software. Unlike traditional AI coding assistants that generate code without context, STUDIO:
+
+- **Plans before building**: Creates execution-ready plans validated against your architecture
+- **Validates continuously**: Runs tests and checks at every step
+- **Self-corrects**: Automatically fixes issues without human intervention
+- **Maintains integrity**: Ensures code adheres to your standards
+
+## What's New in the Beta
+
+### Memory System
+
+STUDIO now includes a persistent memory system that learns your preferences:
+
+```
+studio/memory/
+├── global.md      # Always-applied rules
+├── frontend.md    # Frontend-specific rules
+├── backend.md     # Backend-specific rules
+└── testing.md     # Testing requirements
+```
+
+Rules in memory are automatically embedded in every plan.
+
+### Quality Gate
+
+Every build now ends with a quality gate—a series of checks that determine whether the build meets your standards:
+
+- **STRONG**: All checks pass
+- **SOUND**: Required checks pass, optional warnings
+- **BLOCKED**: Required check failed, fixes needed
+
+### Interactive Mode
+
+New interactive mode lets you approve each step before execution:
+
+```bash
+/build:interactive "Add user authentication"
+```
+
+## Getting Started
+
+1. **Request access** at [twofold.tech/contact](/contact)
+2. **Install the CLI** following our setup guide
+3. **Initialize your project** with `studio init`
+4. **Start building** with `/build "your task"`
+
+## Pricing
+
+During beta, STUDIO is free for teams up to 5 developers. Enterprise pricing will be announced at general availability.
+
+## Feedback
+
+We want your feedback. Report issues and feature requests at our GitHub repository or email us at feedback@twofold.tech.
+
+---
+
+The future of software development is autonomous. Welcome to STUDIO.

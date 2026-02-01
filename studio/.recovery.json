@@ -1,0 +1,13 @@
+{
+  "saved_at": "2026-02-01T20:09:23Z",
+  "task_dir": "studio/projects/twofold-architecture/tasks/tech-spec/",
+  "task_id": "unknown",
+  "goal": "Design high-performance technical architecture for twofold.tech Enterprise R&D Lab website",
+  "status": "COMPLETE",
+  "progress": {
+    "current_step": 0,
+    "total_steps": 4,
+    "completed_steps": ""
+  },
+  "memory_rules_file": "studio/memory/global.md"
+}

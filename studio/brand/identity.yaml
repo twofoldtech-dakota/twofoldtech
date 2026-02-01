@@ -1,0 +1,55 @@
+# TWOFOLD TECH - Brand Identity
+# Version: 1.1
+# Last Updated: 2026-02-01
+
+company:
+  name: Twofold Tech
+  tagline: "Industrial-Grade Software Research"
+
+mission: >
+  To advance the state of enterprise software through high-performance
+  engineering research and autonomous orchestration.
+
+vision: >
+  To define the architectural standards for the next generation of
+  self-evolving digital systems.
+
+values:
+  - name: Industrial Clarity
+    description: >
+      We prioritize precision and transparency in every system we build.
+      No black boxes. No ambiguity. Every decision is traceable.
+
+  - name: Plan-First Execution
+    description: >
+      Architectural integrity begins before the first line of code.
+      We design systems that are correct by construction.
+
+  - name: Open-Box Engineering
+    description: >
+      Our systems are inspectable, auditable, and comprehensible.
+      We reject opacity in favor of traceability.
+
+positioning:
+  category: Enterprise Software Research & Modernization Lab
+
+  differentiator: >
+    We focus exclusively on the R&D of high-concurrency tooling (ALLOY)
+    and agentic orchestration platforms (STUDIO).
+
+  market_position: >
+    Twofold Tech operates at the intersection of research and production—
+    building hardened systems that define new architectural standards.
+
+products:
+  - name: STUDIO
+    description: Agentic orchestration platform for AI-assisted development
+    tagline: "AI builds code. STUDIO makes sure it's correct."
+
+  - name: ALLOY
+    description: High-concurrency modernization tooling powered by Rust
+    tagline: "High-fidelity modernization research powered by Rust."
+
+  - name: Advisory
+    description: Technical consulting for architectural hardening
+    tagline: "Technical deep-dives into architectural hardening and system integrity."

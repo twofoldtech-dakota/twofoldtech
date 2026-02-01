@@ -1,0 +1,48 @@
+---
+import { Check, X } from 'lucide-react';
+
+const features = [
+  { label: 'Context Awareness', ai: true, studio: true },
+  { label: 'Architectural Planning', ai: false, studio: true },
+  { label: 'Constraint Validation', ai: false, studio: true },
+  { label: 'Self-Correction Loop', ai: false, studio: true },
+  { label: 'Unit Test Generation', ai: true, studio: true },
+  { label: 'Test-Driven Implementation', ai: false, studio: true },
+];
+---
+
+<div class="bg-white border-5 border-black shadow-neo p-6 w-full">
+  <h3 class="text-2xl font-black uppercase mb-6 flex items-center gap-2">
+    <span class="bg-black text-white px-2">VS</span> Unmanaged AI
+  </h3>
+
+  <div class="grid grid-cols-12 font-mono text-xs font-bold border-b-4 border-black pb-2 mb-2">
+    <div class="col-span-6 text-gray-500">FEATURE</div>
+    <div class="col-span-3 text-center text-gray-400">COPILOTS</div>
+    <div class="col-span-3 text-center text-tf-orange bg-black py-1">
+      STUDIO
+    </div>
+  </div>
+
+  <div class="flex flex-col">
+    {features.map((feature) => (
+      <div class="grid grid-cols-12 border-b-2 border-gray-200 last:border-0 font-mono text-sm py-3">
+        <div class="col-span-6 font-bold flex items-center">{feature.label}</div>
+        <div class="col-span-3 flex justify-center items-center border-l-2 border-gray-200 text-gray-400">
+          {feature.ai ? <Check size={18} className="text-red-500" /> : <X size={18} />}
+        </div>
+        <div class="col-span-3 flex justify-center items-center border-l-2 border-black bg-orange-50 text-black font-bold">
+          {feature.studio ? <Check size={20} /> : <X size={20} />}
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div class="mt-6 pt-4 border-t-4 border-black">
+    <p class="font-mono text-xs leading-relaxed">
+      <strong class="bg-tf-orange text-black px-1">THE VERDICT:</strong>{' '}
+      Standard AI writes code. STUDIO engineers systems. We eliminate the
+      "Review Tax" of fixing AI hallucinations.
+    </p>
+  </div>
+</div>

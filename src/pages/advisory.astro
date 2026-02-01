@@ -1,0 +1,179 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Button from '@/components/common/Button.astro';
+import SectionHeader from '@/components/common/SectionHeader.astro';
+import Badge from '@/components/common/Badge.astro';
+import { Map, Layers, Cpu, Database, CheckSquare, ArrowRight, Clock } from 'lucide-react';
+import {
+  ADVISORY_META,
+  ADVISORY_SERVICES,
+  ENGAGEMENT_MODELS,
+  ADVISORY_METRICS,
+} from '@/lib/constants/advisory';
+
+const iconMap: Record<string, any> = {
+  map: Map,
+  layers: Layers,
+  cpu: Cpu,
+  database: Database,
+};
+
+const processSteps = ['ASSESS', 'STRATEGIZE', 'EXECUTE', 'OPTIMIZE'];
+---
+
+<BaseLayout title={ADVISORY_META.title} description={ADVISORY_META.description}>
+  <!-- Hero Section -->
+  <header class="pt-40 pb-20 border-b-5 border-black bg-white bg-grid-pattern bg-[size:40px_40px]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl">
+        <div class="inline-block bg-black text-white px-4 py-2 font-mono font-bold text-sm mb-6 uppercase tracking-wider">
+          CONSULTING SERVICES
+        </div>
+        <h1 class="text-5xl sm:text-7xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-8">
+          {ADVISORY_META.title}
+        </h1>
+        <p class="text-2xl md:text-3xl font-mono font-bold text-tf-orange mb-6 uppercase">
+          {ADVISORY_META.tagline}
+        </p>
+        <p class="text-xl font-mono text-gray-700 max-w-3xl mb-10">
+          {ADVISORY_META.description}
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <Button href="/contact" class="text-xl px-10 py-5">
+            SCHEDULE CONSULTATION
+          </Button>
+          <Button href="#services" variant="outline" class="text-xl px-10 py-5">
+            VIEW SERVICES
+          </Button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Metrics Bar -->
+  <section class="py-16 border-t-5 border-black bg-tf-orange">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {ADVISORY_METRICS.map((metric) => (
+          <div class="text-center">
+            <p class="text-5xl md:text-6xl font-black">{metric.value}</p>
+            <p class="font-mono font-bold text-sm mt-2">{metric.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-32 border-t-5 border-black bg-white">
+    <div class="container mx-auto px-4">
+      <SectionHeader
+        number="01"
+        title="ADVISORY SERVICES"
+        subtitle="Specialized consulting for enterprise modernization and digital transformation."
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {ADVISORY_SERVICES.map((service) => {
+          const IconComponent = iconMap[service.icon];
+          return (
+            <div class="border-5 border-black p-8 shadow-neo hover:-translate-y-1 hover:shadow-[12px_12px_0px_#000] transition-all bg-white">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="bg-tf-orange p-3 border-3 border-black">
+                  {IconComponent && <IconComponent size={28} className="text-black" />}
+                </div>
+                <h3 class="text-2xl font-black uppercase">{service.title}</h3>
+              </div>
+              <p class="font-mono text-gray-700 mb-6">{service.description}</p>
+              <div class="border-t-3 border-black pt-6">
+                <p class="font-mono font-bold text-sm uppercase mb-4 text-tf-orange">Deliverables:</p>
+                <ul class="space-y-2">
+                  {service.deliverables.map((item) => (
+                    <li class="flex items-start gap-2 font-mono text-sm">
+                      <CheckSquare size={16} className="mt-1 flex-shrink-0 text-tf-orange" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Engagement Models -->
+  <section class="py-32 border-t-5 border-black bg-gray-100">
+    <div class="container mx-auto px-4">
+      <SectionHeader
+        number="02"
+        title="ENGAGEMENT MODELS"
+        subtitle="Flexible partnerships designed to fit your needs."
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-5 border-black bg-white">
+        {ENGAGEMENT_MODELS.map((model, idx) => (
+          <div class={`p-8 ${idx < ENGAGEMENT_MODELS.length - 1 ? 'border-b-5 md:border-b-0 md:border-r-5 border-black' : ''}`}>
+            <div class="flex items-center gap-2 mb-4 text-tf-orange">
+              <Clock size={20} />
+              <span class="font-mono font-bold text-sm">{model.duration}</span>
+            </div>
+            <h3 class="text-3xl font-black uppercase mb-4">{model.title}</h3>
+            <p class="font-mono text-gray-600 mb-6">{model.description}</p>
+            <div class="bg-black text-white px-4 py-3">
+              <p class="font-mono text-xs uppercase text-gray-400 mb-1">Best For:</p>
+              <p class="font-mono text-sm">{model.bestFor}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="py-32 border-t-5 border-black bg-black text-white">
+    <div class="container mx-auto px-4">
+      <div class="mb-16 border-b-2 border-white/30 pb-6">
+        <h2 class="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85]">
+          OUR APPROACH
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        {processSteps.map((step, idx) => (
+          <div class="relative">
+            <div class="bg-tf-orange text-black w-12 h-12 flex items-center justify-center font-mono font-black text-xl mb-4">
+              {String(idx + 1).padStart(2, '0')}
+            </div>
+            <h3 class="text-2xl font-black uppercase mb-2">{step}</h3>
+            {idx < 3 && (
+              <ArrowRight className="hidden md:block absolute top-4 -right-4 text-tf-orange" size={24} />
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-32 border-t-5 border-black bg-tf-orange">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl md:text-6xl font-black uppercase mb-8">
+        Ready to Transform?
+      </h2>
+      <p class="font-mono text-xl font-bold mb-10 max-w-2xl mx-auto">
+        Schedule a consultation to discuss your modernization challenges and explore how we can help.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button href="/contact" variant="secondary" class="text-xl px-12 py-5">
+          SCHEDULE CONSULTATION
+        </Button>
+        <Button href="/studio" variant="outline" class="text-xl px-12 py-5">
+          EXPLORE STUDIO
+        </Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

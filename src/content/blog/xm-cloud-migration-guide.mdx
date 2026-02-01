@@ -1,0 +1,123 @@
+---
+title: 'The Definitive Guide to Sitecore XM Cloud Migration'
+description: 'A comprehensive walkthrough of migrating from Sitecore XP to XM Cloud, including data strategies, content architecture, and performance optimization.'
+publishDate: 2026-01-14
+author: 'Twofold Tech'
+category: 'tutorial'
+tags: ['sitecore', 'xm-cloud', 'migration', 'headless']
+draft: false
+---
+
+## Introduction
+
+Migrating from Sitecore XP to XM Cloud isn't just a platform upgrade—it's an architectural transformation. This guide covers the key considerations and strategies for a successful migration.
+
+## Understanding the Shift
+
+### From Monolith to Composable
+
+Sitecore XP is a monolithic platform where content management, delivery, and personalization are tightly coupled. XM Cloud separates these concerns:
+
+```
+SITECORE XP (Monolith)
+├── Content Management
+├── Content Delivery
+├── xDB Analytics
+├── Personalization
+└── Marketing Automation
+
+XM CLOUD (Composable)
+├── Content Management (XM Cloud)
+├── Content Delivery (Edge/CDN)
+├── Analytics (Sitecore CDP or third-party)
+├── Personalization (Sitecore Personalize)
+└── Marketing (Sitecore Send or third-party)
+```
+
+### From .NET Rendering to Headless
+
+XM Cloud requires a headless front-end. Your rendering logic moves from Razor views to a JavaScript framework:
+
+- **Next.js** (recommended by Sitecore)
+- **Astro** (for static-heavy sites)
+- **Remix** (for dynamic applications)
+
+## Migration Phases
+
+### Phase 1: Assessment
+
+Before migrating, audit your current implementation:
+
+1. **Content inventory**: How many items? What templates?
+2. **Custom code audit**: What pipelines and processors exist?
+3. **Integration mapping**: What systems connect to Sitecore?
+4. **Personalization rules**: What rules need to migrate to CDP?
+
+### Phase 2: Content Architecture
+
+XM Cloud uses a different content structure. Key changes:
+
+- **Headless SXA**: Sites are configured differently
+- **Component mapping**: Renderings become JSON-based components
+- **Media handling**: Media library items need CDN configuration
+
+### Phase 3: Data Migration
+
+This is where ALLOY shines. A typical migration workflow:
+
+```bash
+# Extract content from XP
+alloy extract --source ./master.db --output ./content
+
+# Transform to XM Cloud format
+alloy transform --input ./content --mapping ./template-map.json
+
+# Import to XM Cloud
+alloy import --target xmcloud --project your-project
+```
+
+### Phase 4: Front-End Development
+
+Build your headless front-end:
+
+1. Set up Next.js with Sitecore JSS
+2. Create component mappings
+3. Implement layout service integration
+4. Configure preview and editing modes
+
+### Phase 5: Testing & Optimization
+
+- **Content verification**: Ensure all content migrated correctly
+- **Link validation**: Check internal links and media references
+- **Performance testing**: Validate Core Web Vitals
+- **SEO audit**: Confirm meta tags and structured data
+
+## Common Pitfalls
+
+### 1. Underestimating Custom Code
+
+XP customizations don't migrate automatically. Audit every:
+- Pipeline processor
+- Event handler
+- Custom field type
+- Computed field
+
+### 2. Ignoring Media Optimization
+
+XM Cloud uses Sitecore's media CDN. Large media libraries need:
+- Image optimization
+- Responsive image configuration
+- CDN cache warming
+
+### 3. Rushing Personalization
+
+Don't try to migrate all personalization rules at once. Start with:
+- Top 10 highest-impact rules
+- Rules with clear business value
+- Rules that can be measured
+
+## Conclusion
+
+XM Cloud migration is a significant undertaking, but the benefits—modern architecture, better performance, reduced infrastructure burden—make it worthwhile.
+
+[Contact us](/contact) to discuss your migration project.

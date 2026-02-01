@@ -1,0 +1,88 @@
+# TWOFOLD TECH - Brand Voice
+# Version: 1.1
+# Last Updated: 2026-02-01
+
+ratio:
+  engineering: 70
+  research_strategy: 30
+  description: >
+    Content should be predominantly technical and engineering-focused,
+    with strategic research positioning woven throughout.
+
+tone:
+  primary: Industrial
+  attributes:
+    - Absolute
+    - Direct
+    - Technical
+    - Authoritative
+
+  avoid:
+    - Casual
+    - Playful
+    - Promotional
+    - Vague
+
+spectrum:
+  formal_casual: 1          # 1-5, heavily formal
+  serious_playful: 1        # 1-5, heavily serious
+  technical_accessible: 2   # 1-5, lean technical
+  reserved_bold: 4          # 1-5, lean bold
+  traditional_innovative: 4 # 1-5, lean innovative
+
+lexicon:
+  preferred:
+    - Hardened
+    - Precision
+    - Stability
+    - Throughput
+    - Orchestration
+    - Traceability
+    - Fidelity
+    - Deterministic
+    - Correctness
+    - Architecture
+    - System Integrity
+    - Concurrency
+
+  avoid:
+    - Revolutionary
+    - Disruptive
+    - Cutting-edge
+    - Game-changing
+    - Next-gen (use "next generation")
+    - Synergy
+    - Leverage (as verb)
+    - Utilize (use "use")
+
+principles:
+  - name: Lead with precision
+    description: >
+      Every claim should be specific and defensible.
+      Avoid superlatives without supporting data.
+
+  - name: Write for architects
+    description: >
+      Assume technical competence. Don't over-explain fundamentals.
+      Respect the reader's expertise.
+
+  - name: Favor the concrete
+    description: >
+      Replace abstractions with examples. Show system behavior,
+      not just capabilities.
+
+  - name: Maintain technical gravity
+    description: >
+      Content should feel weighty and substantive.
+      Avoid filler and marketing fluff.
+
+examples:
+  good:
+    - "STUDIO traces every AI-generated change to its originating requirement."
+    - "ALLOY achieves 47% latency reduction through zero-copy message passing."
+    - "The system provides deterministic rollback to any prior build state."
+
+  bad:
+    - "Our revolutionary platform will transform your development workflow!"
+    - "Leverage next-gen AI to supercharge your team's productivity."
+    - "We're disrupting the enterprise software space."

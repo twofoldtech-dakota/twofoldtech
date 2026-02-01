@@ -1,0 +1,263 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Button from '@/components/common/Button.astro';
+import SectionHeader from '@/components/common/SectionHeader.astro';
+import Badge from '@/components/common/Badge.astro';
+import StudioLogicFlow from '@/components/common/StudioLogicFlow.astro';
+import OrchestrationComparison from '@/components/common/OrchestrationComparison.astro';
+import FAQAccordion from '@/components/islands/react/FAQAccordion';
+import { Database, Server, Brain, Cpu, Terminal, Microscope, CheckSquare, ArrowUpRight, HelpCircle } from 'lucide-react';
+import {
+  PERFORMANCE_MANIFESTO,
+  SERVICE_PILLARS,
+  TECH_STACK,
+  FAQ_ITEMS,
+} from '@/lib/constants/site';
+
+const iconMap: Record<string, any> = {
+  database: Database,
+  server: Server,
+  brain: Brain,
+};
+---
+
+<BaseLayout title="Home">
+  <!-- Hero Section -->
+  <header class="pt-40 pb-20 container mx-auto px-4 border-l-5 border-r-5 border-black min-h-screen flex flex-col justify-center bg-grid-pattern bg-[size:40px_40px] relative overflow-hidden">
+    <div class="max-w-7xl relative z-10 w-full mx-auto">
+      <div class="flex flex-col lg:flex-row justify-between items-center lg:items-end mb-12 gap-12">
+        <div class="flex-1">
+          <div class="inline-block bg-black text-white px-6 py-3 font-mono font-bold text-lg mb-8 shadow-neo border-2 border-transparent">
+            :: THE R&D LAB FOR AGENTIC ENGINEERING
+          </div>
+          <h1 class="text-5xl sm:text-7xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter">
+            ORCHESTRATING <br />
+            ARCHITECTURAL <br />
+            <span class="bg-tf-orange px-2 text-black inline-block border-4 border-black shadow-[8px_8px_0px_#000] mt-2">
+              INTEGRITY
+            </span>
+          </h1>
+        </div>
+      </div>
+
+      <!-- Hero Summary -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+        <div class="border-5 border-black p-8 bg-white shadow-neo relative">
+          <div class="absolute -top-4 -left-1 bg-tf-orange border-4 border-black px-3 py-1 font-mono text-sm font-bold uppercase">
+            Core_Thesis
+          </div>
+          <p class="text-xl md:text-2xl font-mono font-bold leading-relaxed text-gray-900 mt-2">
+            {PERFORMANCE_MANIFESTO}
+          </p>
+        </div>
+        <!-- Studio vs Unmanaged AI Comparison -->
+        <div class="hidden lg:block">
+          <OrchestrationComparison />
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-6">
+        <Button href="#lab" class="text-xl px-12 py-6">
+          EXPLORE STUDIO_OS
+        </Button>
+        <Button variant="outline" href="#enterprise" class="text-xl px-12 py-6">
+          ENTERPRISE SERVICES
+        </Button>
+      </div>
+
+      <!-- Mobile Comparison -->
+      <div class="lg:hidden mt-12">
+        <OrchestrationComparison />
+      </div>
+    </div>
+  </header>
+
+  <!-- The Lab (Bento Box) -->
+  <section id="lab" class="py-32 border-t-5 border-black bg-white">
+    <div class="container mx-auto px-4">
+      <SectionHeader
+        number="01"
+        title="THE R&D LAB"
+        subtitle="We don't just solve problems; we build the autonomous systems that prevent them."
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-3 grid-rows-auto md:grid-rows-2 gap-8 h-auto md:h-[800px]">
+        <!-- Item 1: STUDIO (Large Box) -->
+        <div class="md:col-span-2 md:row-span-2 border-5 border-black p-8 md:p-12 shadow-neo relative overflow-hidden group flex flex-col bg-white">
+          <div class="flex justify-between items-start mb-6">
+            <div>
+              <div class="inline-block bg-tf-orange text-black px-4 py-1 font-mono font-bold border-2 border-black mb-4">
+                FLAGSHIP PLATFORM
+              </div>
+              <h3 class="text-5xl md:text-7xl font-black uppercase leading-none mb-4">
+                STUDIO_OS
+              </h3>
+              <p class="font-mono text-xl md:text-2xl font-bold text-gray-600 max-w-lg">
+                The Agentic Orchestration Operating System. <br />
+                <span class="text-black">Plan. Build. Write.</span>
+              </p>
+            </div>
+            <Cpu size={64} strokeWidth={1} className="hidden md:block" />
+          </div>
+
+          <div class="flex-1 w-full h-full min-h-[300px] mt-6 relative">
+            <StudioLogicFlow />
+          </div>
+
+          <div class="mt-8 flex gap-4 font-mono font-bold text-sm flex-wrap">
+            <span class="flex items-center gap-2">
+              <CheckSquare size={16} /> TRI-AGENT ARCHITECTURE
+            </span>
+            <span class="flex items-center gap-2">
+              <CheckSquare size={16} /> SELF-HEALING
+            </span>
+          </div>
+        </div>
+
+        <!-- Item 2: ALLOY (Medium Box) -->
+        <div class="md:col-span-1 md:row-span-1 border-5 border-black p-8 shadow-neo bg-black text-white relative flex flex-col justify-between group">
+          <div class="absolute top-0 right-0 p-4 opacity-20">
+            <Terminal size={120} />
+          </div>
+          <div>
+            <div class="flex items-center gap-3 mb-4 text-tf-orange">
+              <Terminal size={32} />
+              <span class="font-mono font-bold">MIGRATION_ENGINE</span>
+            </div>
+            <h3 class="text-4xl font-black uppercase mb-4">ALLOY_CLI</h3>
+            <p class="font-mono text-gray-400 text-sm leading-relaxed">
+              High-throughput Rust engine for Sitecore XP to XM Cloud migrations.
+              90% faster parsing. Zero data loss.
+            </p>
+          </div>
+          <div class="mt-6 border-t-2 border-gray-800 pt-4">
+            <div class="font-mono text-xs text-tf-orange mb-1">
+              > RUNNING_PROCESS:
+            </div>
+            <div class="font-mono text-white font-bold text-lg animate-pulse">
+              SERIALIZING_NODES...
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: R&D Forecast (Small Box) -->
+        <div class="md:col-span-1 md:row-span-1 border-5 border-black p-8 shadow-neo bg-gray-100 flex flex-col justify-between hover:bg-tf-orange hover:text-white transition-colors group">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <Microscope size={32} />
+              <span class="font-mono font-bold bg-black text-white px-2 py-1">
+                UPCOMING_RESEARCH
+              </span>
+            </div>
+            <h3 class="text-3xl font-black uppercase mb-4">AGENTIC SEO</h3>
+            <p class="font-mono text-sm font-bold opacity-70">
+              Automated technical SEO auditing and remediation agents
+              specifically for Next.js Headless implementations.
+            </p>
+          </div>
+          <div class="font-mono text-xs font-bold uppercase tracking-widest border-t-4 border-black pt-4 mt-4">
+            STATUS: ALPHA_TESTING
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enterprise Specialization -->
+  <section id="enterprise" class="py-32 border-t-5 border-black bg-tf-orange">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 xl:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="inline-block bg-black text-white px-4 py-2 font-mono font-bold mb-6 border-2 border-white uppercase tracking-wider">
+            Applied Expertise
+          </div>
+          <h2 class="text-5xl md:text-8xl font-black uppercase leading-[0.9] mb-8 text-black">
+            Deep Stack <br />Authority.
+          </h2>
+          <p class="text-xl font-bold mb-10 max-w-xl font-mono leading-relaxed">
+            Our tools are born from the trenches. We are the premier experts in
+            modernizing massive "Big Iron" systems into nimble, agent-ready
+            architectures.
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          {SERVICE_PILLARS.map((service) => {
+            const IconComponent = iconMap[service.icon];
+            return (
+              <div class="bg-white border-5 border-black p-8 shadow-neo-sm hover:shadow-[12px_12px_0px_#000] transition-all hover:-translate-y-1">
+                <div class="flex items-center gap-4 mb-4">
+                  <div class="text-tf-orange bg-black p-2">
+                    {IconComponent && <IconComponent size={32} />}
+                  </div>
+                  <h3 class="text-2xl md:text-3xl font-black uppercase">
+                    {service.title}
+                  </h3>
+                </div>
+                <p class="font-mono text-sm md:text-base font-bold text-gray-700 mb-4">
+                  {service.description}
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  {service.tags.map((tag) => (
+                    <Badge>{tag}</Badge>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Grid -->
+  <section id="stack" class="py-32 border-t-5 border-b-5 border-black bg-white">
+    <div class="container mx-auto px-4">
+      <SectionHeader
+        number="03"
+        title="THE TOOLKIT"
+        subtitle="A curated stack designed for enterprise scale and memory safety."
+      />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-4 border-black">
+        {TECH_STACK.map((tech, idx) => (
+          <div
+            class={`border-b-4 md:border-b-0 md:border-r-4 border-black p-10 hover:bg-gray-100 transition-colors h-64 flex flex-col justify-between ${
+              (idx + 1) % 3 === 0 ? 'md:border-r-0' : ''
+            } ${idx >= TECH_STACK.length - 3 ? 'md:border-b-0' : ''}`}
+          >
+            <div class="flex justify-between items-start">
+              <h3 class="text-4xl font-black uppercase">{tech.name}</h3>
+              <ArrowUpRight className="opacity-0 group-hover:opacity-100 transition-opacity" />
+            </div>
+            <div>
+              <span class="bg-black text-white font-mono text-xs px-2 py-1 mb-2 inline-block">
+                {tech.category}
+              </span>
+              <p class="font-mono font-bold text-gray-600">{tech.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-32 border-t-5 border-b-5 border-black bg-white">
+    <div class="container mx-auto px-4">
+      <div class="mb-16 border-b-5 border-black pb-6">
+        <div class="flex justify-between items-end">
+          <h2 class="text-4xl md:text-7xl font-black tracking-tighter uppercase leading-[0.85] text-black">
+            TECHNICAL FAQ
+          </h2>
+          <div class="hidden md:flex items-center gap-2 font-mono font-bold text-xl">
+            <HelpCircle size={24} />
+            <span>ARCHITECTURAL_CLARITY</span>
+          </div>
+        </div>
+      </div>
+
+      <FAQAccordion client:idle items={FAQ_ITEMS} />
+    </div>
+  </section>
+</BaseLayout>

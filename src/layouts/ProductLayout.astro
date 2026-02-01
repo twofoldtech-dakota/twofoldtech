@@ -1,0 +1,88 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Button from '@/components/common/Button.astro';
+import Badge from '@/components/common/Badge.astro';
+
+interface Props {
+  title: string;
+  tagline: string;
+  description: string;
+  category: string;
+  features?: string[];
+  ctaText?: string;
+  ctaHref?: string;
+}
+
+const {
+  title,
+  tagline,
+  description,
+  category,
+  features = [],
+  ctaText = 'GET STARTED',
+  ctaHref = '/contact',
+} = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <!-- Product Hero -->
+  <header class="pt-40 pb-20 border-b-5 border-black bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl">
+        <div class="inline-block bg-black text-white px-4 py-2 font-mono font-bold text-sm mb-6 uppercase tracking-wider">
+          {category}
+        </div>
+        <h1 class="text-5xl sm:text-7xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-8">
+          {title}
+        </h1>
+        <p class="text-2xl md:text-3xl font-mono font-bold text-tf-orange mb-6 uppercase">
+          {tagline}
+        </p>
+        <p class="text-xl font-mono text-gray-700 max-w-3xl mb-10">
+          {description}
+        </p>
+
+        {features.length > 0 && (
+          <div class="flex flex-wrap gap-3 mb-10">
+            {features.map((feature) => (
+              <Badge variant="orange">{feature}</Badge>
+            ))}
+          </div>
+        )}
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <Button href={ctaHref} class="text-xl px-10 py-5">
+            {ctaText}
+          </Button>
+          <slot name="hero-actions" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Section -->
+  <slot name="features" />
+
+  <!-- Technical Specs Section -->
+  <slot name="specs" />
+
+  <!-- Main Content -->
+  <slot />
+
+  <!-- CTA Section -->
+  <section class="py-32 border-t-5 border-black bg-tf-orange">
+    <div class="container mx-auto px-4 text-center">
+      <slot name="cta">
+        <h2 class="text-4xl md:text-6xl font-black uppercase mb-8">
+          Ready to Get Started?
+        </h2>
+        <p class="font-mono text-xl font-bold mb-10 max-w-2xl mx-auto">
+          Let's discuss how {title} can transform your workflow.
+        </p>
+        <Button href={ctaHref} variant="secondary" class="text-xl px-12 py-5">
+          {ctaText}
+        </Button>
+      </slot>
+    </div>
+  </section>
+</BaseLayout>

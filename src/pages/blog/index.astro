@@ -1,0 +1,147 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Badge from '@/components/common/Badge.astro';
+import { Calendar, Clock, ArrowRight } from 'lucide-react';
+
+const BLOG_META = {
+  title: 'BLOG',
+  tagline: 'TECHNICAL INSIGHTS',
+  description: 'Deep dives into enterprise modernization, agentic engineering, and the future of software development.',
+};
+
+// Get all non-draft posts, sorted by date
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const posts = allPosts.sort((a, b) => 
+  new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+);
+
+// Get unique categories with counts
+const categoryMap = new Map<string, number>();
+posts.forEach(post => {
+  const count = categoryMap.get(post.data.category) || 0;
+  categoryMap.set(post.data.category, count + 1);
+});
+const categories = Array.from(categoryMap.entries()).sort((a, b) => b[1] - a[1]);
+
+const categoryLabels: Record<string, string> = {
+  'engineering': 'Engineering',
+  'tutorial': 'Tutorials',
+  'product': 'Product',
+  'announcement': 'Announcements',
+};
+
+// Calculate read time helper
+function getReadTime(body: string) {
+  const words = body.split(/\s+/).length;
+  return Math.ceil(words / 200);
+}
+---
+
+<BaseLayout title={BLOG_META.title} description={BLOG_META.description}>
+  <!-- Hero Section -->
+  <header class="pt-40 pb-20 border-b-5 border-black bg-white bg-grid-pattern bg-[size:40px_40px]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-5xl">
+        <div class="inline-block bg-black text-white px-4 py-2 font-mono font-bold text-sm mb-6 uppercase tracking-wider">
+          TECHNICAL WRITING
+        </div>
+        <h1 class="text-5xl sm:text-7xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter mb-8">
+          {BLOG_META.title}
+        </h1>
+        <p class="text-2xl md:text-3xl font-mono font-bold text-tf-orange mb-6 uppercase">
+          {BLOG_META.tagline}
+        </p>
+        <p class="text-xl font-mono text-gray-700 max-w-3xl">
+          {BLOG_META.description}
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Category Filters -->
+  <section class="py-8 border-t-5 border-black bg-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap items-center gap-4">
+        <span class="font-mono font-bold text-sm text-gray-500 uppercase">Filter:</span>
+        <a 
+          href="/blog" 
+          class="px-4 py-2 font-mono font-bold text-sm uppercase border-3 border-black bg-black text-white hover:bg-tf-orange hover:text-black transition-colors"
+        >
+          ALL ({posts.length})
+        </a>
+        {categories.map(([cat, count]) => (
+          <a 
+            href={`/blog/category/${cat}`}
+            class="px-4 py-2 font-mono font-bold text-sm uppercase border-3 border-black bg-white hover:bg-tf-orange hover:border-tf-orange transition-colors"
+          >
+            {categoryLabels[cat] || cat} ({count})
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- All Posts -->
+  <section class="py-32 border-t-5 border-black bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <a href={"/blog/" + post.slug} class="group">
+            <article class="border-5 border-black p-6 bg-white hover:border-tf-orange hover:-translate-y-1 hover:shadow-neo transition-all h-full flex flex-col">
+              <div class="flex items-center gap-3 mb-4">
+                <Badge variant="orange">{post.data.category.toUpperCase()}</Badge>
+                <span class="font-mono text-xs text-gray-500 flex items-center gap-1">
+                  <Clock size={12} />
+                  {getReadTime(post.body)} min
+                </span>
+              </div>
+              <h2 class="text-xl font-black uppercase mb-3 group-hover:text-tf-orange transition-colors">
+                {post.data.title}
+              </h2>
+              <p class="font-mono text-sm text-gray-600 mb-4 flex-1 line-clamp-3">{post.data.description}</p>
+              <div class="flex items-center justify-between border-t-3 border-black pt-4">
+                <time class="font-mono text-xs text-gray-500 flex items-center gap-1" datetime={new Date(post.data.publishDate).toISOString()}>
+                  <Calendar size={12} />
+                  {new Date(post.data.publishDate).toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'short', 
+                    day: 'numeric' 
+                  })}
+                </time>
+                <span class="font-mono font-bold text-sm flex items-center gap-1 text-tf-orange">
+                  READ <ArrowRight size={14} />
+                </span>
+              </div>
+            </article>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="py-32 border-t-5 border-black bg-black text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl md:text-6xl font-black uppercase mb-8">
+        Stay Updated
+      </h2>
+      <p class="font-mono text-xl mb-10 max-w-2xl mx-auto text-gray-300">
+        Get notified when we publish new technical insights.
+      </p>
+      <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+        <input
+          type="email"
+          placeholder="your@email.com"
+          class="flex-1 border-4 border-white bg-transparent px-4 py-3 font-mono text-white placeholder-gray-500 focus:outline-none focus:border-tf-orange"
+        />
+        <button
+          type="submit"
+          class="bg-tf-orange border-4 border-white px-8 py-3 font-mono font-bold uppercase hover:bg-white hover:text-black transition-colors"
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+</BaseLayout>
