@@ -34,12 +34,17 @@ const nextPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null;
 const words = post.body.split(/\s+/).length;
 const readTime = Math.ceil(words / 200);
 
+// Determine OG image URL
+const ogImagePath = post.data.seo?.image || post.data.heroImage || "/og-default.png";
+const ogImageUrl = ogImagePath.startsWith("http") ? ogImagePath : `https://twofold.tech${ogImagePath}`;
+
 // Structured data for article
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": post.data.title,
   "description": post.data.description,
+  "image": ogImageUrl,
   "author": {
     "@type": "Organization",
     "name": post.data.author || "Twofold Tech"
@@ -87,9 +92,10 @@ const breadcrumbSchema = {
 };
 ---
 
-<BaseLayout 
-  title={post.data.title} 
+<BaseLayout
+  title={post.data.title}
   description={post.data.description}
+  image={post.data.seo?.image || post.data.heroImage || "/og-default.png"}
   article={true}
   publishDate={post.data.publishDate}
   author={post.data.author}

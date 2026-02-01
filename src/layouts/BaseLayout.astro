@@ -107,7 +107,7 @@ const ogImage = new URL(image, Astro.site);
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "email": "hello@twofold.tech",
+        "email": "contact@twofold.tech",
         "contactType": "sales"
       },
       "sameAs": [
@@ -131,6 +131,9 @@ const ogImage = new URL(image, Astro.site);
 
     <!-- View Transitions -->
     <ViewTransitions />
+
+    <!-- Custom head content slot -->
+    <slot name="head" />
   </head>
   <body class="min-h-screen bg-white text-black font-sans">
     <Header />
