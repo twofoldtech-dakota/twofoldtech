@@ -27,10 +27,10 @@ import { AlertTriangle, Home, ArrowLeft } from 'lucide-react';
             <Home size={20} className="mr-2" />
             BACK TO HOME
           </Button>
-          <Button variant="outline" onclick="history.back()" class="text-lg px-8 py-4">
-            <ArrowLeft size={20} className="mr-2" />
+          <a href="javascript:history.back()" class="font-sans font-bold text-lg border-5 border-black transition-all duration-100 px-8 py-4 flex items-center justify-center gap-2 uppercase tracking-tight shadow-neo active:translate-x-[4px] active:translate-y-[4px] active:shadow-none hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[10px_10px_0px_0px_#000000] bg-white text-black">
+            <ArrowLeft size={20} />
             GO BACK
-          </Button>
+          </a>
         </div>
       </div>
     </div>

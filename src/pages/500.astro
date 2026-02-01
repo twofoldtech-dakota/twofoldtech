@@ -27,10 +27,10 @@ import { ServerCrash, Home, RefreshCw } from 'lucide-react';
             <Home size={20} className="mr-2" />
             BACK TO HOME
           </Button>
-          <Button variant="outline" onclick="location.reload()" class="text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-black">
-            <RefreshCw size={20} className="mr-2" />
+          <a href="javascript:location.reload()" class="font-sans font-bold text-lg border-5 border-white transition-all duration-100 px-8 py-4 flex items-center justify-center gap-2 uppercase tracking-tight shadow-neo active:translate-x-[4px] active:translate-y-[4px] active:shadow-none hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[10px_10px_0px_0px_#fff] bg-transparent text-white hover:bg-white hover:text-black">
+            <RefreshCw size={20} />
             TRY AGAIN
-          </Button>
+          </a>
         </div>
       </div>
     </div>

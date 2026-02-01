@@ -1,25 +1,35 @@
 ---
+import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Badge from '@/components/common/Badge.astro';
 import { Calendar, Clock, ArrowRight, ArrowLeft } from 'lucide-react';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({ data }) => !data.draft);
-  const categories = [...new Set(posts.map(post => post.data.category))];
+  const posts = await getCollection('blog', ({ data }: CollectionEntry<'blog'>) => !data.draft);
+  const categorySet = new Set<string>();
+  posts.forEach((post: CollectionEntry<'blog'>) => categorySet.add(post.data.category));
+  const categories = Array.from(categorySet);
 
-  return categories.map(category => ({
+  return categories.map((category) => ({
     params: { category },
     props: {
       category,
       posts: posts
-        .filter(post => post.data.category === category)
-        .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
+        .filter((post: CollectionEntry<'blog'>) => post.data.category === category)
+        .sort((a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) => 
+          new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+        )
     },
   }));
 }
 
-const { category, posts } = Astro.props;
+interface Props {
+  category: string;
+  posts: CollectionEntry<'blog'>[];
+}
+
+const { category, posts } = Astro.props as Props;
 
 const categoryLabels: Record<string, string> = {
   'engineering': 'Engineering',
@@ -59,7 +69,7 @@ function getReadTime(body: string) {
   <section class="py-32 border-t-5 border-black bg-white">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {posts.map((post) => (
+        {posts.map((post: CollectionEntry<'blog'>) => (
           <a href={"/blog/" + post.slug} class="group">
             <article class="border-5 border-black p-6 bg-white hover:border-tf-orange hover:-translate-y-1 hover:shadow-neo transition-all h-full flex flex-col">
               <div class="flex items-center gap-3 mb-4">

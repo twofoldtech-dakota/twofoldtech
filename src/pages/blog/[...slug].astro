@@ -1,4 +1,5 @@
 ---
+import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Badge from '@/components/common/Badge.astro';
@@ -6,22 +7,26 @@ import Button from '@/components/common/Button.astro';
 import { Calendar, Clock, User, ArrowLeft, ArrowRight } from 'lucide-react';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog', ({ data }) => !data.draft);
-  return posts.map((post) => ({
+  const posts = await getCollection('blog', ({ data }: CollectionEntry<'blog'>) => !data.draft);
+  return posts.map((post: CollectionEntry<'blog'>) => ({
     params: { slug: post.slug },
     props: { post },
   }));
 }
 
-const { post } = Astro.props;
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props as Props;
 const { Content } = await post.render();
 
 // Get adjacent posts for navigation
-const allPosts = await getCollection('blog', ({ data }) => !data.draft);
-const sortedPosts = allPosts.sort((a, b) => 
+const allPosts = await getCollection('blog', ({ data }: CollectionEntry<'blog'>) => !data.draft);
+const sortedPosts = allPosts.sort((a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) => 
   new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
 );
-const currentIndex = sortedPosts.findIndex(p => p.slug === post.slug);
+const currentIndex = sortedPosts.findIndex((p: CollectionEntry<'blog'>) => p.slug === post.slug);
 const prevPost = currentIndex < sortedPosts.length - 1 ? sortedPosts[currentIndex + 1] : null;
 const nextPost = currentIndex > 0 ? sortedPosts[currentIndex - 1] : null;
 
@@ -90,8 +95,8 @@ const breadcrumbSchema = {
   author={post.data.author}
 >
   <!-- Article Structured Data -->
-  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
-  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
 
   <article class="pt-40 pb-20">
     <!-- Header -->
@@ -138,7 +143,7 @@ const breadcrumbSchema = {
           
           {post.data.tags && post.data.tags.length > 0 && (
             <div class="flex flex-wrap gap-2 mt-6">
-              {post.data.tags.map((tag) => (
+              {post.data.tags.map((tag: string) => (
                 <span class="px-3 py-1 bg-gray-100 border-2 border-black font-mono text-xs uppercase">
                   {tag}
                 </span>
