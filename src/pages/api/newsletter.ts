@@ -25,7 +25,7 @@ export const POST: APIRoute = async ({ request }) => {
 
     // Send welcome email
     await resend.emails.send({
-      from: 'Twofold Tech <hello@twofold.tech>',
+      from: 'Twofold Tech <noreply@twofold.tech>',
       to: [email],
       subject: 'Welcome to Twofold Tech Updates',
       html: `
@@ -44,8 +44,8 @@ export const POST: APIRoute = async ({ request }) => {
 
     // Notify team of new subscriber
     await resend.emails.send({
-      from: 'Newsletter <newsletter@twofold.tech>',
-      to: ['hello@twofold.tech'],
+      from: 'Newsletter <noreply@twofold.tech>',
+      to: ['contact@twofold.tech'],
       subject: 'New Newsletter Subscriber',
       html: `<p>New subscriber: ${email}</p>`,
     });

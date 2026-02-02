@@ -13,7 +13,7 @@ export interface ContactMethod {
 export const CONTACT_METHODS: ContactMethod[] = [
   {
     label: 'EMAIL',
-    value: 'hello@twofold.tech',
+    value: 'contact@twofold.tech',
     icon: 'mail',
   },
   {

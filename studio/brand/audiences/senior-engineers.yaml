@@ -39,8 +39,26 @@ messaging_focus:
   - Rollback and recovery capabilities
   - Integration with existing toolchains
 
+value_propositions:
+  - name: STUDIO Product
+    description: >
+      Agentic orchestration platform that ensures AI follows senior-level
+      architectural logic. Plan-first workflows, quality gates, and
+      deterministic rollback. Built by practitioners who use it daily.
+
+  - name: ALLOY Product
+    description: >
+      High-concurrency modernization tooling powered by Rust. Precision
+      data translation at enterprise scale.
+
+  - name: Open-Box Architecture
+    description: >
+      Both products are designed for customization and extension.
+      No black boxes. Full visibility into how they work.
+
 channels:
   - GitHub and open source communities
   - Technical blogs and documentation
   - Engineering podcasts
   - Hacker News / Lobsters
+  - Direct product trials

@@ -1,55 +1,123 @@
 # TWOFOLD TECH - Brand Identity
-# Version: 1.1
+# Version: 2.0
 # Last Updated: 2026-02-01
 
 company:
   name: Twofold Tech
-  tagline: "Industrial-Grade Software Research"
+  tagline: "Senior Expertise. Serious Software."
+
+category: Expert Practitioners & Product Studio
 
 mission: >
-  To advance the state of enterprise software through high-performance
-  engineering research and autonomous orchestration.
+  We bring 30 years of enterprise experience to organizations navigating
+  complex technical transformations—through direct advisory and products
+  that encode our expertise.
 
 vision: >
-  To define the architectural standards for the next generation of
-  self-evolving digital systems.
+  To prove that senior practitioners building real products create more
+  value than agencies staffed with juniors.
+
+thesis:
+  name: Deterministic Orchestration
+  contrast: "Prompt-and-Pray"
+  statement: >
+    While the industry races toward AI-generated code with no guardrails,
+    we focus on Deterministic Orchestration—ensuring agentic intelligence
+    follows strict, senior-level architectural logic. AI should be traceable,
+    auditable, and architecturally sound.
 
 values:
-  - name: Industrial Clarity
+  - name: Senior-Level Standards
     description: >
-      We prioritize precision and transparency in every system we build.
-      No black boxes. No ambiguity. Every decision is traceable.
+      We don't hand off to juniors. The people you talk to are the people
+      who do the work. Dakota and Dillon lead every engagement personally.
 
-  - name: Plan-First Execution
+  - name: Deterministic Over Probabilistic
     description: >
-      Architectural integrity begins before the first line of code.
-      We design systems that are correct by construction.
+      AI should follow architectural logic, not hunches. Every decision
+      is traceable. Every output is auditable. No black boxes.
 
-  - name: Open-Box Engineering
+  - name: Products Over Promises
     description: >
-      Our systems are inspectable, auditable, and comprehensible.
-      We reject opacity in favor of traceability.
+      We ship software, not slide decks. Our products (STUDIO, ALLOY)
+      encode our expertise into tools that enterprises and agencies use.
+
+  - name: Scale Without the Bench
+    description: >
+      We're not carrying a bench that needs to stay billable. For larger
+      engagements, we bring in vetted specialists we've worked with for years.
+      We scale to fit the work, not the other way around.
+
+founders:
+  - name: Dakota Smith
+    role: Senior Architect & Full-Stack Expert
+    experience: 15 years
+    focus: Architecture, AI/Agentic Systems, Hands-On Building
+    expertise:
+      - Systems Architecture (Enterprise .NET, Sitecore XM Cloud, SaaS modernization)
+      - Agentic Orchestration (Autonomous dev loops, multi-agent state machines)
+      - High-Performance Tooling (Concurrency engines, system hardening)
+    thesis: >
+      Bridges the gap between generative AI speed and enterprise-grade rigor.
+
+  - name: Dillon Smith
+    role: Strategic Technology Leader & Dev Manager
+    experience: 15 years
+    focus: Engineering Leadership, Cloud Infrastructure, Enterprise Scale
+    expertise:
+      - Strategic Planning (Executive stakeholder management, P&L management $6M+, Agile/Scrum)
+      - Cloud Architecture (Azure, Docker, Kubernetes, legacy-to-cloud modernization)
+      - Enterprise CMS (Sitecore 6.5-10.4, headless architecture with Next.js)
+      - Compliance & Security (DevSecOps, WCAG accessibility, federal regulatory standards)
+    thesis: >
+      Bridges the gap between high-level engineering and executive business goals.
 
 positioning:
-  category: Enterprise Software Research & Modernization Lab
+  statement: >
+    Twofold Tech is not an agency. We're two senior engineers—brothers—with
+    30 combined years in enterprise software. We advise on architecture,
+    engineering leadership, and AI integration. And we build products that
+    enterprises and agencies actually use.
 
   differentiator: >
-    We focus exclusively on the R&D of high-concurrency tooling (ALLOY)
-    and agentic orchestration platforms (STUDIO).
+    You'll never be handed off to someone you didn't hire. We lead every
+    engagement personally. When projects require additional capacity, we
+    bring in vetted specialists we've worked with for years—but we stay
+    accountable.
 
   market_position: >
-    Twofold Tech operates at the intersection of research and production—
-    building hardened systems that define new architectural standards.
+    We operate alongside and above agencies—not in competition with them.
+    We're the senior expertise agencies call when they're stuck, and we
+    build the tools they wish they had.
+
+  combined_expertise:
+    - Enterprise .NET & Sitecore (stabilization, modernization, XM Cloud)
+    - Cloud-native architecture (Azure, Docker, Kubernetes)
+    - AI & Agentic orchestration (deterministic, auditable, enterprise-grade)
+    - Fortune 500 and federal government scale operations
+    - Compliance & security (DevSecOps, WCAG, regulatory)
 
 products:
   - name: STUDIO
     description: Agentic orchestration platform for AI-assisted development
     tagline: "AI builds code. STUDIO makes sure it's correct."
+    thesis_alignment: >
+      Embodies Deterministic Orchestration—plan-first workflows, quality gates,
+      requirements traceability. The antidote to prompt-and-pray.
 
   - name: ALLOY
     description: High-concurrency modernization tooling powered by Rust
-    tagline: "High-fidelity modernization research powered by Rust."
+    tagline: "High-fidelity modernization at enterprise scale."
+    thesis_alignment: >
+      Precision data translation and system hardening. Performance without
+      sacrificing correctness.
 
+services:
   - name: Advisory
-    description: Technical consulting for architectural hardening
-    tagline: "Technical deep-dives into architectural hardening and system integrity."
+    description: >
+      Architecture reviews, technical strategy, engineering leadership
+      guidance, and AI integration consulting.
+    tagline: "Senior expertise, not a slide deck."
+    delivery: >
+      Direct engagement with Dakota and Dillon. No account managers.
+      No bait-and-switch.

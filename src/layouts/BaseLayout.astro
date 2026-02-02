@@ -17,7 +17,7 @@ interface Props {
 
 const {
   title,
-  description = "Twofold Tech is an R&D lab engineering autonomous development tools for enterprise software modernization. STUDIO and ALLOY power the future of software engineering.",
+  description = "Twofold Tech is two senior engineers with 30 combined years in enterprise software. We advise on architecture, engineering leadership, and AI integration—and build products like STUDIO and ALLOY.",
   image = "/og-default.png",
   article = false,
   publishDate,
@@ -26,7 +26,7 @@ const {
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const fullTitle = title === "Home" ? "Twofold Tech | Enterprise R&D Lab for Agentic Engineering" : `${title} | Twofold Tech`;
+const fullTitle = title === "Home" ? "Twofold Tech | Senior Expertise. Serious Software." : `${title} | Twofold Tech`;
 const ogImage = new URL(image, Astro.site);
 ---
 
@@ -90,7 +90,7 @@ const ogImage = new URL(image, Astro.site);
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Twofold Tech",
-      "description": "Enterprise Software Research & Modernization Lab specializing in agentic engineering and Sitecore migrations",
+      "description": "Senior practitioners building products for enterprise software modernization. Specializing in agentic orchestration and Sitecore migrations.",
       "url": "https://twofold.tech",
       "logo": "https://twofold.tech/logo.png",
       "foundingDate": "2024",
@@ -121,7 +121,7 @@ const ogImage = new URL(image, Astro.site);
       "@type": "WebSite",
       "name": "Twofold Tech",
       "url": "https://twofold.tech",
-      "description": "Enterprise R&D Lab for Agentic Engineering",
+      "description": "Senior Expertise. Serious Software.",
       "publisher": {
         "@type": "Organization",
         "name": "Twofold Tech"

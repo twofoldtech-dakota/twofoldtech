@@ -1,7 +1,7 @@
 export const ABOUT_META = {
   title: 'ABOUT',
-  tagline: 'THE R&D LAB FOR ENTERPRISE MODERNIZATION',
-  description: 'Twofold Tech is a product-led engineering lab building autonomous development tools for enterprise transformation.',
+  tagline: 'SENIOR EXPERTISE. SERIOUS SOFTWARE.',
+  description: 'Twofold Tech is two senior engineers—brothers—with 30 combined years in enterprise software. We advise on architecture, engineering leadership, and AI integration. And we build products that enterprises and agencies actually use.',
 };
 
 export interface TimelineEvent {
@@ -13,23 +13,23 @@ export interface TimelineEvent {
 export const COMPANY_TIMELINE: TimelineEvent[] = [
   {
     year: '2024',
-    title: 'GENESIS',
-    description: 'Founded as an R&D lab focused on enterprise software modernization and agentic engineering.',
+    title: 'FOUNDED',
+    description: 'Dakota and Dillon Smith launch Twofold Tech, bringing 30 combined years of enterprise experience to advisory and product development.',
   },
   {
     year: '2024',
-    title: 'ALLOY ALPHA',
-    description: 'Released first version of ALLOY - the high-performance Rust engine for Sitecore migrations.',
+    title: 'ALLOY SHIPS',
+    description: 'Released ALLOY—the high-performance Rust engine for Sitecore migrations—born from real-world enterprise problems.',
   },
   {
     year: '2025',
     title: 'STUDIO BETA',
-    description: 'Launched STUDIO_OS with Tri-Agent Architecture for autonomous software development.',
+    description: 'Launched STUDIO_OS with Tri-Agent Architecture for Deterministic Orchestration of AI-assisted development.',
   },
   {
     year: '2026',
-    title: 'EXPANSION',
-    description: 'Scaling enterprise deployments and expanding agentic capabilities across the platform.',
+    title: 'SCALING',
+    description: 'Expanding enterprise advisory engagements and product deployments across the platform.',
   },
 ];
 
@@ -41,52 +41,55 @@ export interface CoreValue {
 
 export const CORE_VALUES: CoreValue[] = [
   {
-    title: 'ARCHITECTURAL INTEGRITY',
-    description: 'Every line of code must serve the system. We build for decades, not demos.',
+    title: 'SENIOR-LEVEL STANDARDS',
+    description: 'The people you talk to are the people who do the work. No juniors. No bait-and-switch. No account managers.',
     icon: 'building',
   },
   {
-    title: 'ZERO WASTE ENGINEERING',
-    description: 'No unnecessary complexity. Every abstraction earns its place through utility.',
+    title: 'DETERMINISTIC OVER PROBABILISTIC',
+    description: 'AI should follow architectural logic, not hunches. Every decision is traceable. Every output is auditable.',
     icon: 'target',
   },
   {
-    title: 'HUMAN-IN-THE-LOOP',
-    description: 'AI augments human judgment. Critical decisions require human oversight.',
+    title: 'PRODUCTS OVER PROMISES',
+    description: 'We ship software, not slide decks. Our products (STUDIO, ALLOY) encode our expertise into tools you can actually use.',
     icon: 'users',
   },
   {
-    title: 'MEMORY SAFETY',
-    description: 'From Rust tooling to schema validation, we eliminate entire classes of bugs by design.',
+    title: 'ACCOUNTABLE ALWAYS',
+    description: 'When projects require additional capacity, we bring in vetted specialists—but we stay accountable. You\'ll never be handed off.',
     icon: 'shield',
   },
 ];
 
-export interface LabFocus {
+export interface ExpertiseFocus {
   title: string;
   description: string;
   status: string;
 }
 
-export const LAB_FOCUS_AREAS: LabFocus[] = [
+export const EXPERTISE_FOCUS_AREAS: ExpertiseFocus[] = [
   {
     title: 'AGENTIC ORCHESTRATION',
-    description: 'Multi-agent systems that plan, build, and validate enterprise software autonomously.',
+    description: 'Multi-agent systems that plan, build, and validate enterprise software with Deterministic Orchestration.',
     status: 'ACTIVE',
   },
   {
     title: 'MIGRATION ENGINEERING',
-    description: 'High-performance tooling for moving legacy systems to modern architectures.',
+    description: 'High-performance tooling for moving legacy Sitecore and .NET systems to modern architectures.',
     status: 'ACTIVE',
   },
   {
-    title: 'SEMANTIC SEO',
-    description: 'AI-driven technical SEO auditing and remediation for headless implementations.',
-    status: 'RESEARCH',
+    title: 'ENTERPRISE ADVISORY',
+    description: 'Architecture reviews, technical strategy, and engineering leadership guidance from senior practitioners.',
+    status: 'ACTIVE',
   },
   {
-    title: 'PREDICTIVE DEVOPS',
-    description: 'Self-healing infrastructure powered by predictive anomaly detection.',
-    status: 'RESEARCH',
+    title: 'AI INTEGRATION',
+    description: 'Implementing AI-assisted development workflows that are traceable, auditable, and enterprise-safe.',
+    status: 'ACTIVE',
   },
 ];
+
+// Backward compatibility - keep old export name pointing to new data
+export const LAB_FOCUS_AREAS = EXPERTISE_FOCUS_AREAS;

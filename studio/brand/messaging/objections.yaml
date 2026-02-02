@@ -1,29 +1,90 @@
 # TWOFOLD TECH - Objection Handling
-# Version: 1.1
+# Version: 2.0
 # Last Updated: 2026-02-01
 
 objections:
+
+  # === NEW: Advisory/Team Size Objections ===
+
+  - objection: "You're just two people—can you handle enterprise scale?"
+    category: Team Size
+    response: >
+      We've each spent 15+ years delivering enterprise projects at Fortune 500
+      and federal government scale. When engagements require additional capacity,
+      we bring in vetted specialists we've worked with for years—but we stay
+      accountable. You're not hiring a bench; you're hiring senior expertise
+      that scales to fit the work.
+    proof_points:
+      - Combined 30 years enterprise experience
+      - Fortune 500 and federal government track record
+      - Vetted specialist network for larger engagements
+      - Personal accountability on every project
+
+  - objection: "Why not just hire an agency?"
+    category: Agency Comparison
+    response: >
+      Agencies staff projects with whoever's available. You meet seniors in the
+      pitch, then get handed off to juniors. We're the opposite—the people you
+      talk to are the people who do the work. And we build products (STUDIO, ALLOY)
+      that agencies themselves use when they hit technical ceilings.
+    proof_points:
+      - No bait-and-switch staffing model
+      - Direct access to 15+ year practitioners
+      - Products used by agencies for complex work
+      - We're who agencies call when they're stuck
+
+  - objection: "What if you're busy with other clients?"
+    category: Availability
+    response: >
+      We're selective about engagements specifically so we can deliver. We don't
+      overcommit. When we take on a project, it gets the attention it deserves.
+      If timing doesn't work, we'll tell you upfront rather than spread ourselves
+      thin and underdeliver.
+    proof_points:
+      - Selective engagement model
+      - Transparent capacity communication
+      - Quality over volume approach
+      - Long-term client relationships
+
+  - objection: "How do we know you won't just disappear?"
+    category: Continuity
+    response: >
+      We're building a company, not freelancing between gigs. STUDIO and ALLOY
+      are long-term product investments. Our advisory relationships span years,
+      not months. We have skin in the game—our reputation is tied to every
+      engagement we take on.
+    proof_points:
+      - Product company with long-term roadmap
+      - Multi-year client relationships
+      - Reputation-based business model
+      - Documented knowledge transfer practices
+
+  # === Product Objections ===
 
   - objection: "We already use Copilot/ChatGPT for code generation."
     category: Competition
     response: >
       Consumer AI tools generate code without verification. STUDIO adds
       the traceability and correctness layer that enterprise systems require.
-      AI builds the code—STUDIO ensures it's correct.
+      AI builds the code—STUDIO ensures it's correct. It's the difference
+      between prompt-and-pray and Deterministic Orchestration.
     proof_points:
       - Requirements-to-implementation traceability
       - Plan-first workflow prevents architectural drift
       - Deterministic rollback capabilities
+      - Built by practitioners who use it daily
 
   - objection: "We'll build our own orchestration layer."
     category: Build vs. Buy
     response: >
       Building production-grade orchestration takes 12-18 months of dedicated
       engineering. STUDIO provides that foundation immediately, with open-box
-      architecture you can customize and extend.
+      architecture you can customize and extend. Or—hire us to help you build
+      it right the first time.
     proof_points:
       - Open-box architecture for customization
       - Documented extension points
+      - Advisory available for custom implementations
       - Focus your team on domain-specific logic
 
   - objection: "How is this different from other AI dev tools?"
@@ -37,16 +98,18 @@ objections:
       - Plan-then-build workflow
       - Quality gates before execution
       - Full audit trail
+      - Built by enterprise practitioners, not startup engineers
 
   - objection: "This seems like research, not production-ready software."
     category: Maturity
     response: >
-      Our products emerge from research but ship as production-grade tooling.
-      ALLOY powers high-concurrency modernization in production environments.
-      STUDIO is used for enterprise development workflows.
+      STUDIO and ALLOY are production software that we use daily and that
+      enterprises and agencies rely on. They emerge from real-world problems
+      we've solved, not academic research. We ship products, not papers.
     proof_points:
       - Production deployments
-      - Enterprise customer references
+      - Daily use by founders
+      - Enterprise and agency customers
       - Performance benchmarks
 
   - objection: "We're not ready for this level of change."
@@ -54,13 +117,27 @@ objections:
     response: >
       STUDIO integrates with existing workflows—it doesn't replace them.
       Start with a single team or project. The plan-first approach reduces
-      risk, not increases it.
+      risk, not increases it. Or start with advisory—let us assess your
+      architecture and recommend a path forward.
     proof_points:
       - Incremental adoption path
       - Existing toolchain integration
       - Rollback capabilities for safety
+      - Advisory-first engagement option
 
 positioning_against:
+
+  - competitor: "Traditional Agencies"
+    our_advantage: >
+      Direct access to senior practitioners. No bait-and-switch. The people
+      you meet are the people who do the work. Plus we build products agencies
+      themselves use.
+    their_strength: >
+      Established processes, larger teams for sustained capacity, familiar
+      engagement models.
+    counter: >
+      Process without expertise is just organized mediocrity. We offer the
+      expertise agencies can't retain.
 
   - competitor: "Consumer AI Tools (Copilot, ChatGPT)"
     our_advantage: >
@@ -70,13 +147,24 @@ positioning_against:
       Ubiquitous, low barrier to entry, familiar interface.
     counter: >
       Familiarity without correctness creates technical debt at scale.
+      STUDIO supervises AI—it doesn't replace human judgment.
 
   - competitor: "No-Code/Low-Code Platforms"
     our_advantage: >
       Full code ownership and visibility. No platform lock-in.
-      Industrial-grade performance characteristics.
+      Enterprise-grade performance characteristics.
     their_strength: >
       Fast prototyping, lower technical barrier.
     counter: >
       Enterprise systems require inspectable, auditable code—not
       proprietary abstractions.
+
+  - competitor: "Big Consulting Firms"
+    our_advantage: >
+      Senior practitioners do the work, not junior consultants following
+      playbooks. We build products, not just recommendations.
+    their_strength: >
+      Brand recognition, global scale, comprehensive service offerings.
+    counter: >
+      You're paying for the brand, not the expertise. The senior partner
+      you met disappears after the sale.

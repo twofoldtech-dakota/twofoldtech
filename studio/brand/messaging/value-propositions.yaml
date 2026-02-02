@@ -1,73 +1,106 @@
 # TWOFOLD TECH - Value Propositions
-# Version: 1.1
+# Version: 2.0
 # Last Updated: 2026-02-01
 
 primary_propositions:
 
+  - headline: "Senior expertise, not a slide deck."
+    service: Advisory
+    audience: CTOs, Engineering Leaders, Agencies
+    proof_points:
+      - 30 combined years of enterprise experience
+      - Direct engagement with Dakota and Dillon—no handoffs
+      - Architecture reviews, technical strategy, AI integration
+      - Fortune 500 and federal government scale experience
+
   - headline: "AI builds code. STUDIO makes sure it's correct."
     product: STUDIO
-    audience: All
+    audience: Enterprises, Agencies, Development Teams
     proof_points:
       - Requirements traceability from task to implementation
       - Deterministic rollback to any prior state
       - Plan-first workflow prevents architectural drift
       - Quality gates enforce correctness before build
 
-  - headline: "High-fidelity modernization research powered by Rust."
+  - headline: "High-fidelity modernization at enterprise scale."
     product: ALLOY
-    audience: Enterprise Architects, R&D
+    audience: Enterprise Architects, R&D Teams
     proof_points:
       - Zero-copy message passing for minimal overhead
       - Compile-time correctness guarantees
       - Predictable performance characteristics
       - Memory safety without garbage collection
 
-  - headline: "Technical deep-dives into architectural hardening."
-    product: Advisory
-    audience: Enterprise Architects
-    proof_points:
-      - System integrity assessments
-      - Modernization pathway analysis
-      - Architecture review and recommendations
-      - Implementation guidance
+core_message:
+  headline: "Two engineers. Thirty years. No fluff."
+  subhead: >
+    We're not an agency. We're two senior engineers—brothers—who advise
+    on architecture, engineering leadership, and AI integration. And we
+    build products that enterprises and agencies actually use.
 
 value_hierarchy:
   level_1:
-    name: Correctness
+    name: Senior-Level Expertise
     description: >
-      Every system we build prioritizes correctness over speed.
-      AI-generated code is validated, traced, and auditable.
+      The people you talk to are the people who do the work.
+      No juniors. No bait-and-switch. No account managers.
 
   level_2:
-    name: Traceability
+    name: Deterministic Orchestration
     description: >
-      Full visibility from requirement to implementation.
-      Every change can be traced to its origin.
+      AI should follow architectural logic, not hunches.
+      Traceable, auditable, and architecturally sound.
 
   level_3:
-    name: Stability
+    name: Products That Work
     description: >
-      Production-grade reliability. Deterministic behavior.
-      Systems that perform predictably under load.
+      We ship software, not slide decks. Our products encode
+      30 years of expertise into tools you can actually use.
 
   level_4:
-    name: Throughput
+    name: Scalable Without the Bench
     description: >
-      High-performance engineering without sacrificing correctness.
-      Optimized for enterprise scale.
+      We scale to fit the work, not the other way around.
+      Vetted specialists when needed. Accountability always.
 
 differentiators:
-  - name: Open-Box Architecture
+  - name: Not an Agency
     description: >
-      Unlike black-box AI tools, our systems expose their internals.
-      Inspect, audit, and customize at every layer.
+      We don't have a bench of juniors waiting to be staffed.
+      We're two senior practitioners who lead every engagement.
 
-  - name: Research-First R&D
+  - name: Deterministic Over Probabilistic
     description: >
-      We focus on advancing the state of the art, not just shipping features.
-      Our products emerge from genuine research.
+      While others do "prompt-and-pray," we build AI systems
+      that follow strict architectural logic. No black boxes.
 
-  - name: Industrial-Grade Standards
+  - name: Products + Advisory
     description: >
-      Built for enterprise environments with high reliability requirements.
-      No consumer-grade assumptions.
+      We don't just consult—we build. Our products (STUDIO, ALLOY)
+      are proof that our expertise ships.
+
+  - name: No Handoffs
+    description: >
+      You'll never be handed off to someone you didn't hire.
+      For larger engagements, we bring in vetted specialists—
+      but we stay accountable.
+
+audience_specific:
+  for_enterprises:
+    headline: "The senior expertise your team needs."
+    message: >
+      Architecture reviews. Technical strategy. AI integration guidance.
+      Direct access to 30 years of enterprise experience—no layers.
+
+  for_agencies:
+    headline: "The expertise you call when you're stuck."
+    message: >
+      We're not competing for your projects. We help when problems
+      exceed your team's depth, and we build tools that make your
+      work easier.
+
+  for_ctos:
+    headline: "A second opinion from someone who's been there."
+    message: >
+      Sitecore, .NET, cloud-native, AI integration. We've done it at
+      Fortune 500 and federal scale. Let's talk architecture.

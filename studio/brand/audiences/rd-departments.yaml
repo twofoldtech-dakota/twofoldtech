@@ -25,10 +25,10 @@ responsibilities:
   - Research efficiency improvements
 
 pain_points:
-  - Lack of research-grade tooling for production use
   - Gap between POC and production-ready solutions
   - Difficulty measuring automation effectiveness
   - Vendor solutions that don't expose internals
+  - Need for senior expertise on complex technical challenges
 
 goals:
   - Develop proprietary automation advantages
@@ -38,12 +38,41 @@ goals:
 
 messaging_focus:
   - Open-box architecture for customization
-  - Research-to-production pathway
+  - Production-ready products (not research prototypes)
   - Extensibility and integration APIs
   - Performance benchmarking capabilities
+  - Expert advisory for complex technical decisions
+
+value_propositions:
+  - name: Expert Advisory
+    description: >
+      Direct access to Dakota and Dillon for technical strategy, architecture
+      guidance, and AI integration consulting. 30 combined years of experience
+      applied to your R&D challenges.
+
+  - name: Product Foundation
+    description: >
+      STUDIO and ALLOY provide production-grade foundations for internal
+      tooling. Extend and customize rather than build from scratch.
+
+  - name: Knowledge Transfer
+    description: >
+      We don't just deliver—we transfer knowledge. Your team learns the
+      patterns and practices behind enterprise-grade tooling.
 
 channels:
-  - Research publications and whitepapers
+  - Technical whitepapers
   - Technical conferences
   - Direct enterprise engagement
-  - Technical advisory relationships
+  - Expert advisory relationships
+  - Product licensing discussions
+
+engagement_models:
+  - name: Technical Advisory
+    description: Ongoing strategic guidance for R&D initiatives
+  - name: Product Licensing
+    description: STUDIO/ALLOY as foundations for internal tooling
+  - name: Custom Development
+    description: Build custom solutions with senior practitioner involvement
+  - name: Training & Enablement
+    description: Knowledge transfer on agentic workflows and system design

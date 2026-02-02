@@ -25,27 +25,59 @@ responsibilities:
   - Evaluate build vs. buy decisions
   - Ensure system reliability and scalability
   - Manage technical debt and modernization initiatives
+  - Select and vet external technical partners
 
 pain_points:
   - Legacy system constraints blocking modernization
   - AI tooling that produces inconsistent, unauditable code
   - Vendor lock-in and opacity in critical systems
   - Difficulty maintaining traceability across complex systems
+  - Agency partners who staff juniors on senior-level work
 
 goals:
   - Achieve architectural consistency across teams
   - Implement auditable, traceable development workflows
   - Reduce time-to-production for high-stakes systems
   - Maintain system integrity during modernization
+  - Find trusted senior expertise for complex initiatives
 
 messaging_focus:
   - Traceability and auditability
   - Architectural correctness
   - System stability under load
   - Open-box visibility into AI-generated changes
+  - Direct access to senior practitioners (no bait-and-switch)
+
+value_propositions:
+  - name: Advisory Engagement
+    description: >
+      Architecture reviews, technical strategy, and engineering leadership
+      guidance delivered directly by Dakota and Dillon. No account managers.
+      No handoff to juniors.
+
+  - name: Deterministic Orchestration
+    description: >
+      STUDIO ensures AI-assisted development follows strict architectural
+      logic. Every change is traceable, auditable, and reversible.
+
+  - name: Enterprise-Grade Tooling
+    description: >
+      ALLOY for high-concurrency modernization. Built for the performance
+      and reliability requirements enterprise systems demand.
 
 channels:
   - Technical conferences (QCon, InfoQ)
   - Architecture review boards
   - Technical RFP processes
   - Peer recommendations
+  - Advisory engagement (direct access to senior practitioners)
+
+engagement_models:
+  - name: Architecture Review
+    description: Independent assessment of systems and modernization approach
+  - name: Technical Advisory
+    description: Ongoing strategic guidance for complex initiatives
+  - name: Product Licensing
+    description: STUDIO/ALLOY for enterprise development teams
+  - name: Hands-On Build
+    description: Direct involvement in critical system development

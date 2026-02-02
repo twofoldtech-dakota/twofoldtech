@@ -1,49 +1,53 @@
 # TWOFOLD TECH - Brand Voice
-# Version: 1.1
+# Version: 2.0
 # Last Updated: 2026-02-01
 
 ratio:
-  engineering: 70
-  research_strategy: 30
+  expertise: 60
+  products: 40
   description: >
-    Content should be predominantly technical and engineering-focused,
-    with strategic research positioning woven throughout.
+    Content should emphasize senior-level expertise and practitioner credibility,
+    balanced with product demonstrations and technical depth. Advisory language
+    should feel personal and accountable.
 
 tone:
-  primary: Industrial
+  primary: Expert
   attributes:
-    - Absolute
+    - Founder-forward
     - Direct
     - Technical
     - Authoritative
+    - Accountable
 
   avoid:
     - Casual
     - Playful
     - Promotional
     - Vague
+    - Corporate/Agency-speak
 
 spectrum:
-  formal_casual: 1          # 1-5, heavily formal
+  formal_casual: 2          # 1-5, formal but approachable
   serious_playful: 1        # 1-5, heavily serious
   technical_accessible: 2   # 1-5, lean technical
   reserved_bold: 4          # 1-5, lean bold
   traditional_innovative: 4 # 1-5, lean innovative
+  impersonal_personal: 3    # 1-5, allow personal voice
 
 lexicon:
   preferred:
-    - Hardened
-    - Precision
-    - Stability
-    - Throughput
+    - Senior-level
+    - Practitioners
+    - Accountable
+    - Hands-on
+    - Deterministic
     - Orchestration
     - Traceability
-    - Fidelity
-    - Deterministic
     - Correctness
     - Architecture
-    - System Integrity
-    - Concurrency
+    - Hardened
+    - Precision
+    - Throughput
 
   avoid:
     - Revolutionary
@@ -54,22 +58,30 @@ lexicon:
     - Synergy
     - Leverage (as verb)
     - Utilize (use "use")
+    - Resources (for people)
+    - Lab/Laboratory
+    - Research-focused
 
 principles:
-  - name: Lead with precision
+  - name: Lead with expertise
     description: >
-      Every claim should be specific and defensible.
-      Avoid superlatives without supporting data.
+      Position Dakota and Dillon's combined 30 years of experience upfront.
+      Credibility comes from track record, not marketing claims.
 
-  - name: Write for architects
+  - name: Write for decision-makers
     description: >
       Assume technical competence. Don't over-explain fundamentals.
-      Respect the reader's expertise.
+      Respect the reader's expertise while demonstrating yours.
 
   - name: Favor the concrete
     description: >
       Replace abstractions with examples. Show system behavior,
-      not just capabilities.
+      not just capabilities. Reference real products (STUDIO, ALLOY).
+
+  - name: Be personally accountable
+    description: >
+      Use "we" to mean Dakota and Dillon specifically, not a faceless company.
+      Emphasize direct engagement and personal responsibility.
 
   - name: Maintain technical gravity
     description: >
@@ -78,11 +90,13 @@ principles:
 
 examples:
   good:
+    - "You'll work directly with Dakota and Dillon—the same people who architect and build your system."
     - "STUDIO traces every AI-generated change to its originating requirement."
-    - "ALLOY achieves 47% latency reduction through zero-copy message passing."
-    - "The system provides deterministic rollback to any prior build state."
+    - "We've spent 30 combined years solving these exact problems in enterprise environments."
+    - "When projects need additional capacity, we bring in specialists we've worked with for years—but we stay accountable."
 
   bad:
     - "Our revolutionary platform will transform your development workflow!"
     - "Leverage next-gen AI to supercharge your team's productivity."
-    - "We're disrupting the enterprise software space."
+    - "Our team of resources is standing by to help."
+    - "We're a research lab focused on innovation."

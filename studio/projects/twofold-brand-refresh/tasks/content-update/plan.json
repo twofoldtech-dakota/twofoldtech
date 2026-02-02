@@ -1,0 +1,37 @@
+{
+  "task_id": "content-update",
+  "project_id": "twofold-brand-refresh",
+  "goal": "Update website content to align with new brand strategy: Senior Expertise + Serious Software",
+  "created_at": "2026-02-01T00:00:00Z",
+  "status": "READY_TO_BUILD",
+  "steps": [
+    {
+      "id": 1,
+      "name": "Update site.ts constants"
+    },
+    {
+      "id": 2,
+      "name": "Update about.ts constants"
+    },
+    {
+      "id": 3,
+      "name": "Update advisory.ts constants"
+    },
+    {
+      "id": 4,
+      "name": "Update index.astro homepage"
+    },
+    {
+      "id": 5,
+      "name": "Update about.astro page"
+    },
+    {
+      "id": 6,
+      "name": "Update advisory.astro page"
+    },
+    {
+      "id": 7,
+      "name": "Verify all content alignment"
+    }
+  ]
+}

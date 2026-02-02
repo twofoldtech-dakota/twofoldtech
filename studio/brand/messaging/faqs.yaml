@@ -1,10 +1,100 @@
 # TWOFOLD TECH - Frequently Asked Questions
-# Version: 1.0
+# Version: 2.0
 # Last Updated: 2026-02-01
 
-title: "System Diagnostics: Frequently Asked Questions"
+title: "Frequently Asked Questions"
 
 faqs:
+
+  # === NEW: Company & Founders ===
+
+  - id: who-are-founders
+    question: "Who are the founders of Twofold Tech?"
+    category: Company
+    answer: >
+      Twofold Tech was founded by Dakota and Dillon Smith—two brothers with
+      30 combined years in enterprise software. Dakota is a Senior Architect
+      specializing in systems architecture, AI/agentic orchestration, and
+      high-performance tooling. Dillon is a Strategic Technology Leader with
+      expertise in engineering leadership, cloud infrastructure, and enterprise
+      scale operations. The name "Twofold" reflects both the dual nature of
+      our approach (expertise + products) and our founding partnership.
+    keywords:
+      - founders
+      - Dakota Smith
+      - Dillon Smith
+      - brothers
+      - 30 years
+
+  - id: why-not-agency
+    question: "Why aren't you an agency?"
+    category: Company
+    answer: >
+      Agencies staff projects with whoever's available—you meet seniors in
+      the pitch, then get handed off to juniors. We're the opposite. The people
+      you talk to are the people who do the work. We don't carry a bench of
+      resources waiting to be billable. We build products (STUDIO, ALLOY) that
+      encode our expertise, and we engage directly on advisory and complex
+      technical work. We're who agencies call when they're stuck.
+    keywords:
+      - agency
+      - staffing
+      - juniors
+      - bait-and-switch
+      - bench
+
+  - id: can-two-people-handle-enterprise
+    question: "Can two people really handle enterprise projects?"
+    category: Company
+    answer: >
+      We've each spent 15+ years delivering enterprise projects at Fortune 500
+      and federal government scale. When engagements require additional capacity,
+      we bring in vetted specialists we've worked with for years—but we stay
+      accountable. You're not hiring a bench; you're hiring senior expertise
+      that scales to fit the work. The question isn't team size—it's whether
+      the people doing the work actually know what they're doing.
+    keywords:
+      - scale
+      - enterprise
+      - team size
+      - specialists
+      - capacity
+
+  - id: how-do-you-scale
+    question: "How do you scale for larger engagements?"
+    category: Company
+    answer: >
+      We call it "Scale Without the Bench." For larger engagements, we bring
+      in vetted specialists we've worked with for years—people whose work we
+      trust. But unlike an agency, we stay personally accountable. Dakota and
+      Dillon lead every engagement. We scale to fit the work, not the other
+      way around.
+    keywords:
+      - scale
+      - specialists
+      - vetted
+      - accountability
+      - capacity
+
+  - id: ai-development-approach
+    question: "What's your approach to AI-assisted development?"
+    category: Company
+    answer: >
+      We call it Deterministic Orchestration, in contrast to "prompt-and-pray."
+      While the industry races toward AI-generated code with no guardrails,
+      we focus on ensuring agentic intelligence follows strict, senior-level
+      architectural logic. AI should be traceable, auditable, and architecturally
+      sound. STUDIO is the product embodiment of this philosophy—plan-first
+      workflows, quality gates, requirements traceability, and deterministic
+      rollback.
+    keywords:
+      - AI
+      - Deterministic Orchestration
+      - prompt-and-pray
+      - agentic
+      - STUDIO
+
+  # === STUDIO Product ===
 
   - id: studio-architecture
     question: "What is the core architectural philosophy behind STUDIO?"
@@ -14,9 +104,8 @@ faqs:
       standard LLMs operate on probabilistic guesses, STUDIO enforces a
       "Plan-First" state machine. It utilizes a Tri-Agent Architecture
       (Planner, Builder, Writer) where every proposed code change must pass
-      through a secondary validation agent before execution. This ensures
-      that agentic coding remains within the bounds of senior-level
-      architectural constraints.
+      through validation before execution. This ensures that agentic coding
+      remains within the bounds of senior-level architectural constraints.
     keywords:
       - Deterministic Orchestration
       - Plan-First
@@ -24,41 +113,6 @@ faqs:
       - Planner
       - Builder
       - Writer
-
-  - id: alloy-rust
-    question: "Why was ALLOY developed in Rust instead of C#/.NET?"
-    category: ALLOY
-    answer: >
-      Our research into large-scale Sitecore migrations (20+ site nodes)
-      identified a critical bottleneck in memory management and thread-safe
-      concurrency within standard serialization utilities. We engineered
-      ALLOY in Rust to leverage its zero-cost abstractions and high-concurrency
-      model. This allows for sub-second parsing of complex dependency trees
-      that would typically cause memory pressure or silent failures in
-      managed environments.
-    keywords:
-      - Rust
-      - zero-cost abstractions
-      - high-concurrency
-      - memory management
-      - Sitecore migrations
-
-  - id: architectural-hardening
-    question: "How does Twofold Tech define 'Architectural Hardening'?"
-    category: Advisory
-    answer: >
-      Hardening is the process of eliminating latent technical debt within
-      legacy .NET and Sitecore XP/XM environments. This involves decoupling
-      business logic from the CMS core, optimizing SQL/Solr interaction
-      layers, and refactoring tightly coupled pipelines into event-driven
-      functions. Our research proves that hardening the monolith is a
-      prerequisite for a stable, high-performance transition to XM Cloud.
-    keywords:
-      - technical debt
-      - Sitecore XP/XM
-      - XM Cloud
-      - decoupling
-      - event-driven
 
   - id: studio-cicd
     question: "Is STUDIO compatible with existing CI/CD pipelines?"
@@ -76,22 +130,69 @@ faqs:
       - quality gates
       - Claude Code
 
+  # === ALLOY Product ===
+
+  - id: alloy-rust
+    question: "Why was ALLOY developed in Rust instead of C#/.NET?"
+    category: ALLOY
+    answer: >
+      Our work on large-scale Sitecore migrations (20+ site nodes) identified
+      a critical bottleneck in memory management and thread-safe concurrency
+      within standard serialization utilities. We engineered ALLOY in Rust to
+      leverage its zero-cost abstractions and high-concurrency model. This
+      allows for sub-second parsing of complex dependency trees that would
+      typically cause memory pressure or silent failures in managed environments.
+    keywords:
+      - Rust
+      - zero-cost abstractions
+      - high-concurrency
+      - memory management
+      - Sitecore migrations
+
+  # === Advisory Services ===
+
+  - id: architectural-hardening
+    question: "How does Twofold Tech define 'Architectural Hardening'?"
+    category: Advisory
+    answer: >
+      Hardening is the process of eliminating latent technical debt within
+      legacy .NET and Sitecore XP/XM environments. This involves decoupling
+      business logic from the CMS core, optimizing SQL/Solr interaction
+      layers, and refactoring tightly coupled pipelines into event-driven
+      functions. Hardening the monolith is a prerequisite for a stable,
+      high-performance transition to XM Cloud or other modern architectures.
+    keywords:
+      - technical debt
+      - Sitecore XP/XM
+      - XM Cloud
+      - decoupling
+      - event-driven
+
   - id: platform-agnostic
-    question: "Can Twofold's research be applied to non-Sitecore ecosystems?"
+    question: "Can your expertise be applied to non-Sitecore ecosystems?"
     category: Company
     answer: >
-      While our current deep-stack research focuses on Sitecore and .NET,
-      the underlying orchestration logic of STUDIO is platform-agnostic.
-      It is engineered to bring "Industrial Clarity" to any complex
-      enterprise environment where the gap between AI-generated code and
-      production-ready architecture needs to be closed.
+      While our deep-stack expertise focuses on Sitecore and .NET, the
+      underlying orchestration logic of STUDIO is platform-agnostic. Our
+      advisory services apply to any complex enterprise environment where
+      architecture, AI integration, or engineering leadership guidance is
+      needed. The patterns and practices we've developed over 30 combined
+      years translate across technology stacks.
     keywords:
       - platform-agnostic
-      - Industrial Clarity
       - enterprise
+      - advisory
+      - patterns
 
 # Grouped by category for navigation
 by_category:
+  Company:
+    - who-are-founders
+    - why-not-agency
+    - can-two-people-handle-enterprise
+    - how-do-you-scale
+    - ai-development-approach
+    - platform-agnostic
   STUDIO:
     - studio-architecture
     - studio-cicd
@@ -99,5 +200,3 @@ by_category:
     - alloy-rust
   Advisory:
     - architectural-hardening
-  Company:
-    - platform-agnostic

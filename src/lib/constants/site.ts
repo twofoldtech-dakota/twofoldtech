@@ -1,5 +1,5 @@
 export const SITE_TITLE = 'Twofold Tech';
-export const SITE_DESCRIPTION = 'Enterprise Software Research & Modernization Lab';
+export const SITE_DESCRIPTION = 'Senior Expertise. Serious Software.';
 export const SITE_URL = 'https://twofold.tech';
 
 export interface NavItem {
@@ -39,7 +39,7 @@ export const FOOTER_NAV = {
 };
 
 export const PERFORMANCE_MANIFESTO =
-  "Twofold Tech is an R&D lab engineering the next generation of autonomous development tools. Our flagship platform, STUDIO, provides the planning and validation guardrails required for high-stakes enterprise engineering. From Sitecore XP/XM Cloud transitions to custom .NET ecosystems, we build the systems that build the future.";
+  "We're two senior engineers with 30 combined years in enterprise software. We advise on architecture, engineering leadership, and AI integration. And we build products—STUDIO for agentic orchestration, ALLOY for high-performance migrations—that enterprises and agencies actually use. The people you talk to are the people who do the work.";
 
 export interface ServicePillar {
   title: string;
@@ -52,7 +52,7 @@ export interface ServicePillar {
 export const SERVICE_PILLARS: ServicePillar[] = [
   {
     title: "SITECORE MODERNIZATION",
-    description: "Deep-stack expertise in moving from XP Monoliths to XM Cloud. We don't just migrate; we re-architect for Headless, utilizing ALLOY to ensure data integrity across millions of items.",
+    description: "Deep-stack expertise in moving from XP Monoliths to XM Cloud. We don't just migrate; we re-architect for Headless, using ALLOY to ensure data integrity across millions of items.",
     tags: ["XP TO XM CLOUD", "HEADLESS ARCHITECTURE", "NEXT.JS"],
     highlight: true,
     icon: "database",
@@ -94,11 +94,11 @@ export interface FAQItem {
 export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "What makes STUDIO different from GitHub Copilot?",
-    answer: "Copilot is an autocomplete engine; STUDIO is an Orchestration OS. STUDIO uses a Tri-Agent architecture to 'Plan, Build, and Write.' It validates architectural decisions against your specific constraints before writing code, eliminating the 'drift' common in standard LLM outputs.",
+    answer: "Copilot is an autocomplete engine; STUDIO is an Orchestration OS. STUDIO uses a Tri-Agent architecture to 'Plan, Build, and Write.' It validates architectural decisions against your specific constraints before writing code—that's Deterministic Orchestration instead of prompt-and-pray.",
   },
   {
     question: "Is Twofold Tech a Product Company or a Consultancy?",
-    answer: "We are a Product-Led Engineering Lab. We use our proprietary tooling (STUDIO and ALLOY) to deliver enterprise outcomes 5x faster and with higher precision than conventional manual engineering. You get the benefit of our R&D lab applied directly to your project.",
+    answer: "Neither—and both. We're two senior practitioners who build products (STUDIO, ALLOY) and advise on architecture and AI integration. We're not an agency with a bench of juniors. The people you talk to are the people who do the work.",
   },
   {
     question: "Can ALLOY migrate custom Sitecore pipelines?",
@@ -106,6 +106,10 @@ export const FAQ_ITEMS: FAQItem[] = [
   },
   {
     question: "How do you ensure 'Enterprise Safety' with Agentic AI?",
-    answer: "We implement 'Human-in-the-Loop' gates and rigid schema validation. STUDIO creates a sandbox environment where code is tested against unit tests generated *before* the implementation. If the code fails the tests, the Agent self-corrects without human intervention.",
+    answer: "We implement Human-in-the-Loop gates and rigid schema validation. STUDIO creates a sandbox environment where code is tested against unit tests generated before the implementation. If the code fails the tests, the Agent self-corrects without human intervention.",
+  },
+  {
+    question: "Can two people handle enterprise-scale projects?",
+    answer: "We've each spent 15+ years delivering at Fortune 500 and federal government scale. When engagements require additional capacity, we bring in vetted specialists we've worked with for years—but we stay accountable. You're hiring senior expertise that scales to fit the work.",
   },
 ];

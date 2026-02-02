@@ -1,72 +1,101 @@
-# TWOFOLD TECH - Engineering Manifesto
-# Version: 1.0
+# TWOFOLD TECH - Manifesto
+# Version: 2.0
 # Last Updated: 2026-02-01
 
-title: "Engineering for Architectural Integrity"
+title: "Senior Expertise. Serious Software."
 
 preamble: >
-  Complexity is the natural state of the enterprise. Without rigorous
-  orchestration, that complexity turns into terminal technical debt.
+  The enterprise software industry has a talent problem. Agencies staff projects
+  with juniors. Consultancies rotate people off the moment they understand your
+  system. AI tools generate code with no accountability. Someone has to actually
+  know what they're doing.
 
 declaration: >
-  At Twofold Tech, we are dedicated to the science of software modernization.
+  We're Dakota and Dillon Smith—two brothers with 30 combined years in enterprise
+  software. We advise on architecture, engineering leadership, and AI integration.
+  And we build products that enterprises and agencies actually use.
 
 positioning: >
-  We operate as an engineering lab focused on the research and development
-  of high-performance systems. We believe that the future of the enterprise
-  depends on three pillars of integrity:
+  We're not an agency. We don't carry a bench of juniors waiting to be billable.
+  The people you talk to are the people who do the work. We bring senior-level
+  expertise to complex problems—through direct advisory and products that encode
+  what we've learned.
 
 pillars:
 
-  - name: Hardened Architecture
-    principle: "Stability is a physical requirement of software."
+  - name: Senior Expertise
+    principle: "The people you hire should be the people who do the work."
     statement: >
-      We research the methods and abstractions needed to stabilize legacy
-      .NET and Sitecore environments before they transition to the cloud.
+      We lead every engagement personally. Architecture reviews, technical strategy,
+      engineering leadership guidance—delivered directly by practitioners with
+      15+ years of experience each. No bait-and-switch. No handoff to juniors.
 
-  - name: Orchestrated Intelligence
-    principle: "Generative development requires a supervisor."
+  - name: Products That Ship
+    principle: "We build software, not slide decks."
     statement: >
-      We build STUDIO—the orchestration framework that ensures agentic AI
-      follows strict, senior-level architectural logic.
+      STUDIO is our agentic orchestration platform—Deterministic Orchestration
+      that ensures AI follows senior-level architectural logic. ALLOY powers
+      high-concurrency modernization. These aren't concepts. They're production
+      software that enterprises and agencies use.
 
-  - name: Performance Tooling
-    principle: "When standard utilities fail to meet enterprise throughput requirements, we build our own."
+  - name: Accountable Advisory
+    principle: "We stay responsible for what we recommend."
     statement: >
-      ALLOY is the result of our research into high-concurrency Rust engines
-      for precision data translation.
+      Advisory without accountability is just opinion. When we advise on
+      architecture or AI integration, we're prepared to help build it.
+      When projects require additional capacity, we bring in vetted specialists
+      we've worked with for years—but we stay accountable.
 
 closing: >
-  We don't just study platforms; we engineer the autonomous frameworks
-  that allow them to endure.
+  We operate alongside and above agencies—not in competition with them. We're
+  the senior expertise agencies call when they're stuck, and we build the tools
+  they wish they had. You'll never be handed off to someone you didn't hire.
+
+thesis:
+  name: Deterministic Orchestration
+  contrast: Prompt-and-Pray
+  statement: >
+    While the industry races toward AI-generated code with no guardrails,
+    we focus on Deterministic Orchestration—ensuring agentic intelligence
+    follows strict, senior-level architectural logic. AI should be traceable,
+    auditable, and architecturally sound.
 
 # Rendered manifesto for content use
 full_text: |
-  ENGINEERING FOR ARCHITECTURAL INTEGRITY.
+  SENIOR EXPERTISE. SERIOUS SOFTWARE.
 
-  Complexity is the natural state of the enterprise. Without rigorous
-  orchestration, that complexity turns into terminal technical debt.
+  The enterprise software industry has a talent problem. Agencies staff projects
+  with juniors. Consultancies rotate people off the moment they understand your
+  system. AI tools generate code with no accountability. Someone has to actually
+  know what they're doing.
 
-  At Twofold Tech, we are dedicated to the science of software modernization.
+  We're Dakota and Dillon Smith—two brothers with 30 combined years in enterprise
+  software. We advise on architecture, engineering leadership, and AI integration.
+  And we build products that enterprises and agencies actually use.
 
-  We operate as an engineering lab focused on the research and development
-  of high-performance systems. We believe that the future of the enterprise
-  depends on three pillars of integrity:
+  We're not an agency. We don't carry a bench of juniors waiting to be billable.
+  The people you talk to are the people who do the work. We bring senior-level
+  expertise to complex problems—through direct advisory and products that encode
+  what we've learned.
 
-  HARDENED ARCHITECTURE
-  Stability is a physical requirement of software. We research the methods
-  and abstractions needed to stabilize legacy .NET and Sitecore environments
-  before they transition to the cloud.
+  SENIOR EXPERTISE
+  The people you hire should be the people who do the work. We lead every
+  engagement personally. Architecture reviews, technical strategy, engineering
+  leadership guidance—delivered directly by practitioners with 15+ years of
+  experience each. No bait-and-switch. No handoff to juniors.
 
-  ORCHESTRATED INTELLIGENCE
-  Generative development requires a supervisor. We build STUDIO—the
-  orchestration framework that ensures agentic AI follows strict,
-  senior-level architectural logic.
+  PRODUCTS THAT SHIP
+  We build software, not slide decks. STUDIO is our agentic orchestration
+  platform—Deterministic Orchestration that ensures AI follows senior-level
+  architectural logic. ALLOY powers high-concurrency modernization. These aren't
+  concepts. They're production software that enterprises and agencies use.
 
-  PERFORMANCE TOOLING
-  When standard utilities fail to meet enterprise throughput requirements,
-  we build our own. ALLOY is the result of our research into high-concurrency
-  Rust engines for precision data translation.
+  ACCOUNTABLE ADVISORY
+  We stay responsible for what we recommend. Advisory without accountability
+  is just opinion. When we advise on architecture or AI integration, we're
+  prepared to help build it. When projects require additional capacity, we
+  bring in vetted specialists we've worked with for years—but we stay accountable.
 
-  We don't just study platforms; we engineer the autonomous frameworks
-  that allow them to endure.
+  We operate alongside and above agencies—not in competition with them. We're
+  the senior expertise agencies call when they're stuck, and we build the tools
+  they wish they had. You'll never be handed off to someone you didn't hire.

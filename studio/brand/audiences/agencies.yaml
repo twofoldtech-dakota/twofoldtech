@@ -1,0 +1,87 @@
+# AUDIENCE: Digital Agencies
+# Priority: 2 (Secondary)
+# Last Updated: 2026-02-01
+
+profile:
+  title: Digital Agencies & Implementation Partners
+  priority: secondary
+
+demographics:
+  company_types:
+    - Digital agencies
+    - Sitecore implementation partners
+    - .NET consultancies
+    - Enterprise web development shops
+  company_size: 20-500 employees
+  typical_roles:
+    - Technical Director
+    - VP of Engineering
+    - CTO
+    - Practice Lead
+    - Solutions Architect
+
+characteristics:
+  - Strong front-end and UX capabilities
+  - Hit technical ceilings on complex backend work
+  - Need senior expertise they can't afford to keep on staff
+  - Looking for tools to improve delivery quality
+
+pain_points:
+  - Complex Sitecore/.NET projects exceed team capabilities
+  - Senior talent is expensive and hard to retain
+  - AI tooling generates inconsistent code quality
+  - Clients demand expertise the team doesn't have
+  - Projects go over budget when complexity surprises emerge
+
+goals:
+  - Access senior expertise without full-time overhead
+  - Improve delivery quality on complex projects
+  - Reduce risk on high-stakes enterprise engagements
+  - License tools that encode senior-level practices
+  - Build credibility with enterprise clients
+
+messaging_focus:
+  - We're not competing with you—we're augmenting you
+  - Senior expertise on demand, not a bench to carry
+  - Products (STUDIO, ALLOY) that encode best practices
+  - We're who you call when the project gets complicated
+  - Direct access to practitioners with 15+ years each
+
+value_propositions:
+  - name: Expert Augmentation
+    description: >
+      Bring us in for architecture reviews, technical strategy, or hands-on
+      work when projects exceed your team's depth. We integrate with your
+      delivery, not around it.
+
+  - name: Product Licensing
+    description: >
+      STUDIO and ALLOY encode senior-level practices into tools your team
+      can use. Improve delivery quality without hiring expensive specialists.
+
+  - name: Training & Enablement
+    description: >
+      We can train your team on complex Sitecore/.NET patterns, AI-assisted
+      development workflows, and architectural best practices.
+
+channels:
+  - Sitecore partner network
+  - .NET community events
+  - Agency referrals
+  - Direct outreach to technical leadership
+  - Conference speaking (partner sessions)
+
+engagement_models:
+  - name: Project Augmentation
+    description: Join your team for specific complex phases
+  - name: Architecture Review
+    description: Independent assessment of technical approach
+  - name: Product Licensing
+    description: STUDIO/ALLOY for your delivery teams
+  - name: Retainer Advisory
+    description: Ongoing access for technical escalations
+
+objection_mapping:
+  - "Why not just hire an agency?"  # We ARE the expertise agencies need
+  - "You're just two people"        # We scale with vetted specialists
+  - "What if you're busy?"          # Transparent capacity, selective engagements

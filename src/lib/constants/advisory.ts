@@ -1,7 +1,7 @@
 export const ADVISORY_META = {
   title: 'ADVISORY',
-  tagline: 'ENTERPRISE MODERNIZATION CONSULTING',
-  description: 'Strategic guidance for organizations navigating complex digital transformations, legacy migrations, and agentic engineering adoption.',
+  tagline: 'SENIOR EXPERTISE, NOT A SLIDE DECK',
+  description: 'Direct access to practitioners with 30 combined years of enterprise experience. Architecture reviews, technical strategy, engineering leadership guidance—delivered by the same people who build STUDIO and ALLOY.',
 };
 
 export interface AdvisoryService {
@@ -12,6 +12,17 @@ export interface AdvisoryService {
 }
 
 export const ADVISORY_SERVICES: AdvisoryService[] = [
+  {
+    title: 'ARCHITECTURE REVIEW',
+    description: 'Deep-dive analysis of existing systems with actionable recommendations from senior practitioners.',
+    deliverables: [
+      'Architecture documentation',
+      'Performance bottleneck analysis',
+      'Scalability assessment',
+      'Technical debt inventory',
+    ],
+    icon: 'layers',
+  },
   {
     title: 'MIGRATION STRATEGY',
     description: 'Comprehensive roadmaps for transitioning from legacy platforms to modern architectures.',
@@ -24,35 +35,24 @@ export const ADVISORY_SERVICES: AdvisoryService[] = [
     icon: 'map',
   },
   {
-    title: 'ARCHITECTURE REVIEW',
-    description: 'Deep-dive analysis of existing systems with actionable recommendations.',
+    title: 'AI INTEGRATION',
+    description: 'Prepare your organization for AI-driven development workflows with Deterministic Orchestration.',
     deliverables: [
-      'Architecture documentation',
-      'Performance bottleneck analysis',
-      'Scalability assessment',
-      'Technical debt inventory',
-    ],
-    icon: 'layers',
-  },
-  {
-    title: 'AGENTIC READINESS',
-    description: 'Prepare your organization for AI-driven development workflows.',
-    deliverables: [
-      'AI integration assessment',
+      'AI readiness assessment',
       'Workflow automation opportunities',
       'Security and governance framework',
-      'Team training recommendations',
+      'STUDIO integration planning',
     ],
     icon: 'cpu',
   },
   {
     title: 'SITECORE EXPERTISE',
-    description: 'Specialized consulting for Sitecore XP to XM Cloud transitions.',
+    description: 'Specialized guidance for Sitecore XP to XM Cloud transitions from practitioners who built ALLOY.',
     deliverables: [
       'XM Cloud readiness audit',
       'Content architecture planning',
       'Headless implementation strategy',
-      'Personalization roadmap',
+      'ALLOY deployment support',
     ],
     icon: 'database',
   },
@@ -69,19 +69,19 @@ export const ENGAGEMENT_MODELS: EngagementModel[] = [
   {
     title: 'DISCOVERY',
     duration: '2-4 WEEKS',
-    description: 'Initial assessment and strategic recommendations for your modernization journey.',
+    description: 'Initial assessment and strategic recommendations delivered directly by Dakota and Dillon.',
     bestFor: 'Organizations starting their transformation',
   },
   {
     title: 'EMBEDDED',
     duration: '3-6 MONTHS',
-    description: 'Hands-on partnership with your team to execute complex technical initiatives.',
+    description: 'Hands-on partnership with your team. We lead the technical work, not manage it from afar.',
     bestFor: 'Active migration or transformation projects',
   },
   {
     title: 'RETAINER',
     duration: 'ONGOING',
-    description: 'Continuous access to our expertise for strategic guidance and technical oversight.',
+    description: 'Continuous access to senior expertise for strategic guidance and technical escalations.',
     bestFor: 'Long-term modernization programs',
   },
 ];
@@ -92,8 +92,8 @@ export interface CaseMetric {
 }
 
 export const ADVISORY_METRICS: CaseMetric[] = [
-  { value: '50+', label: 'ENTERPRISE ENGAGEMENTS' },
-  { value: '90%', label: 'CLIENT RETENTION' },
-  { value: '5x', label: 'AVERAGE ROI' },
-  { value: '<24h', label: 'RESPONSE TIME' },
+  { value: '30', label: 'COMBINED YEARS' },
+  { value: '2', label: 'SENIOR PRACTITIONERS' },
+  { value: '0', label: 'JUNIORS ON STAFF' },
+  { value: '100%', label: 'SENIOR DELIVERY' },
 ];

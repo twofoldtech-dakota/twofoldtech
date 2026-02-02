@@ -23,8 +23,8 @@ export const POST: APIRoute = async ({ request }) => {
 
     // Send notification email to team
     await resend.emails.send({
-      from: 'Twofold Contact <contact@twofold.tech>',
-      to: ['hello@twofold.tech'],
+      from: 'Twofold Contact <noreply@twofold.tech>',
+      to: ['contact@twofold.tech'],
       replyTo: email,
       subject: `New ${inquiry || 'Contact'} Inquiry from ${name}`,
       html: `
@@ -40,7 +40,7 @@ export const POST: APIRoute = async ({ request }) => {
 
     // Send confirmation email to user
     await resend.emails.send({
-      from: 'Twofold Tech <hello@twofold.tech>',
+      from: 'Twofold Tech <noreply@twofold.tech>',
       to: [email],
       subject: 'Thanks for reaching out to Twofold Tech',
       html: `
