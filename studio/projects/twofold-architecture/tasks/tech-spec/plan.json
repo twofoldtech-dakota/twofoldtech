@@ -18,7 +18,7 @@
       "docs/SEO-STRATEGY.md - Sitecore keyword domination plan"
     ],
     "constraints": [
-      "Documentation only - no STUDIO/ALLOY product code implementation",
+      "Documentation only - no STUDIO/Conduit product code implementation",
       "Website showcases products but does not embed them",
       "Must achieve 100/100 Lighthouse scores by design",
       "Zero client-side JS by default (island architecture)"
@@ -36,7 +36,7 @@
     "assumptions": [
       "Astro 5.0+ with Content Layer API is stable",
       "Vercel Edge deployment with ISR is target platform",
-      "STUDIO and ALLOY product pages are informational, not functional"
+      "STUDIO and Conduit product pages are informational, not functional"
     ]
   },
   "steps": [

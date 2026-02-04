@@ -1,6 +1,6 @@
 # AUDIENCE: Digital Agencies
 # Priority: 2 (Secondary)
-# Last Updated: 2026-02-01
+# Last Updated: 2026-02-04
 
 profile:
   title: Digital Agencies & Implementation Partners
@@ -27,24 +27,24 @@ characteristics:
   - Looking for tools to improve delivery quality
 
 pain_points:
-  - Complex Sitecore/.NET projects exceed team capabilities
+  - Complex CMS projects exceed team capabilities
   - Senior talent is expensive and hard to retain
   - AI tooling generates inconsistent code quality
-  - Clients demand expertise the team doesn't have
+  - Clients demand integrations across multiple CMS platforms
   - Projects go over budget when complexity surprises emerge
 
 goals:
   - Access senior expertise without full-time overhead
   - Improve delivery quality on complex projects
   - Reduce risk on high-stakes enterprise engagements
-  - License tools that encode senior-level practices
+  - Use tools that reduce integration overhead
   - Build credibility with enterprise clients
 
 messaging_focus:
   - We're not competing with you—we're augmenting you
   - Senior expertise on demand, not a bench to carry
-  - Products (STUDIO, ALLOY) that encode best practices
-  - We're who you call when the project gets complicated
+  - Conduit reduces CMS integration sprawl
+  - STUDIO provides deterministic orchestration
   - Direct access to practitioners with 15+ years each
 
 value_propositions:
@@ -54,15 +54,15 @@ value_propositions:
       work when projects exceed your team's depth. We integrate with your
       delivery, not around it.
 
-  - name: Product Licensing
+  - name: Unified CMS Access
     description: >
-      STUDIO and ALLOY encode senior-level practices into tools your team
-      can use. Improve delivery quality without hiring expensive specialists.
+      Conduit provides a single integration layer across multiple CMS platforms.
+      Reduce custom build time and long-term maintenance.
 
   - name: Training & Enablement
     description: >
-      We can train your team on complex Sitecore/.NET patterns, AI-assisted
-      development workflows, and architectural best practices.
+      We can train your team on complex CMS patterns, AI-assisted development
+      workflows, and architectural best practices.
 
 channels:
   - Sitecore partner network
@@ -76,8 +76,8 @@ engagement_models:
     description: Join your team for specific complex phases
   - name: Architecture Review
     description: Independent assessment of technical approach
-  - name: Product Licensing
-    description: STUDIO/ALLOY for your delivery teams
+  - name: Conduit Integration
+    description: Unified CMS access for client ecosystems
   - name: Retainer Advisory
     description: Ongoing access for technical escalations
 

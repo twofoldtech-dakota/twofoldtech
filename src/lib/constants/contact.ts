@@ -1,7 +1,7 @@
 export const CONTACT_META = {
   title: 'CONTACT',
   tagline: 'START A CONVERSATION',
-  description: 'Get in touch with the Twofold Tech lab. We respond to all inquiries within 24 hours.',
+  description: 'Request Conduit beta access, discuss advisory engagement, or get guidance on deterministic orchestration with STUDIO.',
 };
 
 export interface ContactMethod {
@@ -36,19 +36,19 @@ export interface InquiryType {
 
 export const INQUIRY_TYPES: InquiryType[] = [
   {
-    label: 'STUDIO ACCESS',
+    label: 'CONDUIT BETA',
+    value: 'conduit',
+    description: 'Request Conduit beta access for unified CMS integration',
+  },
+  {
+    label: 'ADVISORY',
+    value: 'advisory',
+    description: 'Architecture reviews, CMS strategy, and AI orchestration guidance',
+  },
+  {
+    label: 'STUDIO OSS',
     value: 'studio',
-    description: 'Request access to STUDIO_OS platform',
-  },
-  {
-    label: 'ALLOY DEMO',
-    value: 'alloy',
-    description: 'Schedule a migration engine demonstration',
-  },
-  {
-    label: 'CONSULTING',
-    value: 'consulting',
-    description: 'Enterprise modernization services',
+    description: 'Open-source orchestration support or implementation help',
   },
   {
     label: 'PARTNERSHIP',

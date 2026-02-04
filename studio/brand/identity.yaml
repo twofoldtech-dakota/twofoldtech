@@ -1,27 +1,27 @@
 # TWOFOLD TECH - Brand Identity
-# Version: 2.0
-# Last Updated: 2026-02-01
+# Version: 3.0
+# Last Updated: 2026-02-04
 
 company:
   name: Twofold Tech
   tagline: "Senior Expertise. Serious Software."
 
-category: Expert Practitioners & Product Studio
+category: Senior Practitioners & Deterministic Systems Studio
 
 mission: >
-  We bring 30 years of enterprise experience to organizations navigating
-  complex technical transformations—through direct advisory and products
-  that encode our expertise.
+  Unify enterprise content systems and deliver deterministic, auditable
+  AI-assisted development—through products that encode our expertise and
+  direct advisory led by senior practitioners.
 
 vision: >
-  To prove that senior practitioners building real products create more
-  value than agencies staffed with juniors.
+  To prove that senior practitioners building real systems create more
+  value than agencies staffed with juniors and AI tools without guardrails.
 
 thesis:
   name: Deterministic Orchestration
   contrast: "Prompt-and-Pray"
   statement: >
-    While the industry races toward AI-generated code with no guardrails,
+    While the industry races toward AI-generated output with no guardrails,
     we focus on Deterministic Orchestration—ensuring agentic intelligence
     follows strict, senior-level architectural logic. AI should be traceable,
     auditable, and architecturally sound.
@@ -39,7 +39,7 @@ values:
 
   - name: Products Over Promises
     description: >
-      We ship software, not slide decks. Our products (STUDIO, ALLOY)
+      We ship software, not slide decks. Our products (Conduit, STUDIO)
       encode our expertise into tools that enterprises and agencies use.
 
   - name: Scale Without the Bench
@@ -77,7 +77,7 @@ positioning:
     Twofold Tech is not an agency. We're two senior engineers—brothers—with
     30 combined years in enterprise software. We advise on architecture,
     engineering leadership, and AI integration. And we build products that
-    enterprises and agencies actually use.
+    unify CMS context (Conduit) and orchestrate deterministic delivery (STUDIO).
 
   differentiator: >
     You'll never be handed off to someone you didn't hire. We lead every
@@ -88,29 +88,30 @@ positioning:
   market_position: >
     We operate alongside and above agencies—not in competition with them.
     We're the senior expertise agencies call when they're stuck, and we
-    build the tools they wish they had.
+    build the tools they wish they had: unified CMS access and deterministic
+    orchestration.
 
   combined_expertise:
-    - Enterprise .NET & Sitecore (stabilization, modernization, XM Cloud)
-    - Cloud-native architecture (Azure, Docker, Kubernetes)
+    - Enterprise CMS (Sitecore XP/XM Cloud, Contentful, Umbraco, Optimizely)
+    - CMS unification & integration (MCP, adapter architecture, governance)
     - AI & Agentic orchestration (deterministic, auditable, enterprise-grade)
     - Fortune 500 and federal government scale operations
     - Compliance & security (DevSecOps, WCAG, regulatory)
 
 products:
+  - name: Conduit
+    description: Enterprise-grade MCP server for unified CMS access
+    tagline: "One connection to every CMS."
+    thesis_alignment: >
+      Conduit turns fragmented content systems into a single, auditable
+      interface for AI and engineering teams.
+
   - name: STUDIO
-    description: Agentic orchestration platform for AI-assisted development
-    tagline: "AI builds code. STUDIO makes sure it's correct."
+    description: Open-source agentic orchestration platform for AI-assisted development
+    tagline: "Deterministic orchestration for enterprise software."
     thesis_alignment: >
       Embodies Deterministic Orchestration—plan-first workflows, quality gates,
       requirements traceability. The antidote to prompt-and-pray.
-
-  - name: ALLOY
-    description: High-concurrency modernization tooling powered by Rust
-    tagline: "High-fidelity modernization at enterprise scale."
-    thesis_alignment: >
-      Precision data translation and system hardening. Performance without
-      sacrificing correctness.
 
 services:
   - name: Advisory

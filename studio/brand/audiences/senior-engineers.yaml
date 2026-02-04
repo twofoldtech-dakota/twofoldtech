@@ -1,6 +1,6 @@
 # SECONDARY AUDIENCE: Senior Software Engineers
 # Priority: 2 (Secondary)
-# Last Updated: 2026-02-01
+# Last Updated: 2026-02-04
 
 profile:
   title: Senior Software Engineers (Agentic Workflow Users)
@@ -19,6 +19,7 @@ responsibilities:
   - Implement and maintain production systems
   - Evaluate and integrate development tooling
   - Review AI-generated code for correctness
+  - Integrate content systems into apps and workflows
   - Mentor junior engineers on best practices
 
 pain_points:
@@ -26,30 +27,33 @@ pain_points:
   - Context loss across long development sessions
   - Difficulty tracing changes back to requirements
   - Tooling that doesn't integrate with existing workflows
+  - Multiple CMS APIs with inconsistent patterns
 
 goals:
   - Increase development velocity without sacrificing quality
   - Maintain code correctness in AI-assisted workflows
   - Reduce cognitive load of context management
   - Achieve deterministic, reproducible builds
+  - Simplify CMS integration across projects
 
 messaging_focus:
   - Plan-then-build workflow correctness
   - Requirements traceability
   - Rollback and recovery capabilities
   - Integration with existing toolchains
+  - One connection to every CMS
 
 value_propositions:
   - name: STUDIO Product
     description: >
-      Agentic orchestration platform that ensures AI follows senior-level
+      Open-source orchestration that ensures AI follows senior-level
       architectural logic. Plan-first workflows, quality gates, and
       deterministic rollback. Built by practitioners who use it daily.
 
-  - name: ALLOY Product
+  - name: Conduit Product
     description: >
-      High-concurrency modernization tooling powered by Rust. Precision
-      data translation at enterprise scale.
+      Unified CMS access through a single, type-safe interface. Reduce
+      integration overhead across Sitecore, Contentful, Umbraco, and more.
 
   - name: Open-Box Architecture
     description: >

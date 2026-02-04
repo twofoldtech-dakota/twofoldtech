@@ -48,8 +48,8 @@ export const POST: APIRoute = async ({ request }) => {
         <p>We've received your inquiry and will get back to you within 24 hours.</p>
         <p>In the meantime, feel free to explore our products:</p>
         <ul>
-          <li><a href="https://twofold.tech/studio">STUDIO</a> - Agentic Orchestration OS</li>
-          <li><a href="https://twofold.tech/alloy">ALLOY</a> - Sitecore Migration Engine</li>
+          <li><a href="https://twofold.tech/conduit">Conduit</a> - Unified CMS MCP Server</li>
+          <li><a href="https://twofold.tech/studio">STUDIO</a> - Deterministic Orchestration (Open Source)</li>
         </ul>
         <p>Best,<br>The Twofold Team</p>
       `,

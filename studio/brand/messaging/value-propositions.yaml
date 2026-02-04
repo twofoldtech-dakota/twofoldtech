@@ -1,6 +1,6 @@
 # TWOFOLD TECH - Value Propositions
-# Version: 2.0
-# Last Updated: 2026-02-01
+# Version: 3.0
+# Last Updated: 2026-02-04
 
 primary_propositions:
 
@@ -13,30 +13,31 @@ primary_propositions:
       - Architecture reviews, technical strategy, AI integration
       - Fortune 500 and federal government scale experience
 
-  - headline: "AI builds code. STUDIO makes sure it's correct."
-    product: STUDIO
-    audience: Enterprises, Agencies, Development Teams
+  - headline: "One connection to every CMS."
+    product: Conduit
+    audience: Enterprises, Agencies, Platform Teams
     proof_points:
-      - Requirements traceability from task to implementation
-      - Deterministic rollback to any prior state
-      - Plan-first workflow prevents architectural drift
-      - Quality gates enforce correctness before build
+      - Unified API for content operations across platforms
+      - Connect Sitecore XP, XM Cloud, Umbraco, Optimizely, Contentful, and more
+      - Enterprise-ready: caching, rate limiting, audit logging
+      - Type-safe TypeScript interfaces with extensible adapters
 
-  - headline: "High-fidelity modernization at enterprise scale."
-    product: ALLOY
-    audience: Enterprise Architects, R&D Teams
+  - headline: "Deterministic orchestration for enterprise software."
+    product: STUDIO
+    audience: Enterprises, Development Teams
     proof_points:
-      - Zero-copy message passing for minimal overhead
-      - Compile-time correctness guarantees
-      - Predictable performance characteristics
-      - Memory safety without garbage collection
+      - Plan-first workflows prevent architectural drift
+      - Quality gates enforce correctness before execution
+      - Requirements traceability from task to implementation
+      - Open-source, open-box architecture
 
 core_message:
-  headline: "Two engineers. Thirty years. No fluff."
+  headline: "Two engineers. Thirty years. Deterministic systems."
   subhead: >
     We're not an agency. We're two senior engineers—brothers—who advise
     on architecture, engineering leadership, and AI integration. And we
-    build products that enterprises and agencies actually use.
+    build products that unify CMS context (Conduit) and orchestrate
+    deterministic delivery (STUDIO).
 
 value_hierarchy:
   level_1:
@@ -46,28 +47,33 @@ value_hierarchy:
       No juniors. No bait-and-switch. No account managers.
 
   level_2:
+    name: Unified CMS Context
+    description: >
+      One connection to every CMS. A single interface for content
+      operations, governance, and AI context.
+
+  level_3:
     name: Deterministic Orchestration
     description: >
       AI should follow architectural logic, not hunches.
       Traceable, auditable, and architecturally sound.
 
-  level_3:
+  level_4:
     name: Products That Work
     description: >
-      We ship software, not slide decks. Our products encode
+      We ship software, not slide decks. Conduit and STUDIO encode
       30 years of expertise into tools you can actually use.
-
-  level_4:
-    name: Scalable Without the Bench
-    description: >
-      We scale to fit the work, not the other way around.
-      Vetted specialists when needed. Accountability always.
 
 differentiators:
   - name: Not an Agency
     description: >
       We don't have a bench of juniors waiting to be staffed.
       We're two senior practitioners who lead every engagement.
+
+  - name: Unified CMS Access
+    description: >
+      While others build one-off integrations, Conduit provides
+      a unified, extensible interface across CMS platforms.
 
   - name: Deterministic Over Probabilistic
     description: >
@@ -76,14 +82,8 @@ differentiators:
 
   - name: Products + Advisory
     description: >
-      We don't just consult—we build. Our products (STUDIO, ALLOY)
+      We don't just consult—we build. Our products (Conduit, STUDIO)
       are proof that our expertise ships.
-
-  - name: No Handoffs
-    description: >
-      You'll never be handed off to someone you didn't hire.
-      For larger engagements, we bring in vetted specialists—
-      but we stay accountable.
 
 audience_specific:
   for_enterprises:
@@ -102,5 +102,5 @@ audience_specific:
   for_ctos:
     headline: "A second opinion from someone who's been there."
     message: >
-      Sitecore, .NET, cloud-native, AI integration. We've done it at
-      Fortune 500 and federal scale. Let's talk architecture.
+      CMS modernization, platform integration, AI orchestration.
+      We've done it at Fortune 500 and federal scale. Let's talk.

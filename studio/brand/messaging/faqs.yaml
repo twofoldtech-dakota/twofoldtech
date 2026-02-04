@@ -1,12 +1,12 @@
 # TWOFOLD TECH - Frequently Asked Questions
-# Version: 2.0
-# Last Updated: 2026-02-01
+# Version: 3.0
+# Last Updated: 2026-02-04
 
 title: "Frequently Asked Questions"
 
 faqs:
 
-  # === NEW: Company & Founders ===
+  # === Company & Founders ===
 
   - id: who-are-founders
     question: "Who are the founders of Twofold Tech?"
@@ -33,7 +33,7 @@ faqs:
       Agencies staff projects with whoever's available—you meet seniors in
       the pitch, then get handed off to juniors. We're the opposite. The people
       you talk to are the people who do the work. We don't carry a bench of
-      resources waiting to be billable. We build products (STUDIO, ALLOY) that
+      resources waiting to be billable. We build products (Conduit, STUDIO) that
       encode our expertise, and we engage directly on advisory and complex
       technical work. We're who agencies call when they're stuck.
     keywords:
@@ -60,22 +60,6 @@ faqs:
       - specialists
       - capacity
 
-  - id: how-do-you-scale
-    question: "How do you scale for larger engagements?"
-    category: Company
-    answer: >
-      We call it "Scale Without the Bench." For larger engagements, we bring
-      in vetted specialists we've worked with for years—people whose work we
-      trust. But unlike an agency, we stay personally accountable. Dakota and
-      Dillon lead every engagement. We scale to fit the work, not the other
-      way around.
-    keywords:
-      - scale
-      - specialists
-      - vetted
-      - accountability
-      - capacity
-
   - id: ai-development-approach
     question: "What's your approach to AI-assisted development?"
     category: Company
@@ -94,6 +78,38 @@ faqs:
       - agentic
       - STUDIO
 
+  # === Conduit Product ===
+
+  - id: conduit-what-is-it
+    question: "What is Conduit?"
+    category: Conduit
+    answer: >
+      Conduit is an enterprise-grade MCP (Model Context Protocol) server that
+      provides unified access to multiple CMS platforms through a single
+      interface. Connect your assistants and applications to Sitecore XP,
+      XM Cloud, Umbraco, Optimizely, Contentful, and more—without building
+      one-off integrations.
+    keywords:
+      - Conduit
+      - MCP
+      - CMS
+      - Sitecore
+      - unified API
+
+  - id: conduit-why
+    question: "Why not just use native CMS APIs?"
+    category: Conduit
+    answer: >
+      Native CMS APIs are fragmented and inconsistent across platforms. Conduit
+      gives you one contract for content operations, with enterprise governance
+      baked in: caching, rate limiting, and audit logging. You get consistency
+      across systems without maintaining a pile of custom integrations.
+    keywords:
+      - CMS APIs
+      - integrations
+      - governance
+      - caching
+
   # === STUDIO Product ===
 
   - id: studio-architecture
@@ -103,86 +119,42 @@ faqs:
       STUDIO is built on the principle of Deterministic Orchestration. While
       standard LLMs operate on probabilistic guesses, STUDIO enforces a
       "Plan-First" state machine. It utilizes a Tri-Agent Architecture
-      (Planner, Builder, Writer) where every proposed code change must pass
-      through validation before execution. This ensures that agentic coding
-      remains within the bounds of senior-level architectural constraints.
+      (Planner, Builder, Reviewer) where every proposed change must pass
+      through validation before execution.
     keywords:
       - Deterministic Orchestration
       - Plan-First
       - Tri-Agent Architecture
       - Planner
       - Builder
-      - Writer
+      - Reviewer
 
-  - id: studio-cicd
-    question: "Is STUDIO compatible with existing CI/CD pipelines?"
+  - id: studio-open-source
+    question: "Is STUDIO open source?"
     category: STUDIO
     answer: >
-      Yes. STUDIO is designed as a portable orchestration layer that plugs
-      into the Claude Code CLI environment. It utilizes standard Git-based
-      snapshots for its rollback system and can be configured to trigger
-      existing enterprise quality gates (Unit Tests, Linting, Security Scans)
-      as part of its internal "Quality Gate" lifecycle.
+      Yes. STUDIO is open source, with an open-box architecture you can inspect,
+      extend, and adapt. We provide advisory for teams that want deterministic
+      orchestration without building the system alone.
     keywords:
-      - CI/CD
-      - Git
-      - rollback
-      - quality gates
-      - Claude Code
-
-  # === ALLOY Product ===
-
-  - id: alloy-rust
-    question: "Why was ALLOY developed in Rust instead of C#/.NET?"
-    category: ALLOY
-    answer: >
-      Our work on large-scale Sitecore migrations (20+ site nodes) identified
-      a critical bottleneck in memory management and thread-safe concurrency
-      within standard serialization utilities. We engineered ALLOY in Rust to
-      leverage its zero-cost abstractions and high-concurrency model. This
-      allows for sub-second parsing of complex dependency trees that would
-      typically cause memory pressure or silent failures in managed environments.
-    keywords:
-      - Rust
-      - zero-cost abstractions
-      - high-concurrency
-      - memory management
-      - Sitecore migrations
+      - STUDIO
+      - open source
+      - open-box
 
   # === Advisory Services ===
 
-  - id: architectural-hardening
-    question: "How does Twofold Tech define 'Architectural Hardening'?"
+  - id: cms-modernization
+    question: "Can you help with CMS modernization beyond Sitecore?"
     category: Advisory
     answer: >
-      Hardening is the process of eliminating latent technical debt within
-      legacy .NET and Sitecore XP/XM environments. This involves decoupling
-      business logic from the CMS core, optimizing SQL/Solr interaction
-      layers, and refactoring tightly coupled pipelines into event-driven
-      functions. Hardening the monolith is a prerequisite for a stable,
-      high-performance transition to XM Cloud or other modern architectures.
-    keywords:
-      - technical debt
-      - Sitecore XP/XM
-      - XM Cloud
-      - decoupling
-      - event-driven
-
-  - id: platform-agnostic
-    question: "Can your expertise be applied to non-Sitecore ecosystems?"
-    category: Company
-    answer: >
-      While our deep-stack expertise focuses on Sitecore and .NET, the
-      underlying orchestration logic of STUDIO is platform-agnostic. Our
-      advisory services apply to any complex enterprise environment where
-      architecture, AI integration, or engineering leadership guidance is
-      needed. The patterns and practices we've developed over 30 combined
-      years translate across technology stacks.
+      Yes. While we have deep Sitecore expertise, our advisory services apply to
+      any enterprise environment where architecture, CMS integration, or AI
+      orchestration is needed. Conduit is designed to be platform-agnostic.
     keywords:
       - platform-agnostic
-      - enterprise
+      - CMS
       - advisory
-      - patterns
+      - modernization
 
 # Grouped by category for navigation
 by_category:
@@ -190,13 +162,12 @@ by_category:
     - who-are-founders
     - why-not-agency
     - can-two-people-handle-enterprise
-    - how-do-you-scale
     - ai-development-approach
-    - platform-agnostic
+  Conduit:
+    - conduit-what-is-it
+    - conduit-why
   STUDIO:
     - studio-architecture
-    - studio-cicd
-  ALLOY:
-    - alloy-rust
+    - studio-open-source
   Advisory:
-    - architectural-hardening
+    - cms-modernization

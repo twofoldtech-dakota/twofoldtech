@@ -1,14 +1,14 @@
 # TWOFOLD TECH - Manifesto
-# Version: 2.0
-# Last Updated: 2026-02-01
+# Version: 3.0
+# Last Updated: 2026-02-04
 
 title: "Senior Expertise. Serious Software."
 
 preamble: >
-  The enterprise software industry has a talent problem. Agencies staff projects
-  with juniors. Consultancies rotate people off the moment they understand your
-  system. AI tools generate code with no accountability. Someone has to actually
-  know what they're doing.
+  Enterprise software has a context problem. Teams are split across multiple
+  CMS platforms, integration glue is brittle, and AI tools generate output
+  without accountability. Someone has to actually know what they're doing—and
+  make systems deterministic.
 
 declaration: >
   We're Dakota and Dillon Smith—two brothers with 30 combined years in enterprise
@@ -30,13 +30,13 @@ pillars:
       engineering leadership guidance—delivered directly by practitioners with
       15+ years of experience each. No bait-and-switch. No handoff to juniors.
 
-  - name: Products That Ship
+  - name: Systems That Ship
     principle: "We build software, not slide decks."
     statement: >
-      STUDIO is our agentic orchestration platform—Deterministic Orchestration
-      that ensures AI follows senior-level architectural logic. ALLOY powers
-      high-concurrency modernization. These aren't concepts. They're production
-      software that enterprises and agencies use.
+      Conduit is our enterprise MCP server—one connection to every CMS. STUDIO is
+      our open-source orchestration platform—Deterministic Orchestration that
+      ensures AI follows senior-level architectural logic. These aren't concepts.
+      They're production-grade systems that teams use.
 
   - name: Accountable Advisory
     principle: "We stay responsible for what we recommend."
@@ -55,7 +55,7 @@ thesis:
   name: Deterministic Orchestration
   contrast: Prompt-and-Pray
   statement: >
-    While the industry races toward AI-generated code with no guardrails,
+    While the industry races toward AI-generated output with no guardrails,
     we focus on Deterministic Orchestration—ensuring agentic intelligence
     follows strict, senior-level architectural logic. AI should be traceable,
     auditable, and architecturally sound.
@@ -64,10 +64,10 @@ thesis:
 full_text: |
   SENIOR EXPERTISE. SERIOUS SOFTWARE.
 
-  The enterprise software industry has a talent problem. Agencies staff projects
-  with juniors. Consultancies rotate people off the moment they understand your
-  system. AI tools generate code with no accountability. Someone has to actually
-  know what they're doing.
+  Enterprise software has a context problem. Teams are split across multiple
+  CMS platforms, integration glue is brittle, and AI tools generate output
+  without accountability. Someone has to actually know what they're doing—and
+  make systems deterministic.
 
   We're Dakota and Dillon Smith—two brothers with 30 combined years in enterprise
   software. We advise on architecture, engineering leadership, and AI integration.
@@ -84,11 +84,11 @@ full_text: |
   leadership guidance—delivered directly by practitioners with 15+ years of
   experience each. No bait-and-switch. No handoff to juniors.
 
-  PRODUCTS THAT SHIP
-  We build software, not slide decks. STUDIO is our agentic orchestration
-  platform—Deterministic Orchestration that ensures AI follows senior-level
-  architectural logic. ALLOY powers high-concurrency modernization. These aren't
-  concepts. They're production software that enterprises and agencies use.
+  SYSTEMS THAT SHIP
+  We build software, not slide decks. Conduit is our enterprise MCP server—one
+  connection to every CMS. STUDIO is our open-source orchestration platform—
+  Deterministic Orchestration that ensures AI follows senior-level architectural
+  logic. These aren't concepts. They're production-grade systems that teams use.
 
   ACCOUNTABLE ADVISORY
   We stay responsible for what we recommend. Advisory without accountability

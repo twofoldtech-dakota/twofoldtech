@@ -63,17 +63,18 @@ XM Cloud uses a different content structure. Key changes:
 
 ### Phase 3: Data Migration
 
-This is where ALLOY shines. A typical migration workflow:
+This is where a deterministic migration pipeline matters. A typical workflow:
 
 ```bash
 # Extract content from XP
-alloy extract --source ./master.db --output ./content
+content-export --source ./master.db --output ./content
 
 # Transform to XM Cloud format
-alloy transform --input ./content --mapping ./template-map.json
+content-transform --input ./content --mapping ./template-map.json
 
-# Import to XM Cloud
-alloy import --target xmcloud --project your-project
+# Validate and import
+content-validate --input ./content --schema xmcloud
+content-import --target xmcloud --project your-project
 ```
 
 ### Phase 4: Front-End Development

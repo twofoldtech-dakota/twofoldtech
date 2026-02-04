@@ -1,9 +1,9 @@
 export const STUDIO_META = {
-  title: 'STUDIO_OS',
-  tagline: 'The Agentic Orchestration Operating System',
+  title: 'STUDIO',
+  tagline: 'Open-Source Deterministic Orchestration',
   description:
-    'STUDIO uses a Tri-Agent Architecture to Plan, Build, and Write enterprise software with unprecedented precision. Human-in-the-Loop validation ensures architectural integrity at every step.',
-  category: 'FLAGSHIP PLATFORM',
+    'STUDIO is an open-source orchestration platform that enforces plan-first workflows, quality gates, and traceable AI-assisted development. Built by senior practitioners for enterprise rigor.',
+  category: 'OPEN SOURCE PLATFORM',
 };
 
 export interface Agent {
@@ -19,7 +19,7 @@ export const STUDIO_AGENTS: Agent[] = [
     name: 'PLANNER',
     role: 'Strategic Architect',
     description:
-      'Analyzes requirements and designs implementation strategies. Creates detailed execution plans with dependency graphs and validation checkpoints.',
+      'Analyzes requirements and designs execution plans with dependency graphs and validation checkpoints.',
     capabilities: [
       'Requirement Analysis',
       'Architecture Design',
@@ -32,7 +32,7 @@ export const STUDIO_AGENTS: Agent[] = [
     name: 'BUILDER',
     role: 'Implementation Engine',
     description:
-      'Executes plans with precision. Generates code that adheres to enterprise standards and automatically validates against defined constraints.',
+      'Executes plans deterministically. Generates code that adheres to constraints and validates each step.',
     capabilities: [
       'Code Generation',
       'Test Creation',
@@ -42,15 +42,15 @@ export const STUDIO_AGENTS: Agent[] = [
     color: 'bg-tf-orange',
   },
   {
-    name: 'WRITER',
-    role: 'Documentation Synthesizer',
+    name: 'REVIEWER',
+    role: 'Quality Gatekeeper',
     description:
-      'Produces comprehensive technical documentation. Maintains consistency across codebases and generates API references automatically.',
+      'Verifies the build against requirements and quality gates. Produces audit-ready outputs.',
     capabilities: [
-      'Technical Writing',
-      'API Documentation',
-      'Architecture Docs',
-      'Changelog Generation',
+      'Quality Gates',
+      'Architecture Compliance',
+      'Security Validation',
+      'Traceability Reports',
     ],
     color: 'bg-green-500',
   },
@@ -66,38 +66,38 @@ export const STUDIO_FEATURES: Feature[] = [
   {
     title: 'Tri-Agent Architecture',
     description:
-      'Three specialized AI agents working in concert: Planner, Builder, and Writer. Each agent is optimized for its specific domain.',
+      'Planner, Builder, and Reviewer work in concert to separate strategy, execution, and validation.',
     icon: 'cpu',
   },
   {
-    title: 'Human-in-the-Loop',
+    title: 'Plan-First Workflows',
     description:
-      'Critical decisions require human approval. Automated validation gates ensure quality without sacrificing control.',
+      'Every change starts with a validated plan to prevent architectural drift.',
     icon: 'users',
   },
   {
-    title: 'Self-Healing Code',
+    title: 'Quality Gates',
     description:
-      'When tests fail, STUDIO automatically diagnoses and corrects issues. Continuous validation prevents regression.',
-    icon: 'refresh',
-  },
-  {
-    title: 'Enterprise Safety',
-    description:
-      'Sandbox environments, schema validation, and audit trails. Built for regulated industries and high-stakes engineering.',
+      'Automated validation gates enforce correctness before execution completes.',
     icon: 'shield',
   },
   {
-    title: 'Context Preservation',
+    title: 'Traceable Decisions',
     description:
-      'Maintains project context across sessions. No more re-explaining your codebase to AI assistants.',
+      'Requirements and changes are linked for full auditability and rollback.',
     icon: 'database',
   },
   {
-    title: 'Multi-Repository Support',
+    title: 'Open-Box Architecture',
     description:
-      'Orchestrate changes across multiple repositories. Perfect for microservices and monorepo architectures.',
+      'Inspect, extend, and customize the orchestration logic. No black boxes.',
     icon: 'git-branch',
+  },
+  {
+    title: 'Deterministic Recovery',
+    description:
+      'Rollback to known-good states with deterministic snapshots and state control.',
+    icon: 'refresh',
   },
 ];
 
@@ -108,11 +108,11 @@ export interface Spec {
 
 export const STUDIO_SPECS: Spec[] = [
   { label: 'Architecture', value: 'Tri-Agent System' },
-  { label: 'Context Window', value: '200K+ Tokens' },
-  { label: 'Languages', value: '.NET, TypeScript, Rust, Python' },
-  { label: 'Integration', value: 'VS Code, CLI, API' },
-  { label: 'Validation', value: 'Real-time + Batch' },
-  { label: 'Deployment', value: 'Cloud + On-Premise' },
+  { label: 'Workflow', value: 'Plan-First Execution' },
+  { label: 'Governance', value: 'Quality Gates' },
+  { label: 'Traceability', value: 'Requirement ↔ Code' },
+  { label: 'Integration', value: 'CLI + Git' },
+  { label: 'License', value: 'Open Source' },
 ];
 
 export interface UseCase {
@@ -123,27 +123,27 @@ export interface UseCase {
 
 export const STUDIO_USE_CASES: UseCase[] = [
   {
-    title: 'Legacy Migration',
+    title: 'Architectural Compliance',
     description:
-      'Modernize monolithic applications to microservices with automated dependency analysis and incremental refactoring.',
-    outcome: '70% reduction in migration time',
+      'Enforce enterprise standards across teams with deterministic quality gates and traceable decisions.',
+    outcome: 'Reduced architectural drift',
   },
   {
-    title: 'Feature Development',
+    title: 'AI-Assisted Refactoring',
     description:
-      'Accelerate new feature delivery with AI-assisted planning, implementation, and testing workflows.',
-    outcome: '3x faster time-to-production',
+      'Modernize legacy codebases with plan-first, validated refactor workflows.',
+    outcome: 'Lower regression risk',
   },
   {
-    title: 'Code Review Automation',
+    title: 'Governed Automation',
     description:
-      'Automated PR reviews with architectural compliance checking and security vulnerability scanning.',
-    outcome: '90% reduction in review cycle time',
+      'Use AI without losing accountability through explicit requirements and verification.',
+    outcome: 'Audit-ready outputs',
   },
   {
-    title: 'Documentation Generation',
+    title: 'Documentation Consistency',
     description:
-      'Generate and maintain technical documentation from code. API docs, architecture diagrams, and runbooks.',
-    outcome: 'Always up-to-date documentation',
+      'Generate consistent technical documentation tied to the implementation plan.',
+    outcome: 'Always current docs',
   },
 ];

@@ -1,6 +1,6 @@
 # PRIMARY AUDIENCE: Enterprise Systems Architects
 # Priority: 1 (Primary)
-# Last Updated: 2026-02-01
+# Last Updated: 2026-02-04
 
 profile:
   title: Enterprise Systems Architects & Technical Decision Makers
@@ -28,8 +28,8 @@ responsibilities:
   - Select and vet external technical partners
 
 pain_points:
-  - Legacy system constraints blocking modernization
-  - AI tooling that produces inconsistent, unauditable code
+  - Fragmented CMS landscape with inconsistent APIs
+  - AI tooling that produces inconsistent, unauditable output
   - Vendor lock-in and opacity in critical systems
   - Difficulty maintaining traceability across complex systems
   - Agency partners who staff juniors on senior-level work
@@ -42,10 +42,10 @@ goals:
   - Find trusted senior expertise for complex initiatives
 
 messaging_focus:
+  - Single source of truth for CMS context
   - Traceability and auditability
   - Architectural correctness
   - System stability under load
-  - Open-box visibility into AI-generated changes
   - Direct access to senior practitioners (no bait-and-switch)
 
 value_propositions:
@@ -55,15 +55,15 @@ value_propositions:
       guidance delivered directly by Dakota and Dillon. No account managers.
       No handoff to juniors.
 
+  - name: Unified CMS Access
+    description: >
+      Conduit provides one interface for multiple CMS platforms with enterprise
+      governance built in.
+
   - name: Deterministic Orchestration
     description: >
       STUDIO ensures AI-assisted development follows strict architectural
       logic. Every change is traceable, auditable, and reversible.
-
-  - name: Enterprise-Grade Tooling
-    description: >
-      ALLOY for high-concurrency modernization. Built for the performance
-      and reliability requirements enterprise systems demand.
 
 channels:
   - Technical conferences (QCon, InfoQ)
@@ -77,7 +77,7 @@ engagement_models:
     description: Independent assessment of systems and modernization approach
   - name: Technical Advisory
     description: Ongoing strategic guidance for complex initiatives
-  - name: Product Licensing
-    description: STUDIO/ALLOY for enterprise development teams
+  - name: Conduit Integration
+    description: Unified CMS access for enterprise platforms
   - name: Hands-On Build
     description: Direct involvement in critical system development

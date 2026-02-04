@@ -1,7 +1,7 @@
 export const ABOUT_META = {
   title: 'ABOUT',
   tagline: 'SENIOR EXPERTISE. SERIOUS SOFTWARE.',
-  description: 'Twofold Tech is two senior engineers—brothers—with 30 combined years in enterprise software. We advise on architecture, engineering leadership, and AI integration. And we build products that enterprises and agencies actually use.',
+  description: 'Twofold Tech is two senior engineers—brothers—with 30 combined years in enterprise software. We advise on architecture, CMS integration, and AI orchestration. And we build products that unify content context (Conduit) and orchestrate deterministic delivery (STUDIO).',
 };
 
 export interface TimelineEvent {
@@ -12,24 +12,24 @@ export interface TimelineEvent {
 
 export const COMPANY_TIMELINE: TimelineEvent[] = [
   {
-    year: '2024',
+    year: '2020',
     title: 'FOUNDED',
-    description: 'Dakota and Dillon Smith launch Twofold Tech, bringing 30 combined years of enterprise experience to advisory and product development.',
-  },
-  {
-    year: '2024',
-    title: 'ALLOY SHIPS',
-    description: 'Released ALLOY—the high-performance Rust engine for Sitecore migrations—born from real-world enterprise problems.',
+    description: 'Dakota and Dillon launch Twofold Tech, bringing 30 combined years of enterprise experience to advisory and product development.',
   },
   {
     year: '2025',
-    title: 'STUDIO BETA',
-    description: 'Launched STUDIO_OS with Tri-Agent Architecture for Deterministic Orchestration of AI-assisted development.',
+    title: 'STUDIO OPEN SOURCE',
+    description: 'Released STUDIO as an open-source orchestration platform for deterministic AI-assisted development.',
   },
   {
     year: '2026',
-    title: 'SCALING',
-    description: 'Expanding enterprise advisory engagements and product deployments across the platform.',
+    title: 'CONDUIT BETA',
+    description: 'Launched Conduit beta—one connection to every CMS via an enterprise-grade MCP server.',
+  },
+  {
+    year: '2026',
+    title: 'ENTERPRISE SCALE',
+    description: 'Expanded advisory engagements and Conduit deployments across enterprise platforms.',
   },
 ];
 
@@ -52,7 +52,7 @@ export const CORE_VALUES: CoreValue[] = [
   },
   {
     title: 'PRODUCTS OVER PROMISES',
-    description: 'We ship software, not slide decks. Our products (STUDIO, ALLOY) encode our expertise into tools you can actually use.',
+    description: 'We ship software, not slide decks. Conduit and STUDIO encode our expertise into tools you can actually use.',
     icon: 'users',
   },
   {
@@ -70,23 +70,23 @@ export interface ExpertiseFocus {
 
 export const EXPERTISE_FOCUS_AREAS: ExpertiseFocus[] = [
   {
+    title: 'CMS UNIFICATION',
+    description: 'Unified content access across Sitecore, Contentful, Umbraco, Optimizely, and more using Conduit.',
+    status: 'ACTIVE',
+  },
+  {
     title: 'AGENTIC ORCHESTRATION',
     description: 'Multi-agent systems that plan, build, and validate enterprise software with Deterministic Orchestration.',
     status: 'ACTIVE',
   },
   {
-    title: 'MIGRATION ENGINEERING',
-    description: 'High-performance tooling for moving legacy Sitecore and .NET systems to modern architectures.',
-    status: 'ACTIVE',
-  },
-  {
     title: 'ENTERPRISE ADVISORY',
-    description: 'Architecture reviews, technical strategy, and engineering leadership guidance from senior practitioners.',
+    description: 'Architecture reviews, integration strategy, and engineering leadership guidance from senior practitioners.',
     status: 'ACTIVE',
   },
   {
-    title: 'AI INTEGRATION',
-    description: 'Implementing AI-assisted development workflows that are traceable, auditable, and enterprise-safe.',
+    title: 'SITECORE MODERNIZATION',
+    description: 'XP to XM Cloud transformations with hardened content architecture and governance.',
     status: 'ACTIVE',
   },
 ];

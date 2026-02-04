@@ -76,7 +76,7 @@ principles:
   - name: Favor the concrete
     description: >
       Replace abstractions with examples. Show system behavior,
-      not just capabilities. Reference real products (STUDIO, ALLOY).
+      not just capabilities. Reference real products (Conduit, STUDIO).
 
   - name: Be personally accountable
     description: >

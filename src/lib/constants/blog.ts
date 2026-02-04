@@ -1,7 +1,7 @@
 export const BLOG_META = {
   title: 'BLOG',
   tagline: 'TECHNICAL INSIGHTS & RESEARCH',
-  description: 'Deep dives into enterprise modernization, agentic engineering, and the future of software development.',
+  description: 'Deep dives into CMS integration, deterministic orchestration, and enterprise software strategy.',
 };
 
 export interface BlogCategory {
@@ -62,14 +62,6 @@ export const SAMPLE_POSTS: BlogPost[] = [
     date: '2026-01-21',
     readTime: '8 min',
     featured: true,
-  },
-  {
-    slug: 'rust-migration-engine-performance',
-    title: 'Why We Built ALLOY in Rust',
-    description: 'The technical decisions behind our high-performance migration engine and why memory safety matters for enterprise tooling.',
-    category: 'architecture',
-    date: '2026-01-14',
-    readTime: '10 min',
   },
   {
     slug: 'dotnet-9-enterprise-patterns',

@@ -1,10 +1,10 @@
 ---
 title: 'Fortune 500 Retailer Migrates 2M Items to XM Cloud'
-description: 'How a major retail brand completed their Sitecore XP to XM Cloud migration in 8 weeks using ALLOY.'
+description: 'How a major retail brand completed their Sitecore XP to XM Cloud migration in 8 weeks with a deterministic migration pipeline.'
 client: 'Fortune 500 Retailer'
 industry: 'Retail & E-commerce'
 challenge: 'The client had a 10-year-old Sitecore XP implementation with over 2 million content items, 500+ custom templates, and complex multi-site architecture. Previous migration attempts using traditional tools had failed due to memory issues and processing time.'
-solution: 'We deployed ALLOY to handle the content migration, processing the entire content tree in parallel with zero data loss. Custom template mappings were created to transform XP structures to XM Cloud format.'
+solution: 'We built a parallelized migration pipeline to process the entire content tree with zero data loss. Custom template mappings transformed XP structures to XM Cloud format.'
 results:
   - metric: '2M+'
     value: 'Items Migrated'
@@ -19,14 +19,14 @@ results:
     value: 'Data Loss'
     description: 'Complete integrity verified post-migration'
 technologies:
-  - 'ALLOY CLI'
+  - 'Custom Migration Pipeline'
   - 'Sitecore XM Cloud'
   - 'Next.js'
   - 'Vercel'
   - 'Azure DevOps'
 publishDate: 2025-11-15
 testimonial:
-  quote: 'We had tried twice before with other tools and vendors. ALLOY processed in hours what previously took days, and we had zero data integrity issues.'
+  quote: 'We had tried twice before with other tools and vendors. The Twofold pipeline processed in hours what previously took days, with zero data integrity issues.'
   author: 'Director of Digital Technology'
   role: 'Fortune 500 Retailer'
 draft: false
@@ -47,10 +47,10 @@ Previous migration attempts had failed. Traditional tools couldn't handle the sc
 
 ### Phase 1: Deep Assessment
 
-We began with a comprehensive audit using ALLOY's analysis mode:
+We began with a comprehensive audit using our analysis pipeline:
 
 ```bash
-alloy analyze --source ./master.db --report detailed
+migration analyze --source ./master.db --report detailed
 ```
 
 This revealed:
@@ -70,7 +70,7 @@ We created a template mapping configuration that handled:
 
 ### Phase 3: Parallel Migration
 
-ALLOY processed the content tree using all available cores:
+The pipeline processed the content tree using all available cores:
 
 - **Extraction**: 2.1M items in 47 minutes
 - **Transformation**: Template mapping in 23 minutes  
@@ -99,4 +99,4 @@ Post-migration metrics:
 1. **Parallel processing is essential** at scale—sequential migration is not viable
 2. **Template consolidation** should happen during migration, not after
 3. **Validation at every step** prevents issues from compounding
-4. **Memory safety matters**—ALLOY's Rust foundation eliminated crash risks
+4. **Deterministic validation matters**—validation at each stage eliminated crash risks

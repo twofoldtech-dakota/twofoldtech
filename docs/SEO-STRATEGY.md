@@ -474,7 +474,7 @@ Disallow: /admin/
 1. **Practitioner-Written Content** - Real implementation experience
 2. **Code-First Approach** - Working examples, not theory
 3. **Modern Stack Focus** - XM Cloud, .NET 8, composable
-4. **Open Source Tools** - STUDIO, ALLOY, utilities
+4. **Open Source Tools** - STUDIO, Conduit, utilities
 
 ---
 

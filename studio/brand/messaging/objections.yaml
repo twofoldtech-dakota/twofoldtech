@@ -1,10 +1,10 @@
 # TWOFOLD TECH - Objection Handling
-# Version: 2.0
-# Last Updated: 2026-02-01
+# Version: 3.0
+# Last Updated: 2026-02-04
 
 objections:
 
-  # === NEW: Advisory/Team Size Objections ===
+  # === Advisory/Team Size ===
 
   - objection: "You're just two people—can you handle enterprise scale?"
     category: Team Size
@@ -25,8 +25,8 @@ objections:
     response: >
       Agencies staff projects with whoever's available. You meet seniors in the
       pitch, then get handed off to juniors. We're the opposite—the people you
-      talk to are the people who do the work. And we build products (STUDIO, ALLOY)
-      that agencies themselves use when they hit technical ceilings.
+      talk to are the people who do the work. And we build products (Conduit,
+      STUDIO) that agencies themselves use when they hit technical ceilings.
     proof_points:
       - No bait-and-switch staffing model
       - Direct access to 15+ year practitioners
@@ -49,7 +49,7 @@ objections:
   - objection: "How do we know you won't just disappear?"
     category: Continuity
     response: >
-      We're building a company, not freelancing between gigs. STUDIO and ALLOY
+      We're building a company, not freelancing between gigs. Conduit and STUDIO
       are long-term product investments. Our advisory relationships span years,
       not months. We have skin in the game—our reputation is tied to every
       engagement we take on.
@@ -59,7 +59,35 @@ objections:
       - Reputation-based business model
       - Documented knowledge transfer practices
 
-  # === Product Objections ===
+  # === Conduit Product ===
+
+  - objection: "We already have CMS APIs—why do we need Conduit?"
+    category: CMS Integration
+    response: >
+      Native CMS APIs are fragmented and inconsistent across platforms.
+      Conduit provides a unified interface, enterprise-grade governance, and
+      auditable access across multiple CMS systems. You get one contract for
+      content operations, not a pile of custom integrations.
+    proof_points:
+      - Unified API across CMS platforms
+      - Built-in caching, rate limiting, audit logs
+      - Extensible adapter architecture
+      - Reduces integration maintenance load
+
+  - objection: "We'll build our own integration layer."
+    category: Build vs. Buy
+    response: >
+      Building a production-grade integration layer takes months and becomes
+      a permanent maintenance burden. Conduit gives you a stable core now,
+      with open-box adapters you can extend. Or hire us to build the pieces
+      you need.
+    proof_points:
+      - Open-box architecture for customization
+      - Documented extension points
+      - Advisory available for custom implementations
+      - Focus your team on domain-specific work
+
+  # === STUDIO Product ===
 
   - objection: "We already use Copilot/ChatGPT for code generation."
     category: Competition
@@ -74,19 +102,6 @@ objections:
       - Deterministic rollback capabilities
       - Built by practitioners who use it daily
 
-  - objection: "We'll build our own orchestration layer."
-    category: Build vs. Buy
-    response: >
-      Building production-grade orchestration takes 12-18 months of dedicated
-      engineering. STUDIO provides that foundation immediately, with open-box
-      architecture you can customize and extend. Or—hire us to help you build
-      it right the first time.
-    proof_points:
-      - Open-box architecture for customization
-      - Documented extension points
-      - Advisory available for custom implementations
-      - Focus your team on domain-specific logic
-
   - objection: "How is this different from other AI dev tools?"
     category: Differentiation
     response: >
@@ -99,31 +114,6 @@ objections:
       - Quality gates before execution
       - Full audit trail
       - Built by enterprise practitioners, not startup engineers
-
-  - objection: "This seems like research, not production-ready software."
-    category: Maturity
-    response: >
-      STUDIO and ALLOY are production software that we use daily and that
-      enterprises and agencies rely on. They emerge from real-world problems
-      we've solved, not academic research. We ship products, not papers.
-    proof_points:
-      - Production deployments
-      - Daily use by founders
-      - Enterprise and agency customers
-      - Performance benchmarks
-
-  - objection: "We're not ready for this level of change."
-    category: Timing
-    response: >
-      STUDIO integrates with existing workflows—it doesn't replace them.
-      Start with a single team or project. The plan-first approach reduces
-      risk, not increases it. Or start with advisory—let us assess your
-      architecture and recommend a path forward.
-    proof_points:
-      - Incremental adoption path
-      - Existing toolchain integration
-      - Rollback capabilities for safety
-      - Advisory-first engagement option
 
 positioning_against:
 
@@ -149,15 +139,14 @@ positioning_against:
       Familiarity without correctness creates technical debt at scale.
       STUDIO supervises AI—it doesn't replace human judgment.
 
-  - competitor: "No-Code/Low-Code Platforms"
+  - competitor: "Point CMS Integrations"
     our_advantage: >
-      Full code ownership and visibility. No platform lock-in.
-      Enterprise-grade performance characteristics.
+      Unified API and enterprise governance across multiple CMS platforms.
     their_strength: >
-      Fast prototyping, lower technical barrier.
+      Deep platform-specific features.
     counter: >
-      Enterprise systems require inspectable, auditable code—not
-      proprietary abstractions.
+      Platform depth without cross-system consistency creates integration sprawl.
+      Conduit gives you one contract across systems, with extensible adapters.
 
   - competitor: "Big Consulting Firms"
     our_advantage: >

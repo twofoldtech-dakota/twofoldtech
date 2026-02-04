@@ -1,7 +1,7 @@
 export const ADVISORY_META = {
   title: 'ADVISORY',
   tagline: 'SENIOR EXPERTISE, NOT A SLIDE DECK',
-  description: 'Direct access to practitioners with 30 combined years of enterprise experience. Architecture reviews, technical strategy, engineering leadership guidance—delivered by the same people who build STUDIO and ALLOY.',
+  description: 'Direct access to practitioners with 30 combined years of enterprise experience. Architecture reviews, CMS integration strategy, and AI orchestration guidance—delivered by the same people who build Conduit and STUDIO.',
 };
 
 export interface AdvisoryService {
@@ -24,37 +24,37 @@ export const ADVISORY_SERVICES: AdvisoryService[] = [
     icon: 'layers',
   },
   {
-    title: 'MIGRATION STRATEGY',
-    description: 'Comprehensive roadmaps for transitioning from legacy platforms to modern architectures.',
+    title: 'CMS UNIFICATION',
+    description: 'Unify fragmented CMS platforms with Conduit and a clear integration roadmap.',
     deliverables: [
-      'Current state assessment',
-      'Migration roadmap with phases',
-      'Risk analysis and mitigation',
-      'Resource and timeline planning',
+      'CMS inventory and capability mapping',
+      'Unified API strategy and governance',
+      'Adapter roadmap for priority platforms',
+      'Risk analysis and migration sequencing',
     ],
-    icon: 'map',
+    icon: 'database',
   },
   {
-    title: 'AI INTEGRATION',
-    description: 'Prepare your organization for AI-driven development workflows with Deterministic Orchestration.',
+    title: 'AI ORCHESTRATION',
+    description: 'Implement deterministic AI-assisted development workflows with STUDIO.',
     deliverables: [
       'AI readiness assessment',
       'Workflow automation opportunities',
-      'Security and governance framework',
+      'Quality gate and traceability design',
       'STUDIO integration planning',
     ],
     icon: 'cpu',
   },
   {
-    title: 'SITECORE EXPERTISE',
-    description: 'Specialized guidance for Sitecore XP to XM Cloud transitions from practitioners who built ALLOY.',
+    title: 'SITECORE MODERNIZATION',
+    description: 'Guidance for Sitecore XP to XM Cloud transitions from senior practitioners.',
     deliverables: [
       'XM Cloud readiness audit',
       'Content architecture planning',
       'Headless implementation strategy',
-      'ALLOY deployment support',
+      'Migration execution support',
     ],
-    icon: 'database',
+    icon: 'map',
   },
 ];
 
@@ -76,13 +76,13 @@ export const ENGAGEMENT_MODELS: EngagementModel[] = [
     title: 'EMBEDDED',
     duration: '3-6 MONTHS',
     description: 'Hands-on partnership with your team. We lead the technical work, not manage it from afar.',
-    bestFor: 'Active migration or transformation projects',
+    bestFor: 'Active modernization or integration programs',
   },
   {
     title: 'RETAINER',
     duration: 'ONGOING',
     description: 'Continuous access to senior expertise for strategic guidance and technical escalations.',
-    bestFor: 'Long-term modernization programs',
+    bestFor: 'Long-term enterprise initiatives',
   },
 ];
 

@@ -1,6 +1,6 @@
 # TERTIARY AUDIENCE: Technical R&D Departments
 # Priority: 3 (Tertiary)
-# Last Updated: 2026-02-01
+# Last Updated: 2026-02-04
 
 profile:
   title: Technical R&D Departments
@@ -17,6 +17,7 @@ demographics:
     - Automation frameworks
     - AI/ML infrastructure
     - Developer productivity research
+    - Content systems integration
 
 responsibilities:
   - Evaluate emerging technologies
@@ -28,6 +29,7 @@ pain_points:
   - Gap between POC and production-ready solutions
   - Difficulty measuring automation effectiveness
   - Vendor solutions that don't expose internals
+  - Need for unified content context across systems
   - Need for senior expertise on complex technical challenges
 
 goals:
@@ -35,6 +37,7 @@ goals:
   - Build internal platforms on solid foundations
   - Achieve measurable R&D outcomes
   - Maintain control over critical tooling internals
+  - Standardize content access across teams
 
 messaging_focus:
   - Open-box architecture for customization
@@ -50,15 +53,15 @@ value_propositions:
       guidance, and AI integration consulting. 30 combined years of experience
       applied to your R&D challenges.
 
-  - name: Product Foundation
+  - name: Unified CMS Foundation
     description: >
-      STUDIO and ALLOY provide production-grade foundations for internal
-      tooling. Extend and customize rather than build from scratch.
+      Conduit provides a production-grade core for CMS access. Extend and
+      customize rather than build from scratch.
 
-  - name: Knowledge Transfer
+  - name: Open-Source Orchestration
     description: >
-      We don't just deliver—we transfer knowledge. Your team learns the
-      patterns and practices behind enterprise-grade tooling.
+      STUDIO provides deterministic orchestration foundations you can inspect
+      and adapt to your internal workflows.
 
 channels:
   - Technical whitepapers
@@ -70,8 +73,8 @@ channels:
 engagement_models:
   - name: Technical Advisory
     description: Ongoing strategic guidance for R&D initiatives
-  - name: Product Licensing
-    description: STUDIO/ALLOY as foundations for internal tooling
+  - name: Conduit Integration
+    description: Unified CMS access layer for internal platforms
   - name: Custom Development
     description: Build custom solutions with senior practitioner involvement
   - name: Training & Enablement

@@ -117,7 +117,7 @@ const blog = defineCollection({
     publishDate: z.date(),
     author: z.string(),
     tags: z.array(z.string()),
-    category: z.enum(['STUDIO', 'ALLOY', 'Advisory', 'Research']),
+    category: z.enum(['STUDIO', 'Conduit', 'Advisory', 'Research']),
     seo: z.object({
       title: z.string().optional(),
       description: z.string().optional(),
@@ -308,7 +308,7 @@ GHOST (Text only)
 ```
 /                           # Homepage — Lab overview
 ├── /studio                 # STUDIO product page
-├── /alloy                  # ALLOY product page
+├── /conduit                # Conduit product page
 ├── /advisory               # Advisory services
 ├── /research               # Research publications
 │   └── /research/[slug]    # Individual papers

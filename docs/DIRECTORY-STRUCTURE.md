@@ -117,7 +117,7 @@ twofold.tech/
 │   │   │
 │   │   ├── products/           # Product data (JSON/YAML)
 │   │   │   ├── studio.json
-│   │   │   └── alloy.json
+│   │   │   └── conduit.json
 │   │   │
 │   │   ├── case-studies/       # Case studies (MDX)
 │   │   │   ├── enterprise-migration.mdx
@@ -144,7 +144,7 @@ twofold.tech/
 │   │   ├── products/
 │   │   │   ├── index.astro     # Products overview
 │   │   │   ├── studio.astro    # STUDIO product page
-│   │   │   └── alloy.astro     # ALLOY product page
+│   │   │   └── conduit.astro   # Conduit product page
 │   │   │
 │   │   ├── blog/
 │   │   │   ├── index.astro     # Blog listing

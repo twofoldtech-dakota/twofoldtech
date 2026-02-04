@@ -3,10 +3,9 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Button from '@/components/common/Button.astro';
 import SectionHeader from '@/components/common/SectionHeader.astro';
 import Badge from '@/components/common/Badge.astro';
-import StudioLogicFlow from '@/components/common/StudioLogicFlow.astro';
 import OrchestrationComparison from '@/components/common/OrchestrationComparison.astro';
 import FAQAccordion from '@/components/islands/react/FAQAccordion';
-import { Database, Server, Brain, Cpu, Terminal, Microscope, CheckSquare, ArrowUpRight, HelpCircle } from 'lucide-react';
+import { Database, Server, Brain, Cpu, Terminal, Microscope, CheckSquare, ArrowUpRight, HelpCircle, Plug } from 'lucide-react';
 import {
   PERFORMANCE_MANIFESTO,
   SERVICE_PILLARS,
@@ -19,6 +18,16 @@ const iconMap: Record<string, any> = {
   server: Server,
   brain: Brain,
 };
+
+const conduitFeatures = [
+  'Unified API for CMS operations',
+  'Multi-CMS adapters',
+  'Caching, rate limits, audit logs',
+  'Type-safe TypeScript interfaces',
+  'MCP-native for AI assistants',
+];
+
+const conduitPlatforms = ['Sitecore XP', 'XM Cloud', 'Umbraco', 'Optimizely', 'Contentful'];
 ---
 
 <BaseLayout title="Home">
@@ -28,13 +37,13 @@ const iconMap: Record<string, any> = {
       <div class="flex flex-col lg:flex-row justify-between items-center lg:items-end mb-12 gap-12">
         <div class="flex-1">
           <div class="inline-block bg-black text-white px-6 py-3 font-mono font-bold text-lg mb-8 shadow-neo border-2 border-transparent">
-            :: SENIOR EXPERTISE. SERIOUS SOFTWARE.
+            :: CONDUIT + STUDIO + ADVISORY
           </div>
           <h1 class="text-5xl sm:text-7xl md:text-8xl font-black uppercase leading-[0.9] tracking-tighter">
-            ORCHESTRATING <br />
-            ARCHITECTURAL <br />
+            UNIFYING <br />
+            CONTENT <br />
             <span class="bg-tf-orange px-2 text-black inline-block border-4 border-black shadow-[8px_8px_0px_#000] mt-2">
-              INTEGRITY
+              CONTEXT
             </span>
           </h1>
         </div>
@@ -57,11 +66,11 @@ const iconMap: Record<string, any> = {
       </div>
 
       <div class="flex flex-col sm:flex-row gap-6">
-        <Button href="#lab" class="text-xl px-12 py-6">
-          EXPLORE STUDIO_OS
+        <Button href="/conduit" class="text-xl px-12 py-6">
+          REQUEST CONDUIT BETA
         </Button>
-        <Button variant="outline" href="#enterprise" class="text-xl px-12 py-6">
-          ENTERPRISE SERVICES
+        <Button variant="outline" href="/advisory" class="text-xl px-12 py-6">
+          ENTERPRISE ADVISORY
         </Button>
       </div>
 
@@ -77,65 +86,82 @@ const iconMap: Record<string, any> = {
     <div class="container mx-auto px-4">
       <SectionHeader
         number="01"
-        title="OUR PRODUCTS"
-        subtitle="We build the tools that enterprises and agencies actually use—STUDIO for orchestration, ALLOY for migrations."
+        title="OUR SYSTEMS"
+        subtitle="Conduit unifies CMS access. STUDIO orchestrates deterministic delivery. Advisory makes it enterprise-ready."
       />
 
       <div class="grid grid-cols-1 md:grid-cols-3 grid-rows-auto md:grid-rows-2 gap-8 h-auto md:h-[800px]">
-        <!-- Item 1: STUDIO (Large Box) -->
+        <!-- Item 1: CONDUIT (Large Box) -->
         <div class="md:col-span-2 md:row-span-2 border-5 border-black p-8 md:p-12 shadow-neo relative overflow-hidden group flex flex-col bg-white">
           <div class="flex justify-between items-start mb-6">
             <div>
-              <div class="inline-block bg-tf-orange text-black px-4 py-1 font-mono font-bold border-2 border-black mb-4">
-                FLAGSHIP PLATFORM
+              <div class="inline-flex items-center gap-3 mb-4">
+                <div class="inline-block bg-tf-orange text-black px-4 py-1 font-mono font-bold border-2 border-black">
+                  ENTERPRISE MCP SERVER
+                </div>
+                <span class="bg-black text-white px-3 py-1 font-mono font-bold text-xs border-2 border-black">
+                  BETA
+                </span>
               </div>
               <h3 class="text-5xl md:text-7xl font-black uppercase leading-none mb-4">
-                STUDIO_OS
+                CONDUIT
               </h3>
-              <p class="font-mono text-xl md:text-2xl font-bold text-gray-600 max-w-lg">
-                The Agentic Orchestration Operating System. <br />
-                <span class="text-black">Plan. Build. Write.</span>
+              <p class="font-mono text-xl md:text-2xl font-bold text-gray-600 max-w-xl">
+                One connection to every CMS. <br />
+                <span class="text-black">Unified context for AI and engineering teams.</span>
               </p>
             </div>
-            <Cpu size={64} strokeWidth={1} className="hidden md:block" />
+            <Plug size={64} strokeWidth={1} className="hidden md:block" />
           </div>
 
-          <div class="flex-1 w-full h-full min-h-[300px] mt-6 relative">
-            <StudioLogicFlow />
-          </div>
-
-          <div class="mt-8 flex gap-4 font-mono font-bold text-sm flex-wrap">
-            <span class="flex items-center gap-2">
-              <CheckSquare size={16} /> TRI-AGENT ARCHITECTURE
-            </span>
-            <span class="flex items-center gap-2">
-              <CheckSquare size={16} /> SELF-HEALING
-            </span>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+            <div class="border-4 border-black p-6 bg-gray-50">
+              <p class="font-mono text-xs font-bold uppercase text-gray-500 mb-4">Capabilities</p>
+              <div class="space-y-3">
+                {conduitFeatures.map((feature) => (
+                  <div class="flex items-start gap-2 font-mono text-sm font-bold">
+                    <CheckSquare size={16} className="text-tf-orange mt-0.5" />
+                    <span>{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div class="border-4 border-black p-6 bg-black text-white">
+              <p class="font-mono text-xs font-bold uppercase text-gray-400 mb-4">Primary Platforms</p>
+              <div class="flex flex-wrap gap-2">
+                {conduitPlatforms.map((platform) => (
+                  <Badge variant="orange">{platform.toUpperCase()}</Badge>
+                ))}
+              </div>
+              <div class="mt-6 border-t-2 border-white/30 pt-4 font-mono text-xs text-gray-300">
+                MCP-native interface for assistants and services.
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Item 2: ALLOY (Medium Box) -->
+        <!-- Item 2: STUDIO (Medium Box) -->
         <div class="md:col-span-1 md:row-span-1 border-5 border-black p-8 shadow-neo bg-black text-white relative flex flex-col justify-between group">
           <div class="absolute top-0 right-0 p-4 opacity-20">
-            <Terminal size={120} />
+            <Cpu size={120} />
           </div>
           <div>
             <div class="flex items-center gap-3 mb-4 text-tf-orange">
               <Terminal size={32} />
-              <span class="font-mono font-bold">MIGRATION_ENGINE</span>
+              <span class="font-mono font-bold">OPEN_SOURCE</span>
             </div>
-            <h3 class="text-4xl font-black uppercase mb-4">ALLOY_CLI</h3>
+            <h3 class="text-4xl font-black uppercase mb-4">STUDIO</h3>
             <p class="font-mono text-gray-400 text-sm leading-relaxed">
-              High-throughput Rust engine for Sitecore XP to XM Cloud migrations.
-              90% faster parsing. Zero data loss.
+              Deterministic orchestration for enterprise software. Plan-first workflows,
+              quality gates, and traceable AI decisions.
             </p>
           </div>
           <div class="mt-6 border-t-2 border-gray-800 pt-4">
             <div class="font-mono text-xs text-tf-orange mb-1">
-              > RUNNING_PROCESS:
+              > WORKFLOW:
             </div>
-            <div class="font-mono text-white font-bold text-lg animate-pulse">
-              SERIALIZING_NODES...
+            <div class="font-mono text-white font-bold text-lg">
+              PLAN → BUILD → REVIEW
             </div>
           </div>
         </div>
@@ -151,7 +177,7 @@ const iconMap: Record<string, any> = {
             </div>
             <h3 class="text-3xl font-black uppercase mb-4">ADVISORY</h3>
             <p class="font-mono text-sm font-bold opacity-70">
-              Architecture reviews, technical strategy, and engineering leadership
+              Architecture reviews, CMS integration strategy, and AI governance
               from practitioners with 30 combined years of experience.
             </p>
           </div>
@@ -172,12 +198,11 @@ const iconMap: Record<string, any> = {
             Applied Expertise
           </div>
           <h2 class="text-5xl md:text-8xl font-black uppercase leading-[0.9] mb-8 text-black">
-            Deep Stack <br />Authority.
+            Deterministic <br />Delivery.
           </h2>
           <p class="text-xl font-bold mb-10 max-w-xl font-mono leading-relaxed">
-            Our tools come from 30 years in the trenches. We're the senior practitioners
-            enterprises call for modernizing complex systems into nimble, agent-ready
-            architectures.
+            We unify CMS context and enforce deterministic orchestration. The result
+            is faster delivery without sacrificing auditability or architectural integrity.
           </p>
         </div>
 
@@ -216,7 +241,7 @@ const iconMap: Record<string, any> = {
       <SectionHeader
         number="03"
         title="THE TOOLKIT"
-        subtitle="A curated stack designed for enterprise scale and memory safety."
+        subtitle="A focused stack for unified CMS access and deterministic orchestration."
       />
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 border-4 border-black">
